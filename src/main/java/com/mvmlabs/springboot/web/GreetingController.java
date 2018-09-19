@@ -24,10 +24,20 @@ public class GreetingController {
 	    return "site.homepage";
 	}
 
-    @RequestMapping(value = "/login", method=RequestMethod.GET)
+	@RequestMapping(value = "/afterlogin", method=RequestMethod.GET)
+	public String afterlogin() {
+		return "site.afterlogin";
+	}
+
+
+	@RequestMapping(value = "/login", method=RequestMethod.GET)
     public String login() {
         return "site.login";
     }
+	@RequestMapping(value = "/register", method=RequestMethod.GET)
+	public String create() {
+		return "site.register";
+	}
 
 	@RequestMapping(value = "/greet/{name}", method=RequestMethod.GET)
 	public ModelAndView greetTwoWays(@PathVariable(value="name") final String name, final Model model) {

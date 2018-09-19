@@ -41,4 +41,10 @@ public class AtmApiController {
     System.out.println(account);
     return  account;
   }
+  @RequestMapping(value = "/create", method = RequestMethod.POST)
+  public Account create(@RequestBody LoginRequest request){
+    RestTemplate restTemplate = new RestTemplate();
+    Account account = restTemplate.postForObject(REST_URL + "/accounts/create", request, Account.class);
+    return account;
+  }
 }
