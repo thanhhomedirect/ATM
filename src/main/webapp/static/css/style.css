@@ -6,8 +6,7 @@ body{
     font-size: 13px;
     color: #061C37;
     background: #4ad2db;
-    background-image:url(../images/background.jpg);
-    background-repeat:repeat-y;
+    background-image:url(/static/images/background.jpg);
 }
 *{
     margin: 0 auto 0 auto;

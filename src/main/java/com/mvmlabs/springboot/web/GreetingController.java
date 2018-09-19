@@ -23,14 +23,11 @@ public class GreetingController {
 	public String home() {
 	    return "site.homepage";
 	}
-	
-	@RequestMapping(value = "/greet", method=RequestMethod.GET)
-	public String greet(@RequestParam(value = "name", required=false, defaultValue="World!")final String name, @RequestParam String age, final Model model) {
-		log.info("Controller has been invoked with Request Parameter name = '" + name + "'.");
-		model.addAttribute("name", name);
-		model.addAttribute("age", age);
-		return "site.greeting";
-	}
+
+    @RequestMapping(value = "/login", method=RequestMethod.GET)
+    public String login() {
+        return "site.login";
+    }
 
 	@RequestMapping(value = "/greet/{name}", method=RequestMethod.GET)
 	public ModelAndView greetTwoWays(@PathVariable(value="name") final String name, final Model model) {

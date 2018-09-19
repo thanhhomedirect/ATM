@@ -5,9 +5,8 @@ package com.mvmlabs.springboot.api;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import com.mvmlabs.springboot.model.request.LoginRequest;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import com.mvmlabs.springboot.model.Account;
@@ -21,17 +20,25 @@ import com.mvmlabs.springboot.model.Account;
 @RequestMapping("/api")
 public class AtmApiController {
 
-  public static final String REST_URL = "http://127.0.0.1:8090";
+  public static final String REST_URL = "http://192.168.0.232:8080";
   
-  @RequestMapping(value = "/getAccounts", method=RequestMethod.GET)
-  public List<Account> getAccount() {
+  @RequestMapping(value = "/getAccounts/{keyword}", method=RequestMethod.GET)
+  public List<Account> getAccount(@PathVariable String keyword) {
     RestTemplate restTemplate = new RestTemplate();
     try {
-      List<Account> account = restTemplate.getForObject(REST_URL + "/accounts", List.class);
+      List<Account> account = restTemplate.getForObject(REST_URL + "/accounts/search/" + keyword, List.class);
       return account;
     } catch (Exception e) {
       throw e;
     }
   }
 
+  @RequestMapping(value = "/login", method=RequestMethod.POST)
+  public Account login(@RequestBody LoginRequest request) {
+    RestTemplate restTemplate = new RestTemplate();
+
+    Account account = restTemplate.postForObject(REST_URL + "/accounts/login", request, Account.class);
+    System.out.println(account);
+    return  account;
+  }
 }

@@ -11,37 +11,46 @@ package com.mvmlabs.springboot.model;
 
 public class Account {
   private Integer id;
-  private String userName;
+  private String username;
   private String accountNumber;
-  private String passWord;
+  private String password;
   private Double amount;
+
   public Integer getId() {
     return id;
   }
   public void setId(Integer id) {
     this.id = id;
   }
-  public String getUserName() {
-    return userName;
+
+  public String getUsername() {
+    return username;
   }
-  public void setUserName(String userName) {
-    this.userName = userName;
+
+  public void setUsername(String username) {
+    this.username = username;
   }
+
   public String getAccountNumber() {
     return accountNumber;
   }
+
   public void setAccountNumber(String accountNumber) {
     this.accountNumber = accountNumber;
   }
-  public String getPassWord() {
-    return passWord;
+
+  public String getPassword() {
+    return password;
   }
-  public void setPassWord(String passWord) {
-    this.passWord = passWord;
+
+  public void setPassword(String password) {
+    this.password = password;
   }
+
   public Double getAmount() {
     return amount;
   }
+
   public void setAmount(Double amount) {
     this.amount = amount;
   }
