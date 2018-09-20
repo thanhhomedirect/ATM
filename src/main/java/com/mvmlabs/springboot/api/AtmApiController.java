@@ -19,17 +19,6 @@ public class AtmApiController {
 
     public static final String REST_URL = "http://192.168.0.194:8080";
 
-    @RequestMapping(value = "/getAccounts/{keyword}", method = RequestMethod.GET)
-    public List<Account> getAccount(@PathVariable String keyword) {
-        RestTemplate restTemplate = new RestTemplate();
-        try {
-            List<Account> account = restTemplate.getForObject(REST_URL + "/accounts/search/" + keyword, List.class);
-            return account;
-        } catch (Exception e) {
-            throw e;
-        }
-    }
-
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Account login(@RequestBody LoginRequest request) {
         RestTemplate restTemplate = new RestTemplate();
@@ -65,7 +54,7 @@ public class AtmApiController {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL +"/transactions/withdrawal", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/transactions/withdrawal", HttpMethod.PUT, httpEntity, Account.class);
 
         return entity.getBody();
     }
@@ -76,7 +65,7 @@ public class AtmApiController {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL +"/transactions/deposit", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/transactions/deposit", HttpMethod.PUT, httpEntity, Account.class);
 
         return entity.getBody();
     }
@@ -87,7 +76,7 @@ public class AtmApiController {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL +"/transactions/transfer", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/transactions/transfer", HttpMethod.PUT, httpEntity, Account.class);
 
         return entity.getBody();
     }
@@ -97,6 +86,13 @@ public class AtmApiController {
         RestTemplate restTemplate = new RestTemplate();
         Iterable<TransactionHistory> transactionHistory = restTemplate.postForObject(REST_URL + "/transactions/show-history", request, Iterable.class);
         return transactionHistory;
+    }
+
+    @RequestMapping(value = "/search-account", method = RequestMethod.GET)
+    public Iterable<Account> getAccount(@RequestParam String q) {
+        RestTemplate restTemplate = new RestTemplate();
+        Iterable<Account> account = restTemplate.getForObject(REST_URL + "/accounts/search?q=" + q, Iterable.class);
+        return account;
     }
 }
 
