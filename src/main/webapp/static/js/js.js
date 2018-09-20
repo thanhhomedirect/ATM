@@ -13,6 +13,7 @@ function login() {
         console.log(data)
         if (data.username != null) {
             alert("Hello" + data.username);
+            id = data.id;
         } else {
             alert("fail");
         }
@@ -20,4 +21,3 @@ function login() {
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify(request))
 }
-
