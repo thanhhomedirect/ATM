@@ -36,7 +36,7 @@ public class AtmApiController {
         System.out.println(account);
         return account;
     }
-0
+
     @RequestMapping(value = "/accounts/detail/{id}", method = RequestMethod.GET)
     public Account accountDetail(@PathVariable Integer id) {
         RestTemplate restTemplate = new RestTemplate();
