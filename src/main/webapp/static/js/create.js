@@ -1,7 +1,7 @@
-function login() {
+function create() {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.open('POST', 'http://127.0.0.1:8090/api/login', true);
+    xhr.open('POST', 'http://127.0.0.1:8090/api/create', true);
     var request = {};
     request.username = document.getElementById("name").value;
     request.password = document.getElementById("pass").value;
@@ -12,9 +12,10 @@ function login() {
 
         console.log(data)
         if (data.username != null) {
-            window.location = 'http://127.0.0.1:8090/afterlogin'
+            alert("Hello " + data.username);
+            window.location = 'http://127.0.0.1:8090/login'
         } else {
-            alert("");
+            alert("Register Fail!");
         }
     }
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");

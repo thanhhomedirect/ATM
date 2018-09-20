@@ -15,7 +15,7 @@ import com.mvmlabs.springboot.model.Account;
 @RequestMapping("/api")
 public class AtmApiController {
 
-    public static final String REST_URL = "http://192.168.0.194:8090";
+    public static final String REST_URL = "http://192.168.0.194:8080";
 
     @RequestMapping(value = "/getAccounts/{keyword}", method = RequestMethod.GET)
     public List<Account> getAccount(@PathVariable String keyword) {
@@ -41,6 +41,13 @@ public class AtmApiController {
     public Account accountDetail(@PathVariable Integer id) {
         RestTemplate restTemplate = new RestTemplate();
         Account account = restTemplate.getForObject(REST_URL + "/accounts/show-account/" + id, Account.class);
+        return account;
+    }
+
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    public Account create(@RequestBody LoginRequest request) {
+        RestTemplate restTemplate = new RestTemplate();
+        Account account = restTemplate.postForObject(REST_URL + "/accounts/create", request, Account.class);
         return account;
     }
 }
