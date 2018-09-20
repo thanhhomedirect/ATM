@@ -14,7 +14,7 @@ function login() {
         if (data.username != null) {
             window.location = 'http://127.0.0.1:8090/afterlogin'
         } else {
-            alert("");
+            alert("abc");
         }
     }
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
