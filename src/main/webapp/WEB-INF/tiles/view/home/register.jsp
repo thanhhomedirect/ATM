@@ -1,33 +1,67 @@
+
+
 <div id="container">
     <div id="menu" class="blue-background">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">You should know</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-        <div id="register">
-            <a href="login.html">Login</a>
-        </div>
-    </div><!--menu end-->
-    <div id="content">
-        <h3>CREATE NEW ACCOUNT</h3>
-        <h4>For individual customers</h4>
-            <p>
-                <label for="name">Username:</label>
-                <input id="name" type="text" name="name" minlength="8" required placeholder="10 characters minimum">
-            </p>
-            <p>
-                <label for="pass">Password: </label>
-                <input id="pass" type="password" name="pass" minlength="8" required placeholder="8 characters minimum">
-            </p>
-            <p>
-                <a href="conditions.html"><input type="checkbox" name="services" value="design"><strong><em>I have read and agree to all terms and conditions</em></strong></a>
-            </p>
-            <p>
-                <button class="title" onclick="create()">Register</button>
-            </p>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="home"><strong><em>BBC<span class="yellow-text">Banking</span></em></strong></a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse navbar-right">
+                    <div class="form-group" style="float: left; margin: 5px; margin-top: 10px; display: block;">
+                        <input type="text" name="search" class="form-control" id="usr" placeholder="Search...">
+                    </div>
+                    <button type="submit" class="btn btn-warning" name="search">Search</button>
+                    <div class="btn-group">
+                        <a class="btn btn-info" href="register">Register</a>
+                    </div>
+                    <div class="btn">
+                        <button type="button" class="btn btn-primary">Login with Facebook</button>
+                    </div>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </div>
 
-    </div><!--content end-->
+    <div class="container" style="background: rgb(255, 255, 255);">
+        <div class="progress">
+            <div id="row" class="row">
+                <div class="col-sm-2"><a href="home.html"><strong>Home</strong></a></div>
+                <div class="col-sm-2"><a href="#"><strong>About Us</strong></a></div>
+                <div class="col-sm-2"><a href="#"><strong>You Should Know</strong></a></div>
+                <div class="col-sm-2"><a href="#"><strong>Contact Us</strong></a></div>
+                <div class="col-sm-2"><a href="#"><strong></strong></a></div>
+                <div class="col-sm-2"><a href="#"><strong></strong></a></div>
+            </div>
+        </div>
+        <div id="content" class="panel panel-default">
+
+            <h3>ELECTRONIC BANKING</h3>
+            <h4>For individual customers</h4>
+            <div class="well-lg">
+                <div class="form-group" style="padding-bottom: 5px">
+                    <label class="control-label col-sm-3" for="name" style="color: #1c478e; font-size: 17px;">Username:</label>
+                    <div class="col-xs-9">
+                        <input type="text" class="form-control" id="name" placeholder="Enter username" name="name">
+                    </div>
+                </div>
+                <br>
+                <div class="form-group" style="padding-bottom: 5px">
+                    <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
+                    <div class="col-xs-9">
+                        <input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12" style="margin: 10px 0 10px 2px;">
+                        <a href="conditions.html"><input type="checkbox" name="services" value="design"><strong><em>I have read and agree to all terms and conditions</em></strong></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <button type="button" class="btn btn-basic btn-block" onclick="create()">Register</button>
+            </div>
+        </div><!--content end-->
+    </div>
 
 </div><!--container end-->

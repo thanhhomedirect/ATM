@@ -12,9 +12,10 @@ function login() {
 
         console.log(data)
         if (data.username != null) {
+            localStorage.setItem("username", data.username)
             window.location = 'http://127.0.0.1:8090/afterlogin'
         } else {
-            alert("");
+            alert("Login fail!");
         }
     }
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");

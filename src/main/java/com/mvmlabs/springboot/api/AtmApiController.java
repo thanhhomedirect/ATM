@@ -15,7 +15,7 @@ import com.mvmlabs.springboot.model.Account;
 @RequestMapping("/api")
 public class AtmApiController {
 
-    public static final String REST_URL = "http://192.168.0.194:8080";
+    public static final String REST_URL = "http://192.168.0.232:8080";
 
     @RequestMapping(value = "/getAccounts/{keyword}", method = RequestMethod.GET)
     public List<Account> getAccount(@PathVariable String keyword) {

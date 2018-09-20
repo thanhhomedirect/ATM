@@ -1,24 +1,48 @@
 <div id="container">
     <div id="menu" class="blue-background">
-        <ul>
-            <li><a href="afterlogin">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">You should know</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </div><!--menu end-->
-    <div id="leftmenu">
-        <h3>Links</h3>
-        <ul>
-            <li><a href="#">Loans</a></li>
-            <li><a href="#">BBCbank cards</a></li>
-            <li><a href="#">Accounts</a></li>
-            <li><a href="#">E-Banking</a></li>
-            <li><a href="#">Saving Advices</a></li>
-        </ul>
-    </div><!--leftmenu end-->
-    <div id="content">
-        <p><strong><em>Hello world!!!</em></strong></p>
-    </div><!--content end-->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="home"><strong><em>BBC<span class="yellow-text">Banking</span></em></strong></a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse navbar-right">
+                    <div class="form-group" style="float: left; margin: 5px; margin-top: 10px; display: block;">
+                        <input type="text" name="search" class="form-control" id="usr" placeholder="Search...">
+                    </div>
+                    <button type="submit" class="btn btn-warning" name="search">Search</button>
+                    <div class="btn-group">
+                        <a class="btn btn-info" href="home" onclick="logout()">Logout</a>
+                    </div>
+                    <div class="btn">
+                        <button type="button" class="btn btn-primary">Login with Facebook</button>
+                    </div>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" style="background: rgb(255, 255, 255);">
+        <div class="progress">
+            <div id="row" class="row">
+                <div class="col-sm-2"><a href="home.html"><strong>Home</strong></a></div>
+                <div class="col-sm-2"><a href="#"><strong>About Us</strong></a></div>
+                <div class="col-sm-2"><a href="#"><strong>You Should Know</strong></a></div>
+                <div class="col-sm-2"><a href="#"><strong>Contact Us</strong></a></div>
+                <div class="col-sm-2"><a href="#"><strong></strong></a></div>
+                <div class="col-sm-2"><a href="#"><strong></strong></a></div>
+            </div>
+        </div>
+        <div id="leftmenu" class="col-sm-2">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="#">Loans</a></li>
+                <li><a href="#">BBCbank cards</a></li>
+                <li><a href="accounts">Accounts</a></li>
+                <li><a href="#">E-Banking</a></li>
+                <li><a href="#">Saving Advices</a></li>
+            </ul>
+        </div><!--leftmenu end-->
+
+    </div>
 
 </div><!--container end-->
