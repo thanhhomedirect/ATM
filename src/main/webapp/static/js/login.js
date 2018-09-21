@@ -1,3 +1,8 @@
+
+if (localStorage.getItem("id") != ""){
+    window.location = 'http://127.0.0.1:8090/afterlogin'
+}
+
 function login() {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
@@ -12,7 +17,8 @@ function login() {
 
         console.log(data)
         if (data.username != null) {
-            localStorage.setItem("username", data.username)
+            localStorage.setItem("id", data.id)
+            localStorage.setItem("user", data.username)
             window.location = 'http://127.0.0.1:8090/afterlogin'
         } else {
             alert("Login fail!");

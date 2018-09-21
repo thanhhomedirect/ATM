@@ -1,7 +1,7 @@
 function deposit() {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.open('PUT', 'http://localhost:8090/api/transactions/deposit', true);
+    xhr.open('PUT', 'http://127.0.0.1:8090/api/transactions/deposit', true);
     var request = {};
     request.id = localStorage.getItem("id");
     request.amount = document.getElementById("amount").value;
@@ -13,7 +13,7 @@ function deposit() {
         console.log(data)
         if (data.username != null) {
             alert("SUCCESS!");
-            window.location = 'http://127.0.0.1:8090/transactions'
+            window.location = 'http://127.0.0.1:8090/afterlogin'
         } else {
             alert("FAIL!");
         }

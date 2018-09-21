@@ -16,6 +16,8 @@
             <add-attribute value="/static/css/style.css"/>
         </put-list-attribute>
         <put-list-attribute name="scripts">
+            <add-attribute value="/static/js/jquery.js"/>
+            <add-attribute value="/static/js/bootstrap.js"/>
         </put-list-attribute>
     </definition>
 
@@ -25,6 +27,9 @@
         <put-attribute name="body" value="/WEB-INF/tiles/view/home/home.jsp"/>
         <put-list-attribute name="stylesheets" inherit="true">
         </put-list-attribute>
+        <put-list-attribute name="scripts" inherit="true">
+            <add-attribute value="/static/js/home.js"/>
+        </put-list-attribute>
     </definition>
 
     <definition name="site.afterlogin" extends="layout.basic">
@@ -33,7 +38,7 @@
         </put-list-attribute>
 
         <put-list-attribute name="scripts" inherit="true">
-        <add-attribute value="/static/js/afterlogin.js"/>
+            <add-attribute value="/static/js/afterlogin.js"/>
         </put-list-attribute>
 
     </definition>
@@ -43,7 +48,7 @@
         <put-list-attribute name="stylesheets" inherit="true">
         </put-list-attribute>
         <put-list-attribute name="scripts" inherit="true">
-            <add-attribute value="/static/js/js.js"/>
+            <add-attribute value="/static/js/login.js"/>
         </put-list-attribute>
     </definition>
 
@@ -62,11 +67,6 @@
 
     <definition name="site.greeting" extends="layout.basic">
         <put-attribute name="body" value="/WEB-INF/tiles/view/home/greeting.jsp"/>
-    </definition>
-
-    <definition name="site.accounts" extends="layout.basic">
-        <put-attribute name="body" value="/WEB-INF/tiles/view/home/accounts.jsp"/>
-        <put-list-attribute name="stylesheets" inherit="true"/>
     </definition>
 
     <definition name="site.account-detail" extends="layout.basic">

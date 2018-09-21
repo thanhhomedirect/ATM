@@ -1,12 +1,22 @@
+
+function confirmPass() {
+    var newpass = document.getElementById("newpass").value;
+    var confirmpass = document.getElementById("confirmpass").value;
+    if (newpass != confirmpass) {
+        document.getElementById("error").innerHTML = "Two passwords do not match";
+    } else {
+        document.getElementById("error").innerHTML = "OK";
+    }
+}
 function changePass() {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.open('PUT', 'http://localhost:8090/api/accounts/change-password', true);
+    xhr.open('PUT', 'http://127.0.0.1:8090/api/accounts/change-password', true);
     var request = {};
     request.id = localStorage.getItem("id");
-    request.oldpass = document.getElementById("oldpass").value;
-    request.newpass = document.getElementById("newpass").value;
-
+    request.oldPassword = document.getElementById("oldpass").value;
+    request.newPassword = document.getElementById("newpass").value;
+    console.log(request);
     xhr.onload = function () {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);

@@ -44,8 +44,12 @@ public class AtmApiController {
     @RequestMapping(value = "/accounts/change-password", method = RequestMethod.PUT)
     public Account changePassword(@RequestBody ChangePassRequest request) {
         RestTemplate restTemplate = new RestTemplate();
-        Account account = restTemplate.postForObject(REST_URL + "/accounts/change-password", request, Account.class);
-        return account;
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
+        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/accounts/change-password", HttpMethod.PUT, httpEntity, Account.class);
+
+        return entity.getBody();
     }
 
     @RequestMapping(value = "/transactions/withdrawal", method = RequestMethod.PUT)
