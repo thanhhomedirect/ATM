@@ -5,6 +5,9 @@
         <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
         <html>
         <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><tiles:getAsString name="title"/></title>
 
         <tilesx:useAttribute id="listCss" name="stylesheets" classname="java.util.List"/>
@@ -22,18 +25,11 @@
         <body>
         <!-- Header -->
         <tiles:insertAttribute name="header"/>
+
+        <tiles:insertAttribute name="body" />
+
         <!-- Body -->
-        <tiles:insertAttribute name="body"/>
-        <div id="leftmenu">
-        <h3>Links</h3>
-        <ul>
-        <li><a href="#">Loans</a></li>
-        <li><a href="#">BBCbank cards</a></li>
-        <li><a href="accounts">Accounts</a></li>
-        <li><a href="#">E-Banking</a></li>
-        <li><a href="#">Saving Advices</a></li>
-        </ul>
-        </div><!--leftmenu end-->
+
         <!-- Footer -->
         <tiles:insertAttribute name="footer"/>
 
