@@ -6,7 +6,7 @@ if (localStorage.getItem("id") != ""){
 function login() {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.open('POST', 'http://127.0.0.1:8090/api/login', true);
+    xhr.open('POST', 'http://localhost:8090/api/login', true);
     var request = {};
     request.username = document.getElementById("name").value;
     request.password = document.getElementById("pass").value;
