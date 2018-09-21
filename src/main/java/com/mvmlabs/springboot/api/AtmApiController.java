@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.mvmlabs.springboot.model.TransactionHistory;
 import com.mvmlabs.springboot.model.request.*;
+import org.springframework.data.domain.Page;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -47,7 +48,7 @@ public class AtmApiController {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/accounts/show-account", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/accounts/change-password/", HttpMethod.PUT, httpEntity, Account.class);
 
         return entity.getBody();
     }
@@ -86,9 +87,9 @@ public class AtmApiController {
     }
 
     @RequestMapping(value = "/transactions/show-history", method = RequestMethod.POST)
-    public Iterable<TransactionHistory> historyTransaction(@RequestBody SearchTransactionHistoryRequest request) {
+    public Page<TransactionHistory> historyTransaction(@RequestBody SearchTransactionHistoryRequest request) {
         RestTemplate restTemplate = new RestTemplate();
-        Iterable<TransactionHistory> transactionHistory = restTemplate.postForObject(REST_URL + "/transactions/show-history", request, Iterable.class);
+        Page<TransactionHistory> transactionHistory = restTemplate.postForObject(REST_URL + "/transactions/show-history", request, Page.class);
         return transactionHistory;
     }
 

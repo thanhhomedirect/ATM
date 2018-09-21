@@ -17,6 +17,10 @@
             <input type="password" name="newpass" id="newpass"/>
         </p>
         <p>
+            <label for="confirmpass">Confirm Password</label>
+            <input type="password" name="newpass" id="confirmpass" onblur="confirmPass()"/><span id="error"></span>
+        </p>
+        <p>
             <button class="title" onclick="changePass()">OK</button>
         </p>
 
