@@ -11,7 +11,12 @@
                     </div>
                     <button type="submit" class="btn btn-warning" name="search">Search</button>
                     <div class="btn-group">
-                        <a class="btn btn-info" href="home" onclick="logout()">Logout</a>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span id="user"></span> <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/accounts/detail">Information</a></li>
+                            <li><a href="/accounts/change-password">Chang Password</a></li>
+                            <li><a href="home" onclick="logout()">Logout</a></li>
+                        </ul>
                     </div>
                     <div class="btn">
                         <button type="button" class="btn btn-primary">Login with Facebook</button>
@@ -24,12 +29,15 @@
     <div class="container" style="background: rgb(255, 255, 255);">
         <div class="progress">
             <div id="row" class="row">
-                <div class="col-sm-2"><a href="home.html"><strong>Home</strong></a></div>
+                <div class="col-sm-2"><a href="home"><strong>Home</strong></a></div>
                 <div class="col-sm-2"><a href="#"><strong>About Us</strong></a></div>
                 <div class="col-sm-2"><a href="#"><strong>You Should Know</strong></a></div>
                 <div class="col-sm-2"><a href="#"><strong>Contact Us</strong></a></div>
                 <div class="col-sm-2"><a href="#"><strong></strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong></strong></a></div>
+                <div class="col-sm-2">
+
+                </div>
+
             </div>
         </div>
         <div id="leftmenu" class="col-sm-2">
@@ -37,7 +45,6 @@
             <ul>
                 <li><a href="#">Loans</a></li>
                 <li><a href="#">BBCbank cards</a></li>
-                <li><a href="accounts">Accounts</a></li>
                 <li><a href="#">E-Banking</a></li>
                 <li><a href="#">Saving Advices</a></li>
             </ul>

@@ -16,7 +16,6 @@ function changePass() {
     request.id = localStorage.getItem("id");
     request.oldPassword = document.getElementById("oldpass").value;
     request.newPassword = document.getElementById("newpass").value;
-
     xhr.onload = function () {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);

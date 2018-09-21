@@ -150,3 +150,14 @@ body {
     background-color: #5bc0de;
     color: #222222;
 }
+#info-table{
+    margin: 20px;
+}
+#info-table th{
+    background-color: #a6e1ec;
+    color: #000000;
+}
+#info-table td{
+    background-color: #cccccc;
+    color: #000000;
+}

@@ -25,7 +25,7 @@
 		<div class="container" style="background: rgb(255, 255, 255);">
 			<div class="progress">
 				<div id="row" class="row">
-					<div class="col-sm-2"><a href="home.html"><strong>Home</strong></a></div>
+					<div class="col-sm-2"><a href="home"><strong>Home</strong></a></div>
 					<div class="col-sm-2"><a href="#"><strong>About Us</strong></a></div>
 					<div class="col-sm-2"><a href="#"><strong>You Should Know</strong></a></div>
 					<div class="col-sm-2"><a href="#"><strong>Contact Us</strong></a></div>
@@ -38,7 +38,6 @@
 				<ul>
 					<li><a href="#">Loans</a></li>
 					<li><a href="#">BBCbank cards</a></li>
-					<li><a href="accounts">Accounts</a></li>
 					<li><a href="#">E-Banking</a></li>
 					<li><a href="#">Saving Advices</a></li>
 				</ul>

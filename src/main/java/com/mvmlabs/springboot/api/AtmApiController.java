@@ -48,7 +48,7 @@ public class AtmApiController {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/accounts/change-password/", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/accounts/change-password", HttpMethod.PUT, httpEntity, Account.class);
 
         return entity.getBody();
     }
