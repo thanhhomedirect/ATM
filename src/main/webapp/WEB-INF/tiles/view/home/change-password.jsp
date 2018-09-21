@@ -13,7 +13,12 @@
                     </div>
                     <button type="submit" class="btn btn-warning" name="search">Search</button>
                     <div class="btn-group">
-                        <a class="btn btn-info" href="register">Register</a>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span id="user"></span> <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/accounts/detail">Information</a></li>
+                            <li><a href="/accounts/change-password">Chang Password</a></li>
+                            <li><a href="home" onclick="logout()">Logout</a></li>
+                        </ul>
                     </div>
                     <div class="btn">
                         <button type="button" class="btn btn-primary">Login with Facebook</button>
@@ -61,7 +66,7 @@
                 </div>
             </div>
             <div class="col-lg-3" style="margin-top: 20px">
-                <button type="button" class="btn btn-basic btn-block" changePass()>OK</button>
+                <button type="button" class="btn btn-basic btn-block" onclick="changePass()">OK</button>
             </div>
 
             </div>
