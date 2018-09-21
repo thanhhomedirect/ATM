@@ -17,7 +17,7 @@ import com.mvmlabs.springboot.model.Account;
 @RequestMapping("/api")
 public class AtmApiController {
 
-    public static final String REST_URL = "http://192.168.0.232:8080";
+    public static final String REST_URL = "http://localhost:8080";
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Account login(@RequestBody LoginRequest request) {
@@ -44,8 +44,12 @@ public class AtmApiController {
     @RequestMapping(value = "/accounts/change-password", method = RequestMethod.PUT)
     public Account changePassword(@RequestBody ChangePassRequest request) {
         RestTemplate restTemplate = new RestTemplate();
-        Account account = restTemplate.postForObject(REST_URL + "/accounts/change-password", request, Account.class);
-        return account;
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
+        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/accounts/show-account", HttpMethod.PUT, httpEntity, Account.class);
+
+        return entity.getBody();
     }
 
     @RequestMapping(value = "/transactions/withdrawal", method = RequestMethod.PUT)

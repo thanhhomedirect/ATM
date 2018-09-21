@@ -4,8 +4,8 @@ function changePass() {
     xhr.open('PUT', 'http://localhost:8090/api/accounts/change-password', true);
     var request = {};
     request.id = localStorage.getItem("id");
-    request.oldpass = document.getElementById("oldpass").value;
-    request.newpass = document.getElementById("newpass").value;
+    request.oldPassword = document.getElementById("oldpass").value;
+    request.newPassword = document.getElementById("newpass").value;
 
     xhr.onload = function () {
         // begin accessing JSON data here
