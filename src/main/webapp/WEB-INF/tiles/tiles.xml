@@ -60,10 +60,54 @@
 
     <definition name="site.accounts" extends="layout.basic">
         <put-attribute name="body" value="/WEB-INF/tiles/view/home/accounts.jsp"/>
-        <put-list-attribute name="stylesheets" inherit="true">
-        </put-list-attribute>
+        <put-list-attribute name="stylesheets" inherit="true"/>
+    </definition>
+
+    <definition name="site.account-detail" extends="layout.basic">
+        <put-attribute name="body" value="/WEB-INF/tiles/view/home/account-detail.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true"/>
         <put-list-attribute name="scripts" inherit="true">
-            <add-attribute value="/static/js/accounts.js"/>
+            <add-attribute value="/static/js/account-detail.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="site.change-password" extends="layout.basic">
+        <put-attribute name="body" value="/WEB-INF/tiles/view/home/change-password.jsp" />
+        <put-list-attribute name="stylesheets" inherit="true"/>
+        <put-list-attribute name="scripts" inherit="true">
+            <add-attribute value="/static/js/change-password.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="site.deposit" extends="layout.basic">
+        <put-attribute name="body" value="/WEB-INF/tiles/view/home/deposit.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true"/>
+        <put-list-attribute name="scripts" inherit="true">
+            <add-attribute value="/static/js/deposit.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="site.withdrawal" extends="layout.basic">
+        <put-attribute name="body" value="/WEB-INF/tiles/view/home/withdrawal.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true"/>
+        <put-list-attribute name="scripts" inherit="true">
+            <add-attribute value="/static/js/withdrawal.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="site.transfer" extends="layout.basic">
+        <put-attribute name="body" value="/WEB-INF/tiles/view/home/transfer.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true"/>
+        <put-list-attribute name="scripts" inherit="true">
+            <add-attribute value="/static/js/transfer.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="site.show-history" extends="layout.basic">
+        <put-attribute name="body" value="/WEB-INF/tiles/view/home/show-history.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true"/>
+        <put-list-attribute name="scripts" inherit="true">
+            <add-attribute value="/static/js/show-history.js"/>
         </put-list-attribute>
     </definition>
 </tiles-definitions>

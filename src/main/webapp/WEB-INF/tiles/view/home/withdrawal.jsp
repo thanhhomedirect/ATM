@@ -8,7 +8,12 @@
         </ul>
     </div><!--menu end-->
     <div id="content">
-        <h3><a href="accounts/detail">Your Account Info</a></h3>
-        <h3><a href="accounts/change-password">Change Your Password</a></h3>
-    </div><!--content end-->
+        <p>
+            <label for="amount">Money</label>
+            <input type="number" name="amount" id="amount"/>
+        </p>
+        <p>
+            <button class="title" onclick="withdrawal()">OK</button>
+        </p>
+    </div>
 </div>

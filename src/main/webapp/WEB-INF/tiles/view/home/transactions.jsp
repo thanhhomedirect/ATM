@@ -7,8 +7,11 @@
             <li><a href="#">Contact Us</a></li>
         </ul>
     </div><!--menu end-->
+
     <div id="content">
-        <h3><a href="accounts/detail">Your Account Info</a></h3>
-        <h3><a href="accounts/change-password">Change Your Password</a></h3>
-    </div><!--content end-->
+        <h3><a href="transacntion/deposit">Deposit</a></h3>
+        <h3><a href="transacntion/withdrawlal">Withdrawal</a></h3>
+        <h3><a href="transacntion/transfer">Transfer</a></h3>
+        <h3><a href="transactions/show-history">Show History</a></h3>
+    </div>
 </div>

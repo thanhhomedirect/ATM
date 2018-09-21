@@ -10,9 +10,13 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 @RequestMapping("/accounts")
 public class AccountController {
+
     @RequestMapping(value = "/detail", method = RequestMethod.GET)
-    public String detail(@PathVariable Integer id) {
-        return "site.accounts-detail";
+    public String detail() { return "site.account-detail"; }
+
+    @RequestMapping(value = "/change-password", method = RequestMethod.GET)
+    public String changePass() {
+        return "site.change-password";
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
