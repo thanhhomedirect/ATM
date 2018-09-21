@@ -18,7 +18,7 @@ function login() {
         console.log(data)
         if (data.username != null) {
             localStorage.setItem("id", data.id)
-            localStorage.setItem("user", data.username)
+            localStorage.setItem("username", data.username)
             window.location = 'http://127.0.0.1:8090/afterlogin'
         } else {
             alert("Login fail!");

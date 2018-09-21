@@ -150,14 +150,21 @@ body {
     background-color: #5bc0de;
     color: #222222;
 }
-#info-table{
-    margin: 20px;
-}
-#info-table th{
+.infor{
+    color: #2e6da4;
     background-color: #a6e1ec;
-    color: #000000;
+    border: #5bc0de solid 2px;
+    border-radius: 3px ;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 20px;
+    width: 900px;
+    height: 250px;
+    float: left;
+    text-align: center;
+    font-size: 30px;
 }
-#info-table td{
-    background-color: #cccccc;
-    color: #000000;
+.infor span{
+    padding: 10px;
+
 }

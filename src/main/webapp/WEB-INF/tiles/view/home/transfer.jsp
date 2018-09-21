@@ -1,37 +1,10 @@
-<%--<div id="container">--%>
-    <%--<div id="menu" class="blue-background">--%>
-        <%--<ul>--%>
-            <%--<li><a href="afterlogin">Home</a></li>--%>
-            <%--<li><a href="#">About Us</a></li>--%>
-            <%--<li><a href="#">You should know</a></li>--%>
-            <%--<li><a href="#">Contact Us</a></li>--%>
-        <%--</ul>--%>
-    <%--</div><!--menu end-->--%>
-    <%--<div id="content">--%>
-        <%--<p>--%>
-            <%--<label for="toaccount">Receiver AccountNumber</label>--%>
-            <%--<input type="number" name="toaccount" id="toaccount"/>--%>
-        <%--</p>--%>
-        <%--<p>--%>
-            <%--<label for="contenttransfer">Content</label>--%>
-            <%--<input type="text" name="content" id="contenttransfer"/>--%>
-        <%--</p>--%>
-        <%--<p>--%>
-            <%--<label for="amount">Money</label>--%>
-            <%--<input type="number" name="amount" id="amount"/>--%>
-        <%--</p>--%>
-        <%--<p>--%>
-            <%--<button class="title" onclick="transfer()">OK</button>--%>
-        <%--</p>--%>
-    <%--</div>--%>
-<%--</div>--%>
 
 <div id="container">
     <div id="menu" class="blue-background">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="home"><strong><em>BBC<span
+                    <a class="navbar-brand" href="../home"><strong><em>BBC<span
                             class="yellow-text">Banking</span></em></strong></a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse navbar-right">
@@ -45,7 +18,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/accounts/detail">Information</a></li>
                             <li><a href="/accounts/change-password">Change Password</a></li>
-                            <li><a href="home" onclick="logout()">Logout</a></li>
+                            <li><a href="../home" onclick="logout()">Logout</a></li>
                         </ul>
                     </div>
                     <div class="btn">
@@ -59,7 +32,7 @@
     <div class="container" style="background: rgb(255, 255, 255);">
         <div class="progress">
             <div id="row" class="row">
-                <div class="col-sm-2"><a href="home.html"><strong>Home</strong></a></div>
+                <div class="col-sm-2"><a href="../home"><strong>Home</strong></a></div>
                 <div class="col-sm-2"><a href="#"><strong>About Us</strong></a></div>
                 <div class="col-sm-2"><a href="#"><strong>You Should Know</strong></a></div>
                 <div class="col-sm-2"><a href="#"><strong>Contact Us</strong></a></div>
@@ -90,12 +63,12 @@
                     <label class="control-label col-sm-3" for="amount"
                            style="color: #1c478e; font-size: 17px;">Money</label>
                     <div class="col-xs-9">
-                        <input type="text" class="form-control" id="amount" placeholder="Enter Money" name="amount">
+                        <input type="number" class="form-control" id="amount" placeholder="Enter Money" name="amount" onkeydown="enterdown(event)">
                     </div>
                 </div>
             </div>
             <div class="col-lg-3" style="margin-top: 20px">
-                <button type="button" class="btn btn-basic btn-block" onclick="transfer()">OK</button>
+                <button type="button" class="btn btn-basic btn-block" onclick="transfer()" id="enter">OK</button>
             </div>
 
         </div>

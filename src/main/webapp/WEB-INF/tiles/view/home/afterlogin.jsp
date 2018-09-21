@@ -48,7 +48,7 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/transactions/deposit">Deposits</a></li>
                         <li><a href="/transactions/withdrawal">Withdrawal</a></li>
-                        <li><a href="/transactions/transfer" onclick="logout()">Transfer</a></li>
+                        <li><a href="/transactions/transfer">Transfer</a></li>
                     </ul>
                 </div>
 

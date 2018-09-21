@@ -76,7 +76,7 @@ public class AtmApiController {
     }
 
     @RequestMapping(value = "/transactions/transfer", method = RequestMethod.PUT)
-    public Account withdraw(@RequestBody TransferRequest request) {
+    public Account transfer(@RequestBody TransferRequest request) {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);

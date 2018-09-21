@@ -49,7 +49,7 @@
                 <div class="form-group" style="padding-bottom: 5px">
                     <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
                     <div class="col-xs-9">
-                        <input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass">
+                        <input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass" onkeydown="enterdown(event)">
                     </div>
                 </div>
                 <div class="form-group">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <button type="button" class="btn btn-basic btn-block" onclick="create()">Register</button>
+                <button type="button" class="btn btn-basic btn-block" onclick="create()" id="enter">Register</button>
             </div>
         </div><!--content end-->
     </div>
