@@ -39,6 +39,7 @@
                 <div class="col-sm-2"><a href="#"><strong></strong></a></div>
             </div>
         </div>
+
         <div id="content" class="panel panel-default">
 
             <h3>ELECTRONIC BANKING</h3>
