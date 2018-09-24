@@ -7,7 +7,7 @@
     <div class="container" style="background-color: white">
         <div class="progress">
             <div id="row" class="row">
-                <div class="col-sm-2"><a href="home"><strong>Home</strong></a></div>
+                <div class="col-sm-2"><a href="../home"><strong>Home</strong></a></div>
                 <div class="col-sm-2"><a href="#"><strong>About Us</strong></a></div>
                 <div class="col-sm-2"><a href="#"><strong>You Should Know</strong></a></div>
                 <div class="col-sm-2"><a href="#"><strong>Contact Us</strong></a></div>
