@@ -23,7 +23,6 @@
 
     <div class="container" style="background-color: white;" >
         <div id="content" class="panel panel-default">
-
             <h3>ELECTRONIC BANKING</h3>
             <h4>For individual customers</h4>
             <div>

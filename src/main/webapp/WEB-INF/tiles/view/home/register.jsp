@@ -13,7 +13,7 @@
                     </div>
                     <button type="submit" class="btn btn-warning" name="search">Search</button>
                     <div class="btn-group">
-                        <a class="btn btn-info" href="register">Register</a>
+                        <a class="btn btn-info" href="login">Login</a>
                     </div>
                     <div class="btn">
                         <button type="button" class="btn btn-primary">Login with Facebook</button>
