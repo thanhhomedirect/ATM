@@ -1,8 +1,13 @@
-function logout() {
-    localStorage.setItem("id","");
-    localStorage.setItem("username","");
+if (localStorage.getItem("id") == "") {
+    document.getElementById("leftmenu").style.display = "none";
 }
-if(localStorage.getItem("username") != ""){
+
+function logout() {
+    localStorage.setItem("id", "");
+    localStorage.setItem("username", "");
+}
+
+if (localStorage.getItem("username") != "") {
     document.getElementById("user").innerHTML = localStorage.getItem("username");
 }
 
