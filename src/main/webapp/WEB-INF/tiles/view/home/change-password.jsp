@@ -28,17 +28,6 @@
     </div>
 
     <div class="container" style="background: rgb(255, 255, 255);">
-        <div class="progress">
-            <div id="row" class="row">
-                <div class="col-sm-2"><a href="../afterlogin"><strong>Home</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong>About Us</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong>You Should Know</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong>Contact Us</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong></strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong></strong></a></div>
-            </div>
-        </div>
-
         <div id="content" class="panel panel-default">
 
             <h3>ELECTRONIC BANKING</h3>

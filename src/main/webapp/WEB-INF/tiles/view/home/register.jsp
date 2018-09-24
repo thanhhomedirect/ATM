@@ -24,16 +24,6 @@
     </div>
 
     <div class="container" style="background: rgb(255, 255, 255);">
-        <div class="progress">
-            <div id="row" class="row">
-                <div class="col-sm-2"><a href="home.html"><strong>Home</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong>About Us</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong>You Should Know</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong>Contact Us</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong></strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong></strong></a></div>
-            </div>
-        </div>
         <div id="content" class="panel panel-default">
 
             <h3>ELECTRONIC BANKING</h3>
@@ -41,14 +31,14 @@
             <div class="well-lg">
                 <div class="form-group" style="padding-bottom: 5px">
                     <label class="control-label col-sm-3" for="name" style="color: #1c478e; font-size: 17px;">Username:</label>
-                    <div class="col-xs-5">
+                    <div class="col-xs-9">
                         <input type="text" class="form-control" id="name" placeholder="Enter username" required name="name">
                     </div>
                 </div>
-                <br><br>
+                <br>
                 <div class="form-group" style="padding-bottom: 5px">
                     <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
-                    <div class="col-xs-5">
+                    <div class="col-xs-9">
                         <input type="password" class="form-control" id="pass" placeholder="Enter password" minlength="6" name="pass" required ="true" onkeydown="enterdown(event)">
                     </div>
                 </div>

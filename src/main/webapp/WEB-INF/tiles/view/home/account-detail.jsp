@@ -29,80 +29,19 @@
     </div>
 
     <div class="container" style="background: rgb(255, 255, 255);">
-        <div class="progress">
-            <div id="row" class="row">
-                <div class="col-sm-2"><a href="../afterlogin"><strong>Home</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong>About Us</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong>You Should Know</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong>Contact Us</strong></a></div>
-                <div class="col-sm-2"><a href="#"><strong></strong></a></div>
-                <div class="col-sm-2">
-
-                </div>
-
-            </div>
-            <div id="leftmenu" class="col-sm-2">
-                <h3>Links</h3>
-                <ul>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Transactions  <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="/transactions/deposit">Deposits</a></li>
-                            <li><a href="/transactions/withdrawal">Withdrawal</a></li>
-                            <li><a href="/transactions/transfer">Transfer</a></li>
-                        </ul>
-                    </div>
-
-                    <li><a href="#">BBCbank cards</a></li>
-                    <li><a href="#">E-Banking</a></li>
-                    <li><a href="#">Saving Advices</a></li>
-                </ul>
-            </div><!--leftmenu end-->
-        </div>
-        <div id="leftmenu" class="col-sm-2">
-            <h3>Links</h3>
-            <ul>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Transactions  <span class="caret"></span></button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="/transactions/deposit">Deposits</a></li>
-                        <li><a href="/transactions/withdrawal">Withdrawal</a></li>
-                        <li><a href="/transactions/transfer">Transfer</a></li>
-                    </ul>
-                </div>
-
-                <li><a href="#">BBCbank cards</a></li>
-                <li><a href="#">E-Banking</a></li>
-                <li><a href="#">Saving Advices</a></li>
-            </ul>
-        </div><!--leftmenu end-->
-        <div class="col-md-10">
-            <%--<table id="info-table" class="table table-bodered">--%>
-                <%--<tr>--%>
-                    <%--<th>Username</th>--%>
-                    <%--<th>Account Number</th>--%>
-                    <%--<th>Amount</th>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                    <%--<td id="username"></td>--%>
-                    <%--<td id="accountNumber"></td>--%>
-                    <%--<td id="amount"></td>--%>
-                <%--</tr>--%>
-                <div class="infor">
-                    <div class="col-sm-3"></div>
+        <div id="content" style="font-size: 28px;">
+            <div class="col-md-10">
                     <div class="col-sm-6">
-                        <span>Username: </span><span id="username"></span><br>
-                        <span>Account Number: </span><span id="accountNumber"></span><br>
-                        <span>Amount: </span><span id="amount"></span><br>
+                        <span>Username</span>
+                        <span>Account Number</span>
+                        <span>Amount</span>
                     </div>
-                    <div class="col-sm-3"></div>
-                </div>
-
-            </table>
+                    <div class="col-sm-6">
+                        <span id="username"></span><br>
+                        <span id="accountNumber"></span><br>
+                        <span id="amount"></span><br>
+                    </div>
+            </div>
         </div>
     </div>
-
-    </div>
-
-
 </div><!--container end-->

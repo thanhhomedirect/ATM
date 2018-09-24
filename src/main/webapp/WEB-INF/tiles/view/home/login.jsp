@@ -21,7 +21,7 @@
         </nav>
     </div>
 
-    <div class="container" style="margin-top: 1%;background-color: white; padding-right: 1%; margin-bottom: 1%" >
+    <div class="container" style="background-color: white;" >
         <div id="content" class="panel panel-default">
 
             <h3>ELECTRONIC BANKING</h3>
