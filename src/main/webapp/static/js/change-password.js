@@ -34,7 +34,7 @@ function changePass() {
             alert("SUCCESS!");
             window.location = 'http://127.0.0.1:8090/afterlogin'
         } else {
-            alert("FAIL!");
+            alert(data.message);
         }
     }
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");

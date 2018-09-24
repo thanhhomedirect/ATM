@@ -1,4 +1,20 @@
-function create() {
+document.getElementById("pass").addEventListener('input', function (evt) {
+    confirmPass();
+});
+document.getElementById("confirm").addEventListener('input', function (evt) {
+    confirmPass();
+});
+
+function confirmPass() {
+    var pass = document.getElementById("pass").value;
+    var confirm = document.getElementById("confirm").value;
+    if (pass != confirm) {
+        document.getElementById("error").innerHTML = "Two passwords do not match";
+    } else {
+        document.getElementById("error").innerHTML = "";
+    }
+}
+function register() {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
     xhr.open('POST', 'http://127.0.0.1:8090/api/create', true);

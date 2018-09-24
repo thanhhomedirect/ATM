@@ -58,7 +58,7 @@
         <put-list-attribute name="stylesheets" inherit="true">
         </put-list-attribute>
         <put-list-attribute name="scripts" inherit="true">
-            <add-attribute value="/static/js/create.js"/>
+            <add-attribute value="/static/js/register.js"/>
         </put-list-attribute>
     </definition>
 
