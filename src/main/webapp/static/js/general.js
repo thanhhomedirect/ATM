@@ -2,7 +2,9 @@ function logout() {
     localStorage.setItem("id","");
     localStorage.setItem("username","");
 }
-document.getElementById("user").innerHTML = localStorage.getItem("username");
+if(localStorage.getItem("username") != ""){
+    document.getElementById("user").innerHTML = localStorage.getItem("username");
+}
 
 function enterdown(event) {
     var x = event.keyCode || event.which;

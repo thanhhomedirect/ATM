@@ -41,25 +41,25 @@
             <div class="well-lg">
                 <div class="form-group" style="padding-bottom: 5px">
                     <label class="control-label col-sm-3" for="name" style="color: #1c478e; font-size: 17px;">Username:</label>
-                    <div class="col-xs-9">
-                        <input type="text" class="form-control" id="name" placeholder="Enter username" name="name">
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" id="name" placeholder="Enter username" required name="name">
                     </div>
                 </div>
-                <br>
+                <br><br>
                 <div class="form-group" style="padding-bottom: 5px">
                     <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
-                    <div class="col-xs-9">
-                        <input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass" onkeydown="enterdown(event)">
+                    <div class="col-xs-5">
+                        <input type="password" class="form-control" id="pass" placeholder="Enter password" minlength="6" name="pass" required ="true" onkeydown="enterdown(event)">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-12" style="margin: 10px 0 10px 2px;">
-                        <a href="conditions.html"><input type="checkbox" name="services" value="design"><strong><em>I have read and agree to all terms and conditions</em></strong></a>
+                        <a href="conditions.html"><input type="checkbox" name="services" required value="design"><strong><em>I have read and agree to all terms and conditions</em></strong></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3">
-                <button type="button" class="btn btn-basic btn-block" onclick="create()" id="enter">Register</button>
+                <button type="submit" class="btn btn-basic btn-block" onclick="create()" id="enter">Register</button>
             </div>
         </div><!--content end-->
     </div>

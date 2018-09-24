@@ -10,6 +10,7 @@
         <put-attribute name="title" value="BBC Banking"/>
         <put-attribute name="header" value="/WEB-INF/tiles/view/header.jsp"/>
         <put-attribute name="body" value=""/>
+        <!--<put-attribute name="progress" value="/WEB-INF/tiles/view/progress.jsp"/>-->
         <put-attribute name="footer" value="/WEB-INF/tiles/view/footer.jsp"/>
         <put-list-attribute name="stylesheets">
             <add-attribute value="/static/css/bootstrap.css"/>
@@ -36,10 +37,10 @@
     <definition name="site.afterlogin" extends="layout.basic">
         <put-attribute name="body" value="/WEB-INF/tiles/view/home/afterlogin.jsp"/>
         <put-list-attribute name="stylesheets" inherit="true">
-            <add-attribute value="/static/js/afterlogin.js"/>
         </put-list-attribute>
 
         <put-list-attribute name="scripts" inherit="true">
+            <add-attribute value="/static/js/afterlogin.js"/>
         </put-list-attribute>
 
     </definition>

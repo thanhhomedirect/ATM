@@ -46,21 +46,21 @@
                 <div class="form-group" class="well">
                     <label class="control-label col-sm-3" for="oldpass" style="color: #1c478e; font-size: 17px;">Old Password:</label>
                     <div class="col-xs-9">
-                        <input type="text" class="form-control" id="oldpass" placeholder="Enter Old Password" name="name">
+                        <input type="text" class="form-control" id="oldpass" placeholder="Enter Old Password" required name="name">
                     </div>
                 </div>
                 <br>
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="newpass" style="color: #1c478e; font-size: 17px;">New Password:</label>
                     <div class="col-xs-9">
-                        <input type="password" class="form-control" id="newpass" placeholder="Enter new password" name="newpass">
+                        <input type="password" class="form-control" id="newpass" placeholder="Enter new password" required name="newpass">
                     </div>
                 </div>
                 <br>
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="confirmpass" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
                     <div class="col-xs-9">
-                        <input type="password" class="form-control" id="confirmpass" name="newpass" onblur="confirmPass()" placeholder="Confirm new password"><span id="error"></span>
+                        <input type="password" class="form-control" id="confirmpass" name="newpass" required onblur="confirmPass()" placeholder="Confirm new password"><span id="error"></span>
                     </div>
                 </div>
             </div>
