@@ -41,6 +41,23 @@
                 </div>
 
             </div>
+            <div id="leftmenu" class="col-sm-2">
+                <h3>Links</h3>
+                <ul>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Transactions  <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/transactions/deposit">Deposits</a></li>
+                            <li><a href="/transactions/withdrawal">Withdrawal</a></li>
+                            <li><a href="/transactions/transfer">Transfer</a></li>
+                        </ul>
+                    </div>
+
+                    <li><a href="#">BBCbank cards</a></li>
+                    <li><a href="#">E-Banking</a></li>
+                    <li><a href="#">Saving Advices</a></li>
+                </ul>
+            </div><!--leftmenu end-->
         </div>
         <div id="leftmenu" class="col-sm-2">
             <h3>Links</h3>

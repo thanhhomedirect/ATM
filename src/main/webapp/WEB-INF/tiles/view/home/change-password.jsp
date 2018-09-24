@@ -38,6 +38,7 @@
                 <div class="col-sm-2"><a href="#"><strong></strong></a></div>
             </div>
         </div>
+
         <div id="content" class="panel panel-default">
 
             <h3>ELECTRONIC BANKING</h3>
@@ -46,7 +47,7 @@
                 <div class="form-group" class="well">
                     <label class="control-label col-sm-3" for="oldpass" style="color: #1c478e; font-size: 17px;">Old Password:</label>
                     <div class="col-xs-9">
-                        <input type="text" class="form-control" id="oldpass" placeholder="Enter Old Password" name="name">
+                        <input type="password" class="form-control" id="oldpass" placeholder="Enter Old Password" name="name">
                     </div>
                 </div>
                 <br>
@@ -60,12 +61,12 @@
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="confirmpass" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
                     <div class="col-xs-9">
-                        <input type="password" class="form-control" id="confirmpass" name="newpass" onblur="confirmPass()" placeholder="Confirm new password"><span id="error"></span>
+                        <input type="password" class="form-control" id="confirmpass" name="newpass" placeholder="Confirm new password"><span id="error"></span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3" style="margin-top: 20px">
-                <button type="button" class="btn btn-basic btn-block" onclick="changePass()">OK</button>
+                <button id = "button" type="button" class="btn btn-basic btn-block" onclick="changePass()">OK</button>
             </div>
 
             </div>

@@ -12,7 +12,7 @@ xhr.onload = function (ev) {
     var amount = document.getElementById("amount");
     username.innerHTML = data.username;
     accountNumber.innerHTML = data.accountNumber;
-    amount.innerHTML = data.amount
+    amount.innerHTML = data.amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND";
 }
 
 xhr.send();

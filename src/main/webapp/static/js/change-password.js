@@ -1,10 +1,19 @@
+document.getElementById("newpass").addEventListener('input', function (evt) {
+    confirmPass();
+});
+document.getElementById("confirmpass").addEventListener('input', function (evt) {
+    confirmPass();
+});
+
 function confirmPass() {
     var newpass = document.getElementById("newpass").value;
     var confirmpass = document.getElementById("confirmpass").value;
     if (newpass != confirmpass) {
         document.getElementById("error").innerHTML = "Two passwords do not match";
+        document.getElementById("button").disabled = true;
     } else {
-        document.getElementById("error").innerHTML = "OK";
+        document.getElementById("error").innerHTML = "";
+        document.getElementById("button").disabled = false;
     }
 }
 
@@ -23,7 +32,7 @@ function changePass() {
         console.log(data)
         if (data.username != null) {
             alert("SUCCESS!");
-            window.location = 'http://127.0.0.1:8090/accounts'
+            window.location = 'http://127.0.0.1:8090/afterlogin'
         } else {
             alert("FAIL!");
         }
