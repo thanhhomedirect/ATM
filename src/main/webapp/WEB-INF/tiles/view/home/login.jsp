@@ -33,6 +33,7 @@
                     </div>
                 </div>
                 <br>
+                <br>
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
                     <div class="col-xs-9">
@@ -44,9 +45,9 @@
                 <button id="enter" type="button" class="btn btn-basic btn-block" onclick="login()">Login</button>
             </div>
             <div class = "col-lg-12">
-                <h5><a href="forgetpassword.html">Forgot Password</a></h5>
-                <h5><a href="conditions.html">Conditions and terms</a></h5>
-                <h5><a href="guide.html">Guide to secure transactions</a></h5>
+                <h5><a href="forgotpassword">Forgot Password</a></h5>
+                <h5><a href="conditions">Conditions and terms</a></h5>
+                <h5><a href="guide">Guide to secure transactions</a></h5>
             </div>
         </div><!--content end-->
     </div>

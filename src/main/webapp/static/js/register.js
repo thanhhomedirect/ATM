@@ -48,7 +48,7 @@ function register() {
     }
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.open('POST', 'http://127.0.0.1:8090/api/create', true);
+    xhr.open('POST', 'http://localhost:8090/api/create', true);
     var request = {
         username: username,
         password: pass
@@ -57,10 +57,9 @@ function register() {
     xhr.onload = function () {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
-
         if (data.username != null) {
             alert("Hello " + data.username);
-            window.location = 'http://127.0.0.1:8090/login'
+            window.location = 'http://localhost:8090/login'
         } else {
             alert(data.message);
         }
