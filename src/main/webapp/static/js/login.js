@@ -7,9 +7,10 @@ function login() {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
     xhr.open('POST', 'http://127.0.0.1:8090/api/login', true);
-    var request = {};
-    request.username = document.getElementById("name").value;
-    request.password = document.getElementById("pass").value;
+    var request = {
+        username: document.getElementById("name").value,
+        password: document.getElementById("pass").value
+    };
 
     xhr.onload = function () {
         // begin accessing JSON data here
@@ -19,9 +20,9 @@ function login() {
         if (data.username != null) {
             localStorage.setItem("id", data.id)
             localStorage.setItem("username", data.username)
-            window.location = 'http://127.0.0.1:8090/afterlogin'
+            window.location = 'http://127.0.0.1:8090/accounts/detail'
         } else {
-            alert("Login fail!");
+            alert(data.message);
         }
     }
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");

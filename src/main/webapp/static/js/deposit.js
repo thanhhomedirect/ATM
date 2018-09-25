@@ -9,9 +9,11 @@ function deposit() {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
     xhr.open('PUT', 'http://127.0.0.1:8090/api/transactions/deposit', true);
-    var request = {};
-    request.id = localStorage.getItem("id");
-    request.amount = document.getElementById("amount").value;
+
+    var request = {
+        id: localStorage.getItem("id"),
+        amount: document.getElementById("amount").value
+    };
 
     xhr.onload = function () {
         // begin accessing JSON data here
@@ -20,7 +22,7 @@ function deposit() {
         console.log(data)
         if (data.username != null) {
             alert("SUCCESS!");
-            window.location = 'http://127.0.0.1:8090/afterlogin'
+            window.location = 'http://127.0.0.1:8090/accounts/detail'
         } else {
             alert("FAIL!");
         }
