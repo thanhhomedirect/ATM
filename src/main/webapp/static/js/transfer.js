@@ -14,8 +14,9 @@ function transfer() {
     request.toAccountNumber = document.getElementById("toAccount").value;
     request.content = document.getElementById("contenttransfer").value;
     request.amount = document.getElementById("amount").value;
+    request.password = document.getElementById("confirm").value;
 
-    console.log(request)
+    console.log(JSON.stringify(request))
     xhr.onload = function () {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);

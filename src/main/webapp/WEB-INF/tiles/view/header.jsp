@@ -21,13 +21,27 @@
     <div id="leftmenu" class="col-sm-2">
         <h3>Links</h3>
         <ul>
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Transactions  <span class="caret"></span></button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="/transactions/deposit">Deposits</a></li>
-                    <li><a href="/transactions/withdrawal">Withdrawal</a></li>
-                    <li><a href="/transactions/transfer">Transfer</a></li>
-                </ul>
+            <%--<div class="btn-group">--%>
+                <%--<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Transactions  <span class="caret"></span></button>--%>
+                <%--<ul class="dropdown-menu" role="menu">--%>
+                    <%--<li><a href="/transactions/deposit">Deposits</a></li>--%>
+                    <%--<li><a href="/transactions/withdrawal">Withdrawal</a></li>--%>
+                    <%--<li><a href="/transactions/transfer">Transfer</a></li>--%>
+                <%--</ul>--%>
+            <%--</div>--%>
+            <div class="panel-group">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1">Transactions  <span class="caret"></span></a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel"><a href="/transactions/deposit">Deposits</a></div>
+                        <div class="panel"><a href="/transactions/withdrawal">Withdrawal</a></div>
+                        <div class="panel"><a href="/transactions/transfer">Transfer</a></div>
+                    </div>
+                </div>
             </div>
             <li><a href="#">BBCbank cards</a></li>
             <li><a href="#">E-Banking</a></li>

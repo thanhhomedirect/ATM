@@ -8,13 +8,22 @@ public class TransferRequest {
 //	private String fromAccountNumber;
 	private Double amount;
 	private String content;
+	private String password;
 
 	public String getToAccountNumber() {
 		return toAccountNumber;
 	}
 
-	public void setToAccountNumber(String toAccountNumber) {
-		this.toAccountNumber = toAccountNumber;
+	public void setToAccountNumber(String password) {
+		this.password = password;
+	}
+
+	public String getPassword() {
+		return toAccountNumber;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public int getFromId() {
@@ -40,6 +49,7 @@ public class TransferRequest {
 	public void setContent(String content) {
 		this.content = content;
 	}
+
 
 //	public String getToAccountNumber() {
 //		return toAccountNumber;

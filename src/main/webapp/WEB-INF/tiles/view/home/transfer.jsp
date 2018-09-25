@@ -56,8 +56,16 @@
                     <div class="col-xs-9">
                         <input type="number" class="form-control" id="amount" placeholder="Enter Money" name="amount" onkeydown="enterdown(event)">
                     </div>
+
                 </div>
+
                 <br>
+                <div class="form-group" style="padding-bottom: 5px">
+                    <label class="control-label col-sm-3" for="confirm" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
+                    <div class="col-xs-9">
+                        <input type="password" class="form-control" id="confirm" placeholder="Confirm password" name="confirm" onkeydown="enterdown(event)"><span id="error"></span>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-3" style="margin-top: 20px">
                 <button type="button" class="btn btn-basic btn-block" onclick="transfer()" id="enter">OK</button>

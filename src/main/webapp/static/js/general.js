@@ -1,4 +1,4 @@
-if (localStorage.getItem("id") == "") {
+if (localStorage.getItem("id") == "" || localStorage.getItem("id") == null) {
     document.getElementById("leftmenu").style.display = "none";
 }
 
