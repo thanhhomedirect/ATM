@@ -1,11 +1,10 @@
-
-
 <div id="container">
     <div id="menu" class="blue-background">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="home"><strong><em>BBC<span class="yellow-text">Banking</span></em></strong></a>
+                    <a class="navbar-brand" href="home"><strong><em>BBC<span
+                            class="yellow-text">Banking</span></em></strong></a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse navbar-right">
                     <div class="form-group" style="float: left; margin: 5px; margin-top: 10px; display: block;">
@@ -30,31 +29,37 @@
             <h4>For individual customers</h4>
             <div class="well-lg">
                 <div class="form-group" style="padding-bottom: 5px">
-                    <label class="control-label col-sm-3" for="name" style="color: #1c478e; font-size: 17px;">Username:</label>
+                    <label class="control-label col-sm-3" for="name"
+                           style="color: #1c478e; font-size: 17px;">Username:</label>
                     <div class="col-xs-9">
-                        <input type="text" class="form-control" id="name" placeholder="Enter username" required name="name">
+                        <input type="text" class="form-control" id="name" placeholder="Enter username" required
+                               name="name">
                     </div>
                 </div>
                 <br>
                 <div class="form-group" style="padding-bottom: 5px">
-                    <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
+                    <label class="control-label col-sm-3" for="pass"
+                           style="color: #1c478e; font-size: 17px;">Password:</label>
                     <div class="col-xs-9">
-                        <input type="password" class="form-control" id="pass" placeholder="Enter password" minlength="6" name="pass" required ="true" onkeydown="enterdown(event)">
+                        <input type="password" class="form-control" id="pass" placeholder="Enter password" minlength="6"
+                               name="pass" required="true" onkeydown="enterdown(event)">
                         <span id="errorpass" style="color: red;"></span>
                     </div>
                 </div>
                 <br>
                 <div class="form-group" style="padding-bottom: 5px">
-                    <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
+                    <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Confirm
+                        Password:</label>
                     <div class="col-xs-9">
-                        <input type="password" class="form-control" id="confirm" placeholder="Confirm password" name="confirm" onkeydown="enterdown(event)">
-                        <span id="error"></span>
+                        <input type="password" class="form-control" id="confirm" placeholder="Confirm password"
+                               name="confirm" onkeydown="enterdown(event)">
+                        <span id="error" style="color:red;"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-12" style="margin: 10px 0 10px 2px;">
-                        <input type="checkbox" name="services" required id="checkconditions"><a href="conditions" target="_blank"><strong><em>I have read and agree to all terms and conditions</em></strong></a>
-                        <span id="errorconditions"></span>
+                        <a href="conditions.html" id="errorcondition"><input type="checkbox" name="services" id="check" required ><strong><em>I have read and agree to all terms
+                            and conditions</em></strong></a>
                     </div>
                 </div>
             </div>
@@ -64,4 +69,5 @@
         </div><!--content end-->
     </div>
 
-</div><!--container end-->
+</div>
+<!--container end-->
