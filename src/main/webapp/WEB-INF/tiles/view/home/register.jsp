@@ -40,13 +40,15 @@
                     <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
                     <div class="col-xs-9">
                         <input type="password" class="form-control" id="pass" placeholder="Enter password" minlength="6" name="pass" required ="true" onkeydown="enterdown(event)">
+                        <span id="errorpass" style="color: red;"></span>
                     </div>
                 </div>
                 <br>
                 <div class="form-group" style="padding-bottom: 5px">
                     <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
                     <div class="col-xs-9">
-                        <input type="password" class="form-control" id="confirm" placeholder="Confirm password" name="confirm" onkeydown="enterdown(event)"><span id="error"></span>
+                        <input type="password" class="form-control" id="confirm" placeholder="Confirm password" name="confirm" onkeydown="enterdown(event)">
+                        <span id="error"></span>
                     </div>
                 </div>
                 <div class="form-group">

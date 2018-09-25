@@ -1,20 +1,21 @@
-document.getElementById("pass").addEventListener('input', function (evt) {
-    confirmPass();
-});
-document.getElementById("confirm").addEventListener('input', function (evt) {
-    confirmPass();
-});
-
-function confirmPass() {
+var regexPass = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,32}$/;
+function register() {
     var pass = document.getElementById("pass").value;
     var confirm = document.getElementById("confirm").value;
+    var testPass = regexPass.exec(pass);
+    if (pass == "" || pass == null) {
+        document.getElementById("errorpass").innerHTML = "Password can not null";
+        return false;
+    }
+    if (!testPass) {
+        document.getElementById("errorpass").innerHTML = "Password must have at least 1 capital letter, 1 lower case, 1 special character, 1 digit and minimum 8, maximum 32 characters";
+        return false;
+    }
+
     if (pass != confirm) {
         document.getElementById("error").innerHTML = "Two passwords do not match";
-    } else {
-        document.getElementById("error").innerHTML = "";
+        return false;
     }
-}
-function register() {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
     xhr.open('POST', 'http://127.0.0.1:8090/api/create', true);
@@ -26,12 +27,11 @@ function register() {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
 
-        console.log(data)
         if (data.username != null) {
             alert("Hello " + data.username);
             window.location = 'http://127.0.0.1:8090/login'
         } else {
-            alert("Register Fail!");
+            alert(data.message);
         }
     }
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");

@@ -40,20 +40,27 @@
                     </div>
                 </div>
                 <br>
+                <br>
+                <br>
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="newpass" style="color: #1c478e; font-size: 17px;">New Password:</label>
                     <div class="col-xs-9">
                         <input type="password" class="form-control" id="newpass" placeholder="Enter new password" required name="newpass">
+                        <span id="errorpass" style="color: red;"></span>
                     </div>
                 </div>
+                <br>
                 <br>
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="confirmpass" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
                     <div class="col-xs-9">
-                        <input type="password" class="form-control" id="confirmpass" name="newpass" required placeholder="Confirm new password"><span id="error"></span>
+                        <input type="password" class="form-control" id="confirmpass" name="newpass" required placeholder="Confirm new password"><span id="error" style="color: red;"></span>
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
             <div class="col-lg-3" style="margin-top: 20px">
                 <button id = "button" type="button" class="btn btn-basic btn-block" onclick="changePass()">OK</button>
             </div>

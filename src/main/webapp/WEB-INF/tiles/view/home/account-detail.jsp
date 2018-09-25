@@ -1,4 +1,3 @@
-
 <div id="container">
     <div id="menu" class="blue-background">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
