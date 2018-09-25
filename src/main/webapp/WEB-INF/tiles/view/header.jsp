@@ -16,8 +16,6 @@
             </div>
         </div>
 
-
-    <%--<div class="col-lg-"></div>--%>
     <div id="leftmenu" class="col-sm-2">
         <h3>Links</h3>
         <ul>
@@ -49,6 +47,5 @@
         </ul>
     </div><!--leftmenu end-->
     </div>
-
 
 </div>
