@@ -61,6 +61,14 @@
         </put-list-attribute>
     </definition>
 
+    <definition name="site.conditions" extends="layout.basic">
+        <put-attribute name="body" value="/WEB-INF/tiles/view/home/conditions.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+        </put-list-attribute>
+        <put-list-attribute name="scripts" inherit="true">
+        </put-list-attribute>
+    </definition>
+
     <definition name="site.atm" extends="layout.basic">
 
     </definition>

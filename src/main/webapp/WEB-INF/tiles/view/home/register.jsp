@@ -53,7 +53,8 @@
                 </div>
                 <div class="form-group">
                     <div class="col-xs-12" style="margin: 10px 0 10px 2px;">
-                        <a href="conditions.html"><input type="checkbox" name="services" required value="design"><strong><em>I have read and agree to all terms and conditions</em></strong></a>
+                        <input type="checkbox" name="services" required id="checkconditions"><a href="conditions" target="_blank"><strong><em>I have read and agree to all terms and conditions</em></strong></a>
+                        <span id="errorconditions"></span>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,8 @@
 var regexPass = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,32}$/;
-function register() {
+function validate() {
     var pass = document.getElementById("pass").value;
     var confirm = document.getElementById("confirm").value;
+    var checkconditions = document.getElementById("checkconditions").checked;
     var testPass = regexPass.exec(pass);
     if (pass == "" || pass == null) {
         document.getElementById("errorpass").innerHTML = "Password can not null";
@@ -18,6 +19,18 @@ function register() {
         return false;
     }
     document.getElementById("error").innerHTML = "";
+    if (checkconditions == false) {
+        document.getElementById("errorconditions").innerHTML = "Check can not null";
+        alert(checkconditions);
+        return false;
+    }
+    document.getElementById("errorconditions").innerHTML = "";
+    return true;
+}
+function register() {
+    if(!validate()){
+        return false;
+    }
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
     xhr.open('POST', 'http://127.0.0.1:8090/api/create', true);

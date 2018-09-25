@@ -40,6 +40,11 @@ public class GreetingController {
 		return "site.register";
 	}
 
+    @RequestMapping(value = "/conditions", method=RequestMethod.GET)
+    public String conditions() {
+        return "site.conditions";
+    }
+
     @RequestMapping(value = "/greet/{name}", method = RequestMethod.GET)
     public ModelAndView greetTwoWays(@PathVariable(value = "name") final String name, final Model model) {
         log.info("Controller has been invoked with Path Variable name = '" + name + "'.");

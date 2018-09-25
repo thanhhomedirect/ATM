@@ -109,13 +109,35 @@ body {
 }
 #leftmenu ul li{
     list-style: none;
+    background-color: #c3daec;
     padding: 15px 0 8px 0;
     border-bottom: #fff dashed 1px;
+}
+.panel{
+    list-style: none;
+    background-color: #c3daec;
+    padding:10px 10px 10px 0;
+    border-bottom: #fff dashed 1px;
+}
+.panel-heading{
+    list-style: none;
+    background-color: #c3daec;
+    padding:3px;
+    border-bottom: #fff dashed 1px;
+}
+.panel-group .panel {
+    margin-bottom: -20px;
+    border-radius: 4px;
+}
+.panel-element{
+    padding: 8px 8px 8px 20px;
+    border-bottom: #9d9d9d dashed 1px;
 }
 #leftmenu a, #leftmenu a:visited{
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
+    color: #337ab7;
 }
 #leftmenu a:hover{
     color: #86AEF9;
@@ -156,4 +178,29 @@ body {
     padding: 20px 20px 20px 70px;
     font-size: 15px;
     line-height: 26px;
+}
+.textover div{
+    height:500px;
+    width:900px;
+    border:1px solid black;
+    padding:0;
+    overflow:auto;
+}
+.textover p{
+    text-indent: 8px;
+    height:500px;
+    width:100%;;
+    border:1px solid rgb(255, 255, 255);
+    margin-bottom: 21%;
+}
+#condition{
+    display: block;
+    color: #222222;
+    float: left;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    border: #1c478e solid 5px;
+    margin-left: 10%;
+    margin-top: 8%;
 }
