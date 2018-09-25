@@ -23,7 +23,6 @@ function transfer() {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
 
-        console.log(data)
         if (data.username != null) {
             alert("SUCCESS!");
             window.location = 'http://127.0.0.1:8090/accounts/detail'

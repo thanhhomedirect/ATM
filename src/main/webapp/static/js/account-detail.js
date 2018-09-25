@@ -12,7 +12,6 @@ xhr.open('GET', 'http://127.0.0.1:8090/api/accounts/detail/' + localStorage.getI
 xhr.onload = function (ev) {
     var data = JSON.parse(this.response);
 
-    console.log(data)
     var username = document.getElementById("username");
     var accountNumber = document.getElementById("accountNumber");
     var amount = document.getElementById("amount");

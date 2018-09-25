@@ -1,11 +1,8 @@
 var regexPass = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,32}$/;
-var regexUsername = /^[a-zA-Z0-9._-]{3,15}$/;
 
 function validatePass() {
-    var username = document.getElementById("name").value;
     var pass = document.getElementById("pass").value;
     var confirm = document.getElementById("confirm").value;
-    var testUsername = regexUsername.exec(username);
     var testPass = regexPass.exec(pass);
 
     if (pass == "" || pass == null) {
@@ -38,8 +35,6 @@ function checked() {
 }
 
 function register() {
-    var username = document.getElementById("name").value;
-    var pass = document.getElementById("pass").value;
     if (!validatePass()) {
         return false;
     }
@@ -50,10 +45,10 @@ function register() {
     xhr.withCredentials = true;
     xhr.open('POST', 'http://localhost:8090/api/create', true);
     var request = {
-        username: username,
-        password: pass
+        username: document.getElementById("name").value,
+        password: document.getElementById("pass").value
     };
-
+    //
     xhr.onload = function () {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
