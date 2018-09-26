@@ -14,6 +14,6 @@ if (localStorage.getItem("username") != "") {
 function enterdown(event) {
     var x = event.keyCode || event.which;
     if (x == 13) {
-        document.getElementById("enter").click();
+        document.getElementsByClassName("enter").click();
     }
 }

@@ -15,17 +15,10 @@ function login() {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
         console.log(data)
-<<<<<<< HEAD
-        if (data.username != null) {
-            localStorage.setItem("id", data.id)
-            localStorage.setItem("username", data.username)
-            window.location = 'http://localhost:8090/accounts/detail'
-=======
-        if (data.object != null) {
-            localStorage.setItem("id", data.object.id)
-            localStorage.setItem("username", data.object.username)
+        if (data.accountResponse != null) {
+            localStorage.setItem("id", data.accountResponse.id)
+            localStorage.setItem("username", data.accountResponse.username)
             window.location = 'http://127.0.0.1:8090/accounts/detail'
->>>>>>> 2fa2cfc7e6cefb7b007f1a738f9fe4a80d73a285
         } else {
             alert(data.message);
         }

@@ -15,9 +15,9 @@ xhr.onload = function (ev) {
     var username = document.getElementById("username");
     var accountNumber = document.getElementById("accountNumber");
     var amount = document.getElementById("amount");
-    username.innerHTML = data.object.username;
-    accountNumber.innerHTML = data.object.accountNumber;
-    amount.innerHTML = data.object.amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND";
+    username.innerHTML = data.accountResponse.username;
+    accountNumber.innerHTML = data.accountResponse.accountNumber;
+    amount.innerHTML = data.accountResponse.amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND";
 }
 
 xhr.send();

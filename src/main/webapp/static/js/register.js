@@ -43,7 +43,7 @@ function register() {
     }
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.open('POST', 'http://localhost:8090/api/create', true);
+    xhr.open('POST', 'http://127.0.0.1:8090/api/create', true);
     var request = {
         username: document.getElementById("name").value,
         password: document.getElementById("pass").value
@@ -52,10 +52,10 @@ function register() {
     xhr.onload = function () {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
-        console.log(data);
-        if (data.username != null) {
-            alert("Hello " + data.username);
-            window.location = 'http://localhost:8090/login'
+        console.log(data)
+        if (data.accountResponse.username != null) {
+            alert(data.message);
+            window.location = 'http://127.0.0.1:8090/login'
         } else {
             alert(data.message);
         }

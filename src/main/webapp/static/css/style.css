@@ -33,7 +33,7 @@ body {
 .pink-text{
      color: pink;
  }
-#header img{
+#header img {
     margin-top: 0px;
     max-width: 50px;
     max-height: 50px;
@@ -203,4 +203,50 @@ body {
     border: #1c478e solid 5px;
     margin-left: 10%;
     margin-top: 8%;
+}
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+.slider-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.slider-display-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(-0%, -50%)
+}
+
+.slider-display-right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%)
+}
+
+.btn{
+    padding: 14px;
+}
+#gridContainer { padding: 20px; }
+.grid-row > a {
+    /*border: 1px solid lightgrey;*/
+    /*padding: 10px;*/
+    /*background-color: aliceblue;*/
+    margin: 0px 5px ;
+    /*float: right;*/
 }
