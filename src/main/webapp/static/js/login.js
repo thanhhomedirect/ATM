@@ -15,9 +15,9 @@ function login() {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
         console.log(data)
-        if (data.accountResponse != null) {
-            localStorage.setItem("id", data.accountResponse.id)
-            localStorage.setItem("username", data.accountResponse.username)
+        if (data.code == 1) {
+            localStorage.setItem("id", data.data.id)
+            localStorage.setItem("username", data.data.username)
             window.location = 'http://127.0.0.1:8090/accounts/detail'
         } else {
             alert(data.message);

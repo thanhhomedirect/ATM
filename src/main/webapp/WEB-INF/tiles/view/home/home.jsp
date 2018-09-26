@@ -29,3 +29,4 @@
 	<button class="slider-button slider-display-left" onclick="plusDivs(-1)">&#10094;</button>
 	<button class="slider-button slider-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div><!--container end-->
+

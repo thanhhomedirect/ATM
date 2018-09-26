@@ -14,7 +14,7 @@
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span id="user"></span> <span class="caret"></span></button>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/accounts/detail">Information</a></li>
-                            <li><a href="/accounts/change-password">Chang Password</a></li>
+                            <li><a href="/accounts/change-password">Change Password</a></li>
                             <li><a href="home" onclick="logout()">Logout</a></li>
                         </ul>
                     </div>
@@ -24,6 +24,13 @@
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
+    </div>
+    <div id="content">
+        <p>sdfkogdkfjngvkdbjkdfjkbndnb</p>
+        <p>sdfkogdkfjngvkdbjkdfjkbndnb</p>
+        <p>sdfkogdkfjngvkdbjkdfjkbndnb</p>
+        <p>sdfkogdkfjngvkdbjkdfjkbndnb</p>
+        <p>sdfkogdkfjngvkdbjkdfjkbndnb</p>
     </div>
 
 

@@ -53,9 +53,9 @@ function register() {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
         console.log(data)
-        if (data.accountResponse.username != null) {
-            alert(data.message);
-            window.location = 'http://127.0.0.1:8090/login'
+        if (data.code == 1) {
+            alert("Hello " + data.data.username);
+            window.location = 'http://localhost:8090/login'
         } else {
             alert(data.message);
         }

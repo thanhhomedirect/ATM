@@ -38,7 +38,7 @@
                     <label class="control-label col-sm-3" for="amount"
                            style="color: #1c478e; font-size: 17px;">Money</label>
                     <div class="col-xs-9">
-                        <input type="text" class="form-control" id="amount" placeholder="Enter Money" name="amount" required onkeydown="enterdown(event)">
+                        <input type="number" class="form-control" id="amount" placeholder="Enter Money" name="amount" required onkeydown="enterdown(event)">
                     </div>
                 </div>
             </div>
