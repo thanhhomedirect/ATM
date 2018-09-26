@@ -20,7 +20,7 @@ function login() {
         if (data.username != null) {
             localStorage.setItem("id", data.id)
             localStorage.setItem("username", data.username)
-            window.location = 'http://127.0.0.1:8090/accounts/detail'
+            window.location = 'http://localhost:8090/accounts/detail'
         } else {
             alert(data.message);
         }

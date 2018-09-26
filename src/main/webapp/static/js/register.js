@@ -52,6 +52,7 @@ function register() {
     xhr.onload = function () {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
+        console.log(data);
         if (data.username != null) {
             alert("Hello " + data.username);
             window.location = 'http://localhost:8090/login'
