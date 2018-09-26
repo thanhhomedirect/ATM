@@ -1,33 +1,20 @@
 package com.mvmlabs.springboot.model;
 
-import message.MyException;
-
-public class ATMReponse {
+public class ATMReponse<T> {
 
 	private int code;
 	private String message;
-	private Object object;
+	private T data;
 
 	public ATMReponse() {
 	}
 
-	public ATMReponse(MyException code, Object object) {
-		this.code = code.getCode();
-		this.message = code.getDescription();
-		this.object = object;
-	}
-
-	public ATMReponse(int code, String message, Object object) {
+	public ATMReponse(int code, String message, T data) {
 		this.code = code;
 		this.message = message;
-		this.object = object;
+		this.data = data;
 	}
-
-	public ATMReponse(Object object) {
-		super();
-		this.object = object;
-	}
-
+	
 	public int getCode() {
 		return code;
 	}
@@ -44,12 +31,11 @@ public class ATMReponse {
 		this.message = message;
 	}
 
-	public Object getObject() {
-		return object;
+	public T getData() {
+		return data;
 	}
 
-	public void setObject(Object object) {
-		this.object = object;
+	public void setData(T data) {
+		this.data = data;
 	}
-
 }

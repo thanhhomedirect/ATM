@@ -3,21 +3,25 @@ body {
     background: #e2f097;
     color: rgb(252, 252, 252);
 }
-*{
+
+* {
     margin: 0 auto 0 auto;
-    text-align:left;
+    text-align: left;
 }
-#header{
+
+#header {
     width: 80%;
     height: 85px;
 }
-#header h1{
+
+#header h1 {
     font-size: 42px;
     float: left;
     color: #fff;
     padding: 10px 20px 0 0;
 }
-#header h2{
+
+#header h2 {
     float: right;
     font-size: 20px;
     color: #2658a9;
@@ -27,34 +31,39 @@ body {
     margin-top: 5px;
     margin-bottom: 0px;
 }
-#header h1 span.blue-text{
+
+#header h1 span.blue-text {
     color: #2658a9;
 }
-.pink-text{
-     color: pink;
- }
-#header img{
+
+.pink-text {
+    color: pink;
+}
+
+#header img {
     margin-top: 0px;
     max-width: 50px;
     max-height: 50px;
 }
-.container h2{
+
+.container h2 {
     font-size: 33px;
     width: 900px;
 }
-#header img{
+
+#header img {
     margin-top: 35px;
     max-width: 50px;
     max-height: 50px;
 }
+
 .progress {
     text-align: center;
-    border:2px solid #fff;
     height: 40px;
-    margin-top: 5px;
 }
-#row div{
-    background-color:rgb(16, 16, 34);
+
+#row div {
+    background-color: rgb(16, 16, 34);
     height: 40px;
     text-align: center;
     margin: 0;
@@ -73,24 +82,29 @@ body {
 
 }
 
-.progress a:hover{
-    color:rgb(224, 236, 115);
+.progress a:hover {
+    color: rgb(224, 236, 115);
 }
-#navbar .btn-group{
+
+#navbar .btn-group {
     padding: 5px;
     margin-top: 5px;
 }
-#navbar .btn button{
+
+#navbar .btn button {
     padding: 5px;
     margin-top: 5px;
 }
-.yellow-text{
+
+.yellow-text {
     color: yellow;
 }
+
 #paragraph {
     color: #000;
 }
-#leftmenu{
+
+#leftmenu {
     float: left;
     margin-top: 15px;
     background-color: #c3daec;
@@ -98,51 +112,61 @@ body {
     border-radius: 10px;
     padding: 15px 20px 5px 10px;
 }
-#leftmenu ul{
+
+#leftmenu ul {
     list-style: none;
     padding: 0;
 }
-#leftmenu h3{
+
+#leftmenu h3 {
     padding-bottom: 8px;
     border-bottom: blue solid 2px;
     font-size: 16px;
 }
-#leftmenu ul li{
+
+#leftmenu ul li {
     list-style: none;
     background-color: #c3daec;
     padding: 15px 0 8px 0;
     border-bottom: #fff dashed 1px;
 }
-.panel{
+
+.panel {
     list-style: none;
     background-color: #c3daec;
-    padding:10px 10px 10px 0;
+    padding: 10px 10px 10px 0;
     border-bottom: #fff dashed 1px;
 }
-.panel-heading{
+
+.panel-heading {
     list-style: none;
     background-color: #c3daec;
-    padding:3px;
+    padding: 3px;
     border-bottom: #fff dashed 1px;
 }
+
 .panel-group .panel {
     margin-bottom: -20px;
     border-radius: 4px;
 }
-.panel-element{
+
+.panel-element {
     padding: 8px 8px 8px 20px;
     border-bottom: #9d9d9d dashed 1px;
 }
-#leftmenu a, #leftmenu a:visited{
+
+#leftmenu a, #leftmenu a:visited {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
     color: #337ab7;
 }
-#leftmenu a:hover{
+
+#leftmenu a:hover {
     color: #86AEF9;
 }
-#content{
+
+#content {
     display: block;
     width: 700px;
     color: #1c478e;
@@ -156,44 +180,52 @@ body {
     margin-right: 2%;
     margin-bottom: 2%;
 }
-#content h3{
+
+#content h3 {
     font-size: 22px;
     text-align: center;
 }
-#content h4{
+
+#content h4 {
     font-size: 18px;
     text-align: center;
 }
-#content button{
+
+#content button {
     padding: 10px;
     background-color: #cccccc;
     color: #a94442;
 }
-#content button:hover{
+
+#content button:hover {
     padding: 10px;
     background-color: #5bc0de;
     color: #222222;
 }
+
 .panel-body {
     padding: 20px 20px 20px 70px;
     font-size: 15px;
     line-height: 26px;
 }
-.textover div{
-    height:500px;
-    width:900px;
-    border:1px solid black;
-    padding:0;
-    overflow:auto;
+
+.textover div {
+    height: 500px;
+    width: 900px;
+    border: 1px solid black;
+    padding: 0;
+    overflow: auto;
 }
-.textover p{
+
+.textover p {
     text-indent: 8px;
-    height:500px;
-    width:100%;;
-    border:1px solid rgb(255, 255, 255);
+    height: 500px;
+    width: 100%;;
+    border: 1px solid rgb(255, 255, 255);
     margin-bottom: 21%;
 }
-#condition{
+
+#condition {
     display: block;
     color: #222222;
     float: left;
@@ -203,4 +235,40 @@ body {
     border: #1c478e solid 5px;
     margin-left: 10%;
     margin-top: 8%;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 653px;
+}
+
+.slider-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.slider-display-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(-0%, -50%)
+}
+
+.slider-display-right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%)
 }

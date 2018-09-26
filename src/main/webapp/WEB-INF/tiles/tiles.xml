@@ -73,10 +73,6 @@
 
     </definition>
 
-    <definition name="site.greeting" extends="layout.basic">
-        <put-attribute name="body" value="/WEB-INF/tiles/view/home/greeting.jsp"/>
-    </definition>
-
     <definition name="site.account-detail" extends="layout.basic">
         <put-attribute name="body" value="/WEB-INF/tiles/view/home/account-detail.jsp"/>
         <put-list-attribute name="stylesheets" inherit="true"/>

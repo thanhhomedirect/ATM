@@ -29,17 +29,17 @@ public class AtmApiController {
         return atmReponse;
     }
 
-    @RequestMapping(value = "/accounts/detail", method = RequestMethod.GET)
-    public ATMReponse accountDetail(@RequestParam int id) {
+    @RequestMapping(value = "/accounts/detail/{id}", method = RequestMethod.GET)
+    public ATMReponse accountDetail(@PathVariable int id) {
         RestTemplate restTemplate = new RestTemplate();
-        ATMReponse atmReponse = restTemplate.getForObject(REST_URL + "/accounts/show-account?id=" + id, ATMReponse.class);
+        ATMReponse atmReponse = restTemplate.getForObject(REST_URL + "/accounts/" + id, ATMReponse.class);
         return atmReponse;
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ATMReponse create(@RequestBody LoginRequest request) {
         RestTemplate restTemplate = new RestTemplate();
-        ATMReponse atmReponse = restTemplate.postForObject(REST_URL + "/accounts/create", request, ATMReponse.class);
+        ATMReponse atmReponse = restTemplate.postForObject(REST_URL + "/accounts", request, ATMReponse.class);
         return atmReponse;
     }
 
@@ -55,34 +55,34 @@ public class AtmApiController {
     }
 
     @RequestMapping(value = "/transactions/withdrawal", method = RequestMethod.PUT)
-    public Account withdraw(@RequestBody WithdrawRequest request) {
+    public ATMReponse withdraw(@RequestBody WithdrawRequest request) {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> atmReponse = restTemplate.exchange(REST_URL + "/transactions/withdrawal", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<ATMReponse> atmReponse = restTemplate.exchange(REST_URL + "/transactions/withdrawal", HttpMethod.PUT, httpEntity, ATMReponse.class);
 
         return atmReponse.getBody();
     }
 
     @RequestMapping(value = "/transactions/deposit", method = RequestMethod.PUT)
-    public Account deposit(@RequestBody DepositRequest request) {
+    public ATMReponse deposit(@RequestBody DepositRequest request) {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> atmReponse = restTemplate.exchange(REST_URL + "/transactions/deposit", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<ATMReponse> atmReponse = restTemplate.exchange(REST_URL + "/transactions/deposit", HttpMethod.PUT, httpEntity, ATMReponse.class);
 
         return atmReponse.getBody();
     }
 
     @RequestMapping(value = "/transactions/transfer", method = RequestMethod.PUT)
-    public Account transfer(@RequestBody TransferRequest request) {
+    public ATMReponse transfer(@RequestBody TransferRequest request) {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> atmReponse = restTemplate.exchange(REST_URL + "/transactions/transfer", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<ATMReponse> atmReponse = restTemplate.exchange(REST_URL + "/transactions/transfer", HttpMethod.PUT, httpEntity, ATMReponse.class);
 
         return atmReponse.getBody();
     }

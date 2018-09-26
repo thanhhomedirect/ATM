@@ -18,16 +18,14 @@ function transfer() {
         password: document.getElementById("confirm").value
     };
 
-    console.log(JSON.stringify(request))
     xhr.onload = function () {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
-
-        if (data.username != null) {
+        if (data.code == 1) {
             alert("SUCCESS!");
             window.location = 'http://127.0.0.1:8090/accounts/detail'
         } else {
-            alert("FAIL!");
+            alert(data.message);
         }
     }
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
