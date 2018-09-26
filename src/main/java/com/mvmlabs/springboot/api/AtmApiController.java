@@ -5,6 +5,7 @@ package com.mvmlabs.springboot.api;
 
 import java.util.List;
 
+import com.mvmlabs.springboot.model.ATMReponse;
 import com.mvmlabs.springboot.model.TransactionHistory;
 import com.mvmlabs.springboot.model.request.*;
 import org.springframework.data.domain.Page;
@@ -21,36 +22,36 @@ public class AtmApiController {
     public static final String REST_URL = "http://localhost:8080";
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public Account login(@RequestBody LoginRequest request) {
+    public ATMReponse login(@RequestBody LoginRequest request) {
         RestTemplate restTemplate = new RestTemplate();
 
-        Account account = restTemplate.postForObject(REST_URL + "/accounts/login", request, Account.class);
-        return account;
+        ATMReponse atmReponse = restTemplate.postForObject(REST_URL + "/accounts/login", request, ATMReponse.class);
+        return atmReponse;
     }
 
-    @RequestMapping(value = "/accounts/detail/{id}", method = RequestMethod.GET)
-    public Account accountDetail(@PathVariable Integer id) {
+    @RequestMapping(value = "/accounts/detail", method = RequestMethod.GET)
+    public ATMReponse accountDetail(@RequestParam int id) {
         RestTemplate restTemplate = new RestTemplate();
-        Account account = restTemplate.getForObject(REST_URL + "/accounts/show-account/" + id, Account.class);
-        return account;
+        ATMReponse atmReponse = restTemplate.getForObject(REST_URL + "/accounts/show-account?id=" + id, ATMReponse.class);
+        return atmReponse;
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public Account create(@RequestBody LoginRequest request) {
+    public ATMReponse create(@RequestBody LoginRequest request) {
         RestTemplate restTemplate = new RestTemplate();
-        Account account = restTemplate.postForObject(REST_URL + "/accounts/create", request, Account.class);
-        return account;
+        ATMReponse atmReponse = restTemplate.postForObject(REST_URL + "/accounts/create", request, ATMReponse.class);
+        return atmReponse;
     }
 
     @RequestMapping(value = "/accounts/change-password", method = RequestMethod.PUT)
-    public Account changePassword(@RequestBody ChangePassRequest request) {
+    public ATMReponse changePassword(@RequestBody ChangePassRequest request) {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/accounts/change-password", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<ATMReponse> atmReponse = restTemplate.exchange(REST_URL + "/accounts/change-password", HttpMethod.PUT, httpEntity, ATMReponse.class);
 
-        return entity.getBody();
+        return atmReponse.getBody();
     }
 
     @RequestMapping(value = "/transactions/withdrawal", method = RequestMethod.PUT)
@@ -59,9 +60,9 @@ public class AtmApiController {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/transactions/withdrawal", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<Account> atmReponse = restTemplate.exchange(REST_URL + "/transactions/withdrawal", HttpMethod.PUT, httpEntity, Account.class);
 
-        return entity.getBody();
+        return atmReponse.getBody();
     }
 
     @RequestMapping(value = "/transactions/deposit", method = RequestMethod.PUT)
@@ -70,9 +71,9 @@ public class AtmApiController {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/transactions/deposit", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<Account> atmReponse = restTemplate.exchange(REST_URL + "/transactions/deposit", HttpMethod.PUT, httpEntity, Account.class);
 
-        return entity.getBody();
+        return atmReponse.getBody();
     }
 
     @RequestMapping(value = "/transactions/transfer", method = RequestMethod.PUT)
@@ -81,9 +82,9 @@ public class AtmApiController {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<?> httpEntity = new HttpEntity<>(request, httpHeaders);
-        ResponseEntity<Account> entity = restTemplate.exchange(REST_URL + "/transactions/transfer", HttpMethod.PUT, httpEntity, Account.class);
+        ResponseEntity<Account> atmReponse = restTemplate.exchange(REST_URL + "/transactions/transfer", HttpMethod.PUT, httpEntity, Account.class);
 
-        return entity.getBody();
+        return atmReponse.getBody();
     }
 
     @RequestMapping(value = "/transactions/show-history", method = RequestMethod.POST)

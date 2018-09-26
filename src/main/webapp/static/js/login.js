@@ -11,15 +11,13 @@ function login() {
         username: document.getElementById("name").value,
         password: document.getElementById("pass").value
     };
-
     xhr.onload = function () {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
-
         console.log(data)
-        if (data.username != null) {
-            localStorage.setItem("id", data.id)
-            localStorage.setItem("username", data.username)
+        if (data.object != null) {
+            localStorage.setItem("id", data.object.id)
+            localStorage.setItem("username", data.object.username)
             window.location = 'http://127.0.0.1:8090/accounts/detail'
         } else {
             alert(data.message);
