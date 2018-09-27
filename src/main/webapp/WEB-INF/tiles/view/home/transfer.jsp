@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="col-lg-3" style="margin-top: 20px">
-                <button type="button" class="btn btn-basic btn-block" onclick="transfer()" id="enter">OK</button>
+                <button type="button" class="btn btn-basic btn-block" id="enter">OK</button>
             </div>
 
         </div>

@@ -32,31 +32,26 @@ function validatePass() {
     return true;
 }
 
-function changePass() {
-    if (!validatePass()) {
-        return false;
-    }
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-    xhr.open('PUT', 'http://127.0.0.1:8090/api/accounts/change-password', true);
-
-    var request = {
-        id: localStorage.getItem("id"),
-        oldPassword: document.getElementById("oldpass").value,
-        newPassword: document.getElementById("newpass").value,
-    };
-
-    xhr.onload = function () {
-        // begin accessing JSON data here
-        var data = JSON.parse(this.response);
-        console.log(data);
-        if (data.code == 1) {
-            alert("SUCCESS!");
-            window.location = 'http://127.0.0.1:8090/afterlogin'
-        } else {
-            alert(data.message);
-        }
-    }
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.send(JSON.stringify(request))
-}
+$(document).ready(function () {
+    $('#button').click(function () {
+        console.log($('#newpass').val())
+        $.ajax({
+            method : 'PUT',
+            url : '/accounts/change-password',
+            contentType : 'application/json',
+            data : JSON.stringify({
+                "id" : localStorage.getItem("id"),
+                "oldPassword" : $('#oldpass').val(),
+                "newPassword" : $('#newpass').val(),
+            })
+        }).done(function (data) {
+            console.log(data)
+            if (data.code == 1) {
+                alert("SUCCESS!");
+                window.location = 'http://127.0.0.1:8090/afterlogin'
+            } else {
+                alert(data.message);
+            }
+        });
+    })
+})
