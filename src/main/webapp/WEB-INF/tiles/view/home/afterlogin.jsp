@@ -9,7 +9,6 @@
                         </div>
                     </div>
                     <div class="col-sm-2 col-xs-2.5 col-md-0 col-lg-1" style="float: right">
-
                     </div>
                     <div class="col-sm-1 col-xs-2.1 col-md-0 col-lg-1" style="float: right">
                         <div class="btn-group">
@@ -25,5 +24,12 @@
             </div>
         </nav>
     </div>
+    <div id="content">
+        <p class="afterlogin">Welcome to BBC Bank</p>
+        <p class="afterlogin">Have a nice day!</p>
+        <p class="afterlogin">Good Luck!</p>
+    </div>
 
-</div><!--container end-->
+
+</div>
+<!--container end-->

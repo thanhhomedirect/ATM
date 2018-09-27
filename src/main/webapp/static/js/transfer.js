@@ -17,7 +17,6 @@ function transfer() {
         amount: document.getElementById("amount").value,
         password: document.getElementById("confirm").value
     };
-
     xhr.onload = function () {
         // begin accessing JSON data here
         var data = JSON.parse(this.response);
