@@ -5,18 +5,16 @@ if (localStorage.getItem("id") == "") {
 } else {
     document.getElementById("user").innerHTML = localStorage.getItem("username");
 }
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-xhr.open('GET', 'http://127.0.0.1:8090/api/accounts/detail/' + localStorage.getItem("id"), true);
 
-xhr.onload = function (ev) {
-    var data = JSON.parse(this.response);
-    console.log(data)
-    var username = document.getElementById("username");
-    var accountNumber = document.getElementById("accountNumber");
-    var amount = document.getElementById("amount");
-    username.innerHTML = data.data.username;
-    accountNumber.innerHTML = data.data.accountNumber;
-    amount.innerHTML = data.data.amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND";
-}
-xhr.send();
+$(document).ready(function () {
+    $.ajax({
+        method: "GET",
+        url: "/accounts/detail/" + localStorage.getItem("id"),
+    }).done(function (data) {
+        if (data.code == 1) {
+            $('#username').text(data.data.username);
+            $('#accountNumber').text(data.data.accountNumber);
+            $('#amount').text(data.data.amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND");
+        }
+    })
+});

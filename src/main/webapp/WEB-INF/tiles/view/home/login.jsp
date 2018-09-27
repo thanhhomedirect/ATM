@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <button id="enter" type="button" class="btn btn-basic btn-block" onclick="login()">Login</button>
+                <button id="enter" type="button" class="btn btn-basic btn-block">Login</button>
             </div>
             <div class = "col-lg-12">
                 <h5><a href="forgotpassword">Forgot Password</a></h5>

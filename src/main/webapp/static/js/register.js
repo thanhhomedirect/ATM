@@ -34,32 +34,29 @@ function checked() {
     return true;
 }
 
-function register() {
-    if (!validatePass()) {
-        return false;
-    }
-    if (!checked()) {
-        return false;
-    }
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-    xhr.open('POST', 'http://127.0.0.1:8090/api/create', true);
-    var request = {
-        username: document.getElementById("name").value,
-        password: document.getElementById("pass").value
-    };
-    //
-    xhr.onload = function () {
-        // begin accessing JSON data here
-        var data = JSON.parse(this.response);
-        console.log(data)
-        if (data.code == 1) {
-            alert("Hello " + data.data.username);
-            window.location = 'http://localhost:8090/login'
-        } else {
-            alert(data.message);
+$(document).ready(function () {
+    $('#enter').click(function () {
+        if (!validatePass()) {
+            return false;
         }
-    }
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.send(JSON.stringify(request))
-}
+        if (!checked()) {
+            return false;
+        }
+        $.ajax({
+            method: 'POST',
+            url: '/create',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                "username": $('#name').val(),
+                "password": $('#pass').val()
+            })
+        }).done(function (data) {
+            if (data.code == 1) {
+                alert("SUCCESS");
+                window.location = 'http://localhost:8090/login'
+            } else {
+                alert(data.message);
+            }
+        });
+    })
+})

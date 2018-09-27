@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <div id="header">
     <div class="container">
         <h1><span class="blue-text">BBC</span> <span class="pink-text">Banking</span></h1>

@@ -62,7 +62,7 @@
             <br>
             <br>
             <div class="col-lg-3" style="margin-top: 20px">
-                <button id = "button" type="button" class="btn btn-basic btn-block" onclick="changePass()">OK</button>
+                <button id = "button" type="button" class="btn btn-basic btn-block">OK</button>
             </div>
 
             </div>
