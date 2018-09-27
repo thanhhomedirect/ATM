@@ -2,6 +2,7 @@ body {
     padding-top: 50px;
     background: #e2f097;
     color: rgb(252, 252, 252);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -15,10 +16,10 @@ body {
 }
 
 #header h1 {
-    font-size: 42px;
-    float: left;
+    font-size: 234%;
+    float: right;
     color: #fff;
-    padding: 10px 20px 0 0;
+    padding-top: 5px;
 }
 
 #header h2 {
@@ -27,9 +28,9 @@ body {
     color: #2658a9;
     width: 400px;
     text-align: right;
-    padding: 40px 20px 0 0;
-    margin-top: 5px;
-    margin-bottom: 0px;
+    padding: 7% 10% 0 0;
+    margin-top: 27px;
+    margin-bottom: 24px;
 }
 
 #header h1 span.blue-text {
@@ -40,11 +41,6 @@ body {
     color: pink;
 }
 
-#header img {
-    margin-top: 0px;
-    max-width: 50px;
-    max-height: 50px;
-}
 
 .container h2 {
     font-size: 33px;
@@ -52,9 +48,11 @@ body {
 }
 
 #header img {
-    margin-top: 35px;
     max-width: 50px;
+    margin-top: 20px;
     max-height: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .progress {
@@ -168,17 +166,21 @@ body {
 
 #content {
     display: block;
-    width: 700px;
+    width: 64%;
     color: #1c478e;
-    margin-top: 85px;
+    margin-top: 3%;
     float: left;
     background-color: #fff;
     border-radius: 10px;
     border: #1c478e solid 2px;
     padding: 10px;
-    margin-left: 1%;
+    margin-left: 9%;
     margin-right: 2%;
     margin-bottom: 2%;
+}
+.login{
+    margin-left: 15%;
+    margin-top: 4%;
 }
 
 #content h3 {
@@ -202,6 +204,7 @@ body {
     background-color: #5bc0de;
     color: #222222;
 }
+
 
 .panel-body {
     padding: 20px 20px 20px 70px;
@@ -275,6 +278,13 @@ body {
 
 .btn{
     padding: 14px;
+    color: floralwhite;
+    background-color: #222222;
+
+}
+.btn:hover{
+    background-color: black;
+    color: #cccccc;
 }
 #gridContainer { padding: 20px; }
 .grid-row > a {

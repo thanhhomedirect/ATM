@@ -3,20 +3,19 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="row grid-row">
-					<div class="col-sm-3 card col-xs-4 col-md-2 col-lg-1">
+					<div class="col-sm-8 col-xs-4 col-md-8 col-lg-9">
 						<div class="navbar-header">
 							<a class="navbar-brand" href="home"><strong><em>BBC<span class="yellow-text">Banking</span></em></strong></a>
 						</div>
 					</div>
-					<%--<div class="col-sm-3 card col-xs-4 col-md-2 col-lg-1"></div>--%>
-					<div class="col-sm-3 card col-xs-4 col-md-2 col-lg-1" style="float: right">
+					<div class="col-sm-2 col-xs-2.5 col-md-0 col-lg-1" style="float: right">
 						<div class="btn-group">
-							<a class="btn btn-info" href="login">Login</a>
+							<a class="btn" href="login">Login</a>
 						</div>
 					</div>
-					<div class="col-sm-3 card col-xs-4 col-md-2 col-lg-1" style="float: right">
+					<div class="col-sm-1 col-xs-2.1 col-md-0 col-lg-1" style="float: right">
 						<div class="btn-group">
-							<a class="btn btn-info" href="register">Register</a>
+							<a class="btn" href="register">Register</a>
 						</div>
 					</div>
 				</div>
