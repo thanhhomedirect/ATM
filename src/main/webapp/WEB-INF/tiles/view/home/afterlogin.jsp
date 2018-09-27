@@ -5,7 +5,7 @@
                 <div class="row grid-row">
                     <div class="col-sm-8 col-xs-4 col-md-8 col-lg-9">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="home"><strong><em>BBC<span class="yellow-text">Banking</span></em></strong></a>
+                            <a class="navbar-brand" href="../home"><strong><em>BBC<span class="yellow-text">Banking</span></em></strong></a>
                         </div>
                     </div>
                     <div class="col-sm-2 col-xs-2.5 col-md-0 col-lg-1" style="float: right">
@@ -16,7 +16,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/accounts/detail">Information</a></li>
                                 <li><a href="/accounts/change-password">Change Password</a></li>
-                                <li><a href="home" onclick="logout()">Logout</a></li>
+                                <li><a href="../home" onclick="logout()">Logout</a></li>
                             </ul>
                         </div>
                     </div>

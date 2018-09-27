@@ -47,7 +47,7 @@
                 </div>
                 <div class = "col-lg-12">
                     <h5><a href="forgotpassword">Forgot Password</a></h5>
-                    <h5><a href="conditions">Conditions and terms</a></h5>
+                    <h5><a href="conditions" target="_blank">Conditions and terms</a></h5>
                     <h5><a href="guide">Guide to secure transactions</a></h5>
                 </div>
             </div><!--content end-->

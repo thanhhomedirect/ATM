@@ -5,7 +5,7 @@
                 <div class="row grid-row">
                     <div class="col-sm-8 col-xs-4 col-md-8 col-lg-9">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="home"><strong><em>BBC<span class="yellow-text">Banking</span></em></strong></a>
+                            <a class="navbar-brand" href="../home"><strong><em>BBC<span class="yellow-text">Banking</span></em></strong></a>
                         </div>
                     </div>
                     <div class="col-sm-2 col-xs-2.5 col-md-0 col-lg-1" style="float: right">
@@ -30,9 +30,9 @@
         <div id="content" style="font-size: 28px;">
             <div class="col-md-10">
                     <div class="col-sm-6">
-                        <span>Username</span>
-                        <span>Account Number</span>
-                        <span>Amount</span>
+                        <span>Username</span><br>
+                        <span>Account Number</span><br>
+                        <span>Amount</span><br>
                     </div>
                     <div class="col-sm-6">
                         <span id="username"></span><br>
