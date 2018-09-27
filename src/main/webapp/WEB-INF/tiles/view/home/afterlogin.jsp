@@ -24,10 +24,12 @@
             </div>
         </nav>
     </div>
-    <div id="content">
-        <p class="afterlogin">Welcome to BBC Bank</p>
-        <p class="afterlogin">Have a nice day!</p>
-        <p class="afterlogin">Good Luck!</p>
+    <div class="container">
+        <div id="content">
+            <p class="afterlogin">Welcome to BBC Bank</p>
+            <p class="afterlogin">Have a nice day!</p>
+            <p class="afterlogin">Good Luck!</p>
+        </div>
     </div>
 
 
