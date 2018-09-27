@@ -2,68 +2,49 @@ package com.mvmlabs.springboot.model.request;
 
 public class TransferRequest {
 
-//	private int toId;
-	private int fromId;
-	private String toAccountNumber;
-//	private String fromAccountNumber;
-	private Double amount;
-	private String content;
-	private String password;
+    private int fromId;
+    private String toAccountNumber;
+    private Double amount;
+    private String content;
+    private String password;
 
-	public String getToAccountNumber() {
-		return toAccountNumber;
-	}
+    public int getFromId() {
+        return fromId;
+    }
 
-	public void setToAccountNumber(String password) {
-		this.password = password;
-	}
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
+    }
 
-	public String getPassword() {
-		return toAccountNumber;
-	}
+    public String getToAccountNumber() {
+        return toAccountNumber;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setToAccountNumber(String toAccountNumber) {
+        this.toAccountNumber = toAccountNumber;
+    }
 
-	public int getFromId() {
-		return fromId;
-	}
+    public Double getAmount() {
+        return amount;
+    }
 
-	public void setFromId(int fromId) {
-		this.fromId = fromId;
-	}
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
 
-	public Double getAmount() {
-		return amount;
-	}
+    public String getContent() {
+        return content;
+    }
 
-	public void setAmount(Double amount) {
-		this.amount = amount;
-	}
+    public void setContent(String content) {
+        this.content = content;
+    }
 
-	public String getContent() {
-		return content;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setContent(String content) {
-		this.content = content;
-	}
-
-
-//	public String getToAccountNumber() {
-//		return toAccountNumber;
-//	}
-//
-//	public void setToAccountNumber(String toAccountNumber) {
-//		this.toAccountNumber = toAccountNumber;
-//	}
-//
-//	public String getFromAccountNumber() {
-//		return fromAccountNumber;
-//	}
-//
-//	public void setFromAccountNumber(String fromAccountNumber) {
-//		this.fromAccountNumber = fromAccountNumber;
-//	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

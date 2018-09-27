@@ -3,7 +3,8 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="home"><strong><em>BBC<span class="yellow-text">Banking</span></em></strong></a>
+                    <a class="navbar-brand" href="home"><strong><em>BBC<span
+                            class="yellow-text">Banking</span></em></strong></a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse navbar-right">
                     <div class="form-group" style="float: left; margin: 5px; margin-top: 10px; display: block;">
@@ -11,7 +12,8 @@
                     </div>
                     <button type="submit" class="btn btn-warning" name="search">Search</button>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span id="user"></span> <span class="caret"></span></button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span
+                                id="user"></span> <span class="caret"></span></button>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/accounts/detail">Information</a></li>
                             <li><a href="/accounts/change-password">Change Password</a></li>
@@ -26,12 +28,11 @@
         </nav>
     </div>
     <div id="content">
-        <p>sdfkogdkfjngvkdbjkdfjkbndnb</p>
-        <p>sdfkogdkfjngvkdbjkdfjkbndnb</p>
-        <p>sdfkogdkfjngvkdbjkdfjkbndnb</p>
-        <p>sdfkogdkfjngvkdbjkdfjkbndnb</p>
-        <p>sdfkogdkfjngvkdbjkdfjkbndnb</p>
+        <p class="afterlogin">Welcome to BBC Bank</p>
+        <p class="afterlogin">Have a nice day!</p>
+        <p class="afterlogin">Good Luck!</p>
     </div>
 
 
-</div><!--container end-->
+</div>
+<!--container end-->

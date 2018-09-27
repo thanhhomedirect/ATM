@@ -12,7 +12,9 @@ import org.springframework.web.client.RestTemplate;
 public class AccountController {
 
     @RequestMapping(value = "/detail", method = RequestMethod.GET)
-    public String detail() { return "site.account-detail"; }
+    public String detail() {
+        return "site.account-detail";
+    }
 
     @RequestMapping(value = "/change-password", method = RequestMethod.GET)
     public String changePass() {
@@ -22,5 +24,10 @@ public class AccountController {
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String accounts() {
         return "site.accounts";
+    }
+
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    public String search() {
+        return "site.search";
     }
 }
