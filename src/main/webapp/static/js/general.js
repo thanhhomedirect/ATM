@@ -8,7 +8,7 @@ function logout() {
 }
 
 if (localStorage.getItem("username") != "") {
-    document.getElementById("user").innerHTML = localStorage.getItem("username");
+    document.getElementById("user").innerHTML = "Wellcome " + localStorage.getItem("username");
 }
 
 function enterdown(event) {

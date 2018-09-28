@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <br>
-                    <br>
+
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
                         <div class="col-xs-9">

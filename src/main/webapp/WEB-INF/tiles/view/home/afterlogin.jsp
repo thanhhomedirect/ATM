@@ -10,25 +10,27 @@
                     </div>
                     <div class="col-sm-2 col-xs-2.5 col-md-0 col-lg-1" style="float: right">
                     </div>
-                    <div class="col-sm-1 col-xs-2.1 col-md-0 col-lg-1" style="float: right">
-                        <div class="btn-group">
-                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><span id="user"></span> <span class="caret"></span></button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/accounts/detail">Information</a></li>
-                                <li><a href="/accounts/change-password">Change Password</a></li>
-                                <li><a href="../home" onclick="logout()">Logout</a></li>
-                            </ul>
+
+                    <div class="col-sm-1 col-xs-2.1 col-md-0 col-lg-1" style="float: right;">
+                        <div class="w3-dropdown-hover">
+                            <button class="w3-padding-large w3-button w3-black" title="More"><span id="user"></span> <span class="caret"></span></button>
+                            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                                <a href="/accounts/detail" class="w3-bar-item w3-button">Information</a>
+                                <a href="/accounts/change-password" class="w3-bar-item w3-button">Change Password</a>
+                                <a href="../home" class="w3-bar-item w3-button" onclick="logout()">Logout</a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </nav>
     </div>
-    <div class="container">
+    <div class="container " style="background: rgb(255, 255, 255);">
         <div id="content">
-            <p class="afterlogin">Welcome to BBC Bank</p>
-            <p class="afterlogin">Have a nice day!</p>
-            <p class="afterlogin">Good Luck!</p>
+            <div class="w3-center w3-animate-bottom">
+                <div id="chart1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            </div>
         </div>
     </div>
 

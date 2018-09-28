@@ -53,7 +53,7 @@ $(document).ready(function () {
         }).done(function (data) {
             if (data.code == 1) {
                 alert("SUCCESS");
-                window.location = 'http://localhost:8090/login'
+                window.location = 'http://127.0.0.1:8090/login'
             } else {
                 alert(data.message);
             }

@@ -41,7 +41,6 @@ body {
     color: pink;
 }
 
-
 .container h2 {
     font-size: 33px;
     width: 900px;
@@ -49,7 +48,7 @@ body {
 
 #header img {
     max-width: 50px;
-    margin-top: 20px;
+    margin-top: 10px;
     max-height: 50px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -82,6 +81,8 @@ body {
 
 .progress a:hover {
     color: rgb(224, 236, 115);
+    font-size: 19px;
+    line-height: 22px;
 }
 
 #navbar .btn-group {
@@ -177,14 +178,21 @@ body {
     margin-left: 9%;
     margin-right: 2%;
     margin-bottom: 2%;
+    font-size: 24px;
 }
-.login{
+
+.login {
     margin-left: 15%;
     margin-top: 4%;
 }
 
 #content h3 {
-    font-size: 22px;
+    font-size: 35px;
+    text-align: center;
+}
+
+#content h2 {
+    font-size: 29px;
     text-align: center;
 }
 
@@ -204,7 +212,6 @@ body {
     background-color: #5bc0de;
     color: #222222;
 }
-
 
 .panel-body {
     padding: 20px 20px 20px 70px;
@@ -276,21 +283,39 @@ body {
     -ms-transform: translate(0%, -50%)
 }
 
-.btn{
+.btn {
     padding: 14px;
     color: floralwhite;
     background-color: #222222;
 
 }
-.btn:hover{
+
+.btn:hover {
     background-color: black;
     color: #cccccc;
 }
-#gridContainer { padding: 20px; }
-.grid-row > a {
-    margin: 0px 5px ;
+
+#gridContainer {
+    padding: 20px;
 }
+
+.grid-row > a {
+    margin: 0px 5px;
+}
+
 .afterlogin {
     text-align: center;
     font-size: 40px;
+}
+
+#content span {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.w3-dropdown-hover a {
+    text-decoration: none;
+}
+.w3-black button:visited{
+    border: none;
 }

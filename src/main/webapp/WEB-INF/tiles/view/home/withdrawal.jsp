@@ -12,13 +12,13 @@
 
                     </div>
                     <div class="col-sm-1 col-xs-2.1 col-md-0 col-lg-1" style="float: right">
-                        <div class="btn-group">
-                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><span id="user"></span> <span class="caret"></span></button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/accounts/detail">Information</a></li>
-                                <li><a href="/accounts/change-password">Change Password</a></li>
-                                <li><a href="../home" onclick="logout()">Logout</a></li>
-                            </ul>
+                        <div class="w3-dropdown-hover">
+                            <button class="w3-padding-large w3-button w3-black" title="More"><span id="user"></span> <span class="caret"></span></button>
+                            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                                <a href="/accounts/detail" class="w3-bar-item w3-button">Information</a>
+                                <a href="/accounts/change-password" class="w3-bar-item w3-button">Change Password</a>
+                                <a href="../home" class="w3-bar-item w3-button" onclick="logout()">Logout</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
 
     <div class="container" style="background: rgb(255, 255, 255);">
         <div id="content" class="panel panel-default">
-            <h3>ELECTRONIC BANKING</h3>
+            <h3>WITHDRAW MONEY</h3>
             <h4>For individual customers</h4>
             <div>
                 <div class="form-group" class="well">
@@ -37,8 +37,9 @@
                     <div class="col-xs-9">
                         <input type="text" class="form-control" id="amount" placeholder="Enter Money" name="amount" onkeydown="enterdown(event)">
                     </div>
-                </div><br/>
-                <div class="form-group" style="padding-bottom: 5px">
+                </div>
+
+                <div class="form-group" style="padding-bottom: 5px; margin-top: 3px">
                     <label class="control-label col-sm-3" for="confirm" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
                     <div class="col-xs-9">
                         <input type="password" class="form-control" id="confirm" placeholder="Confirm password" name="confirm" onkeydown="enterdown(event)"><span id="error"></span>
