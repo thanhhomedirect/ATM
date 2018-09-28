@@ -2,16 +2,10 @@ package com.mvmlabs.springboot.api;
 
 import com.mvmlabs.springboot.model.ATMReponse;
 import com.mvmlabs.springboot.model.TransactionHistory;
-import com.mvmlabs.springboot.model.request.DepositRequest;
-import com.mvmlabs.springboot.model.request.SearchTransactionHistoryRequest;
-import com.mvmlabs.springboot.model.request.TransferRequest;
-import com.mvmlabs.springboot.model.request.WithdrawRequest;
+import com.mvmlabs.springboot.model.request.*;
 import org.springframework.data.domain.Page;
 import org.springframework.http.*;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
@@ -53,10 +47,15 @@ public class ApiTransactionController {
         return atmReponse.getBody();
     }
 
-    @RequestMapping(value = "/show-history", method = RequestMethod.POST)
-    public Page<TransactionHistory> historyTransaction(@RequestBody SearchTransactionHistoryRequest request) {
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    public ATMReponse historyTransaction(@RequestParam("accountId") int id,
+                                         @RequestParam(value = "toDate", required = false) String toDate,
+                                         @RequestParam(value = "fromDate", required = false) String fromDate,
+                                         @RequestParam(value = "type", required = false) Byte type,
+                                         @RequestParam(defaultValue = "0") int pageNo) {
         RestTemplate restTemplate = new RestTemplate();
-        Page<TransactionHistory> transactionHistory = restTemplate.postForObject(REST_URL + "/transactions/show-history", request, Page.class);
+        ATMReponse transactionHistory = restTemplate.getForObject(REST_URL + "/transactions/search?accountId=" + id + "&toDate=" + toDate +
+                "&fromDate=" + fromDate + "&type=" + type + "&pageNo=" +pageNo, ATMReponse.class);
         return transactionHistory;
     }
 }

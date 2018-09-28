@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- * Controller that demonstrates tiles mapping, reguest parameters and path variables.
- *
- * @author Mark Meany
- */
 @Controller
 public class GreetingController {
     private Log log = LogFactory.getLog(this.getClass());
@@ -30,29 +25,18 @@ public class GreetingController {
 	}
 
 
-	@RequestMapping(value = "/login", method=RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
         return "site.login";
     }
 
-	@RequestMapping(value = "/register", method=RequestMethod.GET)
-	public String create() {
-		return "site.register";
-	}
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public String create() {
+        return "site.register";
+    }
 
     @RequestMapping(value = "/conditions", method=RequestMethod.GET)
     public String conditions() {
         return "site.conditions";
-    }
-
-    @RequestMapping(value = "/greet/{name}", method = RequestMethod.GET)
-    public ModelAndView greetTwoWays(@PathVariable(value = "name") final String name, final Model model) {
-        log.info("Controller has been invoked with Path Variable name = '" + name + "'.");
-        return new ModelAndView("site.greeting", "name", name);
-    }
-
-    @RequestMapping("/atm")
-    public String atmView() {
-        return "site.atm";
     }
 }
