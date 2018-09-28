@@ -37,6 +37,7 @@
                             <div class="panel-element" title="Deposits"><a href="/transactions/deposit">Deposits</a></div>
                             <div class="panel-element" title="Withdrawal"><a href="/transactions/withdrawal">Withdrawal</a></div>
                             <div class="panel-element" title="Transfer"><a href="/transactions/transfer">Transfer</a></div>
+                            <div class="panel-element" title="History"><a href="/transactions/show-history">History</a></div>
                         </div>
                     </div>
                 </div>

@@ -25,6 +25,6 @@ public class TransactionController {
 
     @RequestMapping(value = "/show-history", method = RequestMethod.GET)
     public String showHistory() {
-        return "site.show-history";
+        return "site.search-history";
     }
 }

@@ -5,7 +5,8 @@
                 <div class="row grid-row">
                     <div class="col-sm-8 col-xs-4 col-md-8 col-lg-9">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="../home"><strong><em>BBC<span class="yellow-text">Banking</span></em></strong></a>
+                            <a class="navbar-brand" href="../home"><strong><em>BBC<span
+                                    class="yellow-text">Banking</span></em></strong></a>
                         </div>
                     </div>
                     <div class="col-sm-2 col-xs-2.5 col-md-0 col-lg-1" style="float: right">
@@ -36,7 +37,8 @@
                     <label class="control-label col-sm-3" for="amount"
                            style="color: #1c478e; font-size: 17px;">Money</label>
                     <div class="col-xs-9">
-                        <input type="number" class="form-control" id="amount" placeholder="Enter Money" name="amount" required onkeydown="enterdown(event)">
+                        <input type="number" class="form-control" id="amount" placeholder="Enter Money" name="amount"
+                               required onkeydown="enterdown(event)">
                     </div>
                 </div>
             </div>
@@ -44,8 +46,7 @@
                 <button type="button" class="btn btn-basic btn-block" id="enter">OK</button>
             </div>
 
-        </div>
-    </div><!--content end-->
-</div>
+        </div><!--content end-->
+    </div><!--container end-->
 
 </div><!--container end-->

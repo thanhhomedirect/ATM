@@ -110,4 +110,12 @@
             <add-attribute value="/static/js/transaction/transfer.js"/>
         </put-list-attribute>
     </definition>
+
+    <definition name="site.search-history" extends="layout.basic">
+        <put-attribute name="body" value="/WEB-INF/tiles/view/home/search-history.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true"/>
+        <put-list-attribute name="scripts" inherit="true">
+            <add-attribute value="/static/js/search-history.js"/>
+        </put-list-attribute>
+    </definition>
 </tiles-definitions>
