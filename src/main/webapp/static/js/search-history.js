@@ -1,8 +1,11 @@
-if (localStorage.getItem("id") == "") {
-    alert("Please login!")
-    window.location = 'http://127.0.0.1:8090/login'
-} else {
-    document.getElementById("user").innerHTML = localStorage.getItem("username");
+if (localStorage.getItem("id") == "" || localStorage.getItem("id") == null) {
+    document.getElementById("content").style.display = "none";
+    swal({
+        title: "Please Login!",
+        icon: "warning"
+    }).then(function() {
+        window.location = 'http://127.0.0.1:8090/login'
+    });
 }
 
 $(document).ready(function () {
@@ -42,7 +45,7 @@ $(document).ready(function () {
                     $('#back').show();
                 }
             } else {
-                alert("No data can found!")
+                swal("No data can found!");
             }
         });
     })

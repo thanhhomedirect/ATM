@@ -1,10 +1,12 @@
 var regexPass = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,32}$/;
-if (localStorage.getItem("id") == "") {
-    alert("Please login!")
-    window.location = 'http://127.0.0.1:8090/login'
-    console.log(localStorage.getItem("username"));
-} else {
-    document.getElementById("user").innerHTML = localStorage.getItem("username");
+if (localStorage.getItem("id") == "" || localStorage.getItem("id") == null) {
+    document.getElementById("content").style.display = "none";
+    swal({
+        title: "Please Login!",
+        icon: "warning"
+    }).then(function() {
+        window.location = 'http://127.0.0.1:8090/login'
+    });
 }
 
 function validatePass() {
@@ -34,7 +36,6 @@ function validatePass() {
 
 $(document).ready(function () {
     $('#button').click(function () {
-        console.log($('#newpass').val())
         $.ajax({
             method : 'PUT',
             url : '/accounts/change-password',
@@ -45,12 +46,15 @@ $(document).ready(function () {
                 "newPassword" : $('#newpass').val(),
             })
         }).done(function (data) {
-            console.log(data)
             if (data.code == 1) {
-                alert("SUCCESS!");
-                window.location = 'http://127.0.0.1:8090/afterlogin'
+                swal({
+                    title: "SUCCESS!",
+                    icon: "success"
+                }).then(function() {
+                    window.location = 'http://127.0.0.1:8090/afterlogin'
+                });
             } else {
-                alert(data.message);
+                sweetAlert("Oops...", data.message, "error");
             }
         });
     })

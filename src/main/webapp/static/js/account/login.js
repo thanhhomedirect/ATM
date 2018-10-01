@@ -14,12 +14,11 @@ $(document).ready(function () {
             })
         }).done(function (data) {
             if (data.code == 1) {
-                console.log(data)
                 localStorage.setItem("id", data.data.id)
                 localStorage.setItem("username", data.data.username)
                 window.location = 'http://127.0.0.1:8090/accounts/detail'
             } else {
-                alert(data.message);
+                swal(data.message);
             }
         })
     })

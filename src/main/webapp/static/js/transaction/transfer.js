@@ -1,9 +1,11 @@
-if (localStorage.getItem("id") == "") {
-    alert("Please login!")
-    window.location = 'http://127.0.0.1:8090/login'
-    console.log(localStorage.getItem("username"));
-} else {
-    document.getElementById("user").innerHTML = localStorage.getItem("username");
+if (localStorage.getItem("id") == "" || localStorage.getItem("id") == null) {
+    document.getElementById("content").style.display = "none";
+    swal({
+        title: "Please Login!",
+        icon: "warning"
+    }).then(function() {
+        window.location = 'http://127.0.0.1:8090/login'
+    });
 }
 
 $(document).ready(function () {
@@ -21,10 +23,14 @@ $(document).ready(function () {
             })
         }).done(function (data) {
             if (data.code == 1) {
-                alert("SUCCESS!");
-                window.location = 'http://127.0.0.1:8090/accounts/detail'
+                swal({
+                    title: "SUCCESS!",
+                    icon: "success"
+                }).then(function() {
+                    window.location = 'http://127.0.0.1:8090/accounts/detail'
+                });
             } else {
-                alert(data.message);
+                sweetAlert("Oops...", data.message, "error");
             }
         });
     })

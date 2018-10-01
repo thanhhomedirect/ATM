@@ -28,25 +28,27 @@
     </div>
 
     <div class="container" style="background: rgb(255, 255, 255);">
-        <div id="content" class="panel panel-default">
+        <div class="w3-center w3-animate-zoom">
+            <div id="content" class="panel panel-default">
 
-            <h3>DEPOSITS</h3>
-            <h4>For individual customers</h4>
-            <div>
-                <div class="form-group" class="well">
-                    <label class="control-label col-sm-3" for="amount"
-                           style="color: #1c478e; font-size: 17px;">Money</label>
-                    <div class="col-xs-9">
-                        <input type="number" class="form-control" id="amount" placeholder="Enter Money" name="amount"
-                               required onkeydown="enterdown(event)">
+                <h3>DEPOSITS</h3>
+                <h4>For individual customers</h4>
+                <div>
+                    <div class="form-group" class="well">
+                        <label class="control-label col-sm-3" for="amount"
+                               style="color: #1c478e; font-size: 17px;">Money</label>
+                        <div class="col-xs-9">
+                            <input type="number" class="form-control" id="amount" placeholder="Enter Money" name="amount"
+                                   required onkeydown="enterdown(event)">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3" style="margin-top: 20px">
-                <button type="button" class="btn btn-basic btn-block" id="enter">OK</button>
-            </div>
+                <div class="col-lg-3" style="margin-top: 20px">
+                    <button type="button" class="btn btn-basic btn-block" id="enter">OK</button>
+                </div>
 
-        </div><!--content end-->
+            </div><!--content end-->
+        </div>
     </div><!--container end-->
 
 </div><!--container end-->

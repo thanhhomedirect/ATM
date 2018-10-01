@@ -27,16 +27,16 @@
     </div>
 
     <div class="container" style="background: rgb(255, 255, 255);">
-            <div class="w3-center w3-animate-zoom">
-                <div id="content">
+        <div class="w3-center w3-animate-zoom">
+            <div id="content" style="font-size: 25px">
                 <h3>CUSTOMER INFORMATION</h3>
                 <div class="col-md-10">
-                    <div class="col-sm-6">
+                    <div class="col-sm-5">
                         <span>Username</span><br>
                         <span>Account Number</span><br>
                         <span>Amount</span><br>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-7">
                         <span id="username"></span><br>
                         <span id="accountNumber"></span><br>
                         <span id="amount"></span><br>

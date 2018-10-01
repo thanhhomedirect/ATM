@@ -178,7 +178,7 @@ body {
     margin-left: 9%;
     margin-right: 2%;
     margin-bottom: 2%;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .login {
@@ -318,4 +318,7 @@ body {
 }
 .w3-black button:visited{
     border: none;
+}
+.modal-footer .btn{
+    padding: 10px;
 }

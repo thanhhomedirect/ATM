@@ -25,7 +25,7 @@
     </div>
 
     <div class="container" style="background: rgb(255, 255, 255);">
-        <%--<div id="content" class="panel panel-default">--%>
+        <div class="w3-center w3-animate-zoom">
             <div id="condition" class="textover">
                 <div>
                     <p>
@@ -49,6 +49,6 @@
                         1.12. SMS Token: The system automatically sends OTP to the customer's registered mobile phone nuBBCer when the customer executes the transaction / payment order / instruction.<br/>
                 </div>
             </div><!--content end-->
-        <%--</div>--%>
+        </div>
     </div>
 </div>
