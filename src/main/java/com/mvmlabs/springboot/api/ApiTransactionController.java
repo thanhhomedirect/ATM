@@ -51,7 +51,7 @@ public class ApiTransactionController {
     public ATMReponse historyTransaction(@RequestParam("accountId") int id,
                                          @RequestParam(value = "toDate", required = false) String toDate,
                                          @RequestParam(value = "fromDate", required = false) String fromDate,
-                                         @RequestParam(value = "type", required = false) Byte type,
+                                         @RequestParam(value = "type", required = false) String type,
                                          @RequestParam(defaultValue = "0") int pageNo) {
         RestTemplate restTemplate = new RestTemplate();
         ATMReponse transactionHistory = restTemplate.getForObject(REST_URL + "/transactions/search?accountId=" + id + "&toDate=" + toDate +

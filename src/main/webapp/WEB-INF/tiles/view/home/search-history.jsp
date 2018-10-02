@@ -56,7 +56,7 @@
                            style="color: #1c478e; font-size: 17px;">Type</label>
                     <div class="col-xs-9">
                         <select id="type" class="form-control">
-                            <option value="null">---</option>
+                            <option value="">---</option>
                             <option value="1">Deposit</option>
                             <option value="2">Withdrawal</option>
                             <option value="3">Transfer</option>
