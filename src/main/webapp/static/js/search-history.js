@@ -3,7 +3,7 @@ if (localStorage.getItem("id") == "" || localStorage.getItem("id") == null) {
     swal({
         title: "Please Login!",
         icon: "warning"
-    }).then(function() {
+    }).then(function () {
         window.location = 'http://127.0.0.1:8090/login'
     });
 }
@@ -25,10 +25,9 @@ $(document).ready(function () {
     }
 
     function drawTable() {
-        $('<div id="div1"></div><br>').appendTo('#history');
-        $('<button id="back" style="color: black;">Back</button>').appendTo('#div1');
-        $('<button id="next" style="color: black;">Next</button>').appendTo('#div1');
-        $('#div1').append(
+        $('<button id="back" style="color: black;">Back</button>').appendTo('#tables');
+        $('<button id="next" style="color: black;">Next</button>').appendTo('#tables');
+        $('#tables').append(
             '<table id="table-history" class="table table-bordered" style="color: black">' +
             '<tr>' +
             '<th>STT</th>' +
@@ -51,7 +50,7 @@ $(document).ready(function () {
     }
 
     $('#enter').click(function () {
-        $("#div1").html("");
+        $("#tables").empty();
         getData();
         currentIndex = 0;
         $.ajax({
@@ -62,19 +61,9 @@ $(document).ready(function () {
             drawTable();
             if (data.code == 1 && data.data.content != null && data.data.content != "") {
                 fetch = data.data.size;
-                size = data.data.size
+                size = data.data.size;
                 if (data.data.numberOfElements < data.data.size) {
                     fetch = data.data.numberOfElements;
-                }
-                if (currentPage == (data.data.totalPages - 1)) {
-                    $('#next').prop('disabled', true);
-                } else {
-                    $('#next').prop('disabled', false);
-                }
-                if (currentPage == 0) {
-                    $('#back').prop('disabled', true);
-                } else {
-                    $('#back').prop('disabled', false);
                 }
                 for (i = 0; i < fetch; i++) {
                     var markup =
@@ -90,6 +79,18 @@ $(document).ready(function () {
                     $("table tbody").append(markup);
                     currentIndex++;
                 }
+
+                if (currentPage == (data.data.totalPages - 1)) {
+                    $('#next').prop('disabled', true);
+                } else {
+                    $('#next').prop('disabled', false);
+                }
+
+                if (currentPage == 0) {
+                    $('#back').prop('disabled', true);
+                } else {
+                    $('#back').prop('disabled', false);
+                }
             } else {
                 swal("No data can found!");
             }
@@ -97,7 +98,7 @@ $(document).ready(function () {
     })
 
     function next(accountId, fromDate, toDate, type) {
-        $("#div1").html("");
+        $("#tables").empty();
         currentPage++;
         $.ajax({
             method: 'GET',
@@ -130,11 +131,13 @@ $(document).ready(function () {
                 $("table tbody").append(markup);
                 currentIndex++;
             }
+
             if (currentPage == (data.data.totalPages - 1)) {
                 $('#next').prop('disabled', true);
             } else {
                 $('#next').prop('disabled', false);
             }
+
             if (currentPage == 0) {
                 $('#back').prop('disabled', true);
             } else {
@@ -144,7 +147,7 @@ $(document).ready(function () {
     }
 
     function back(accountId, fromDate, toDate, type) {
-        $("#div1").html("");
+        $("#tables").empty();
         currentPage--;
         currentIndex = currentIndex - fetch - size;
         $.ajax({
@@ -168,6 +171,7 @@ $(document).ready(function () {
                 $("table tbody").append(markup);
                 currentIndex++;
             }
+
             if (currentPage == (data.data.totalPages - 1)) {
                 $('#next').prop('disabled', true);
             } else {

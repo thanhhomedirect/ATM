@@ -72,5 +72,7 @@
             </div><!--content end-->
         </div>
     </div>
-    <div id="history" class="container" style="background: rgb(255, 255, 255);"></div>
+    <div id="history" class="container" style="background: rgb(255, 255, 255);">
+        <div id="tables"></div>
+    </div>
 </div><!--container end-->
