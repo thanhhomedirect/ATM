@@ -28,45 +28,41 @@
     </div>
 
     <div class="container" style="background: rgb(255, 255, 255);">
-        <div id="content" class="panel panel-default">
+        <div class="w3-center w3-animate-zoom">
+            <div id="content" class="panel panel-default">
 
-            <h3>ELECTRONIC BANKING</h3>
-            <h4>For individual customers</h4>
-            <div>
-                <div class="form-group" class="well">
-                    <label class="control-label col-sm-3" for="oldpass" style="color: #1c478e; font-size: 17px;">Old Password:</label>
-                    <div class="col-xs-9">
-                        <input type="password" class="form-control" id="oldpass" placeholder="Enter Old Password" required name="name">
+                <h3>ELECTRONIC BANKING</h3>
+                <h4>For individual customers</h4>
+                <div>
+                    <div class="form-group" class="well">
+                        <label class="control-label col-sm-3" for="oldpass" style="color: #1c478e; font-size: 17px;">Old Password:</label>
+                        <div class="col-xs-9">
+                            <input type="password" class="form-control" id="oldpass" placeholder="Enter Old Password" required name="name">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="newpass" style="color: #1c478e; font-size: 17px;">New Password:</label>
+                        <div class="col-xs-9">
+                            <input type="password" class="form-control" id="newpass" placeholder="Enter new password" required name="newpass">
+                            <span id="errorpass" style="color: red;"></span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="confirmpass" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
+                        <div class="col-xs-9">
+                            <input type="password" class="form-control" id="confirmpass" name="newpass" required placeholder="Confirm new password"><span id="error" style="color: red;"></span>
+                        </div>
                     </div>
                 </div>
                 <br>
-                <br>
-                <br>
-                <div class="form-group">
-                    <label class="control-label col-sm-3" for="newpass" style="color: #1c478e; font-size: 17px;">New Password:</label>
-                    <div class="col-xs-9">
-                        <input type="password" class="form-control" id="newpass" placeholder="Enter new password" required name="newpass">
-                        <span id="errorpass" style="color: red;"></span>
-                    </div>
+                <div class="col-lg-3" style="margin-top: 20px">
+                    <button id = "button" type="button" class="btn btn-basic btn-block">OK</button>
                 </div>
-                <br>
-                <br>
-                <div class="form-group">
-                    <label class="control-label col-sm-3" for="confirmpass" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
-                    <div class="col-xs-9">
-                        <input type="password" class="form-control" id="confirmpass" name="newpass" required placeholder="Confirm new password"><span id="error" style="color: red;"></span>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <div class="col-lg-3" style="margin-top: 20px">
-                <button id = "button" type="button" class="btn btn-basic btn-block">OK</button>
-            </div>
-
-            </div>
-        </div><!--content end-->
+            </div><!--content end-->
+        </div>
     </div>
 
 </div><!--container end-->

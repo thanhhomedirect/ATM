@@ -28,31 +28,33 @@
         </nav>
     </div>
     <div class="container" style="background: rgb(255, 255, 255);">
-        <div id="content" class="panel panel-default">
+        <div class="w3-center w3-animate-zoom">
+            <div id="content" class="panel panel-default">
 
-            <h3>ELECTRONIC BANKING</h3>
-            <h4>For individual customers - Show History Transaction</h4>
-            <div>
-                <div class="form-group" class="well">
-                    <label class="control-label col-sm-3" for="fromDate"
-                           style="color: #1c478e; font-size: 17px;">From Date</label>
-                    <div class="col-xs-9">
-                        <input type="date" class="form-control" id="fromDate" name="fromDate" required>
+                <h3>ELECTRONIC BANKING</h3>
+                <h4>For individual customers - Show History Transaction</h4>
+                <div>
+                    <div class="form-group" class="well">
+                        <label class="control-label col-sm-3" for="fromDate"
+                               style="color: #1c478e; font-size: 17px;">From Date</label>
+                        <div class="col-xs-9">
+                            <input type="date" class="form-control" id="fromDate" name="fromDate" required>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group" class="well">
+                        <label class="control-label col-sm-3" for="toDate"
+                               style="color: #1c478e; font-size: 17px;">To Date</label>
+                        <div class="col-xs-9">
+                            <input type="date" class="form-control" id="toDate" name="toDate" required>
+                        </div>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="form-group" class="well">
-                    <label class="control-label col-sm-3" for="toDate"
-                           style="color: #1c478e; font-size: 17px;">To Date</label>
-                    <div class="col-xs-9">
-                        <input type="date" class="form-control" id="toDate" name="toDate" required>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="form-group" class="well">
-                    <label class="control-label col-sm-3" for="amount"
+                    <label class="control-label col-sm-3"
                            style="color: #1c478e; font-size: 17px;">Type</label>
                     <div class="col-xs-9">
                         <select id="type" class="form-control">
@@ -63,12 +65,12 @@
                         </select>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3" style="margin-top: 20px">
-                <button type="button" class="btn btn-basic btn-block" id="enter">OK</button>
-            </div>
+                <div class="col-lg-3" style="margin-top: 20px">
+                    <button type="button" class="btn btn-basic btn-block" id="enter">OK</button>
+                </div>
 
-        </div><!--content end-->
+            </div><!--content end-->
+        </div>
     </div>
     <div id="history" class="container" style="background: rgb(255, 255, 255);"></div>
 </div><!--container end-->

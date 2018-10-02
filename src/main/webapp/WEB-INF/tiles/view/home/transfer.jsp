@@ -28,49 +28,50 @@
     </div>
 
     <div class="container" style="background: rgb(255, 255, 255);">
-        <div id="content" class="panel panel-default">
-            <h3>TRANFER</h3>
-            <h4>For individual customers</h4>
-            <div>
-                <div class="form-group" class="well">
-                    <label class="control-label col-sm-3" for="toAccount"
-                           style="color: #1c478e; font-size: 17px;">Account Number</label>
-                    <div class="col-xs-9">
-                        <input type="text" class="form-control" id="toAccount" placeholder="Enter Receiver Account Number" name="toAccount">
+        <div class="w3-center w3-animate-zoom">
+            <div id="content" class="panel panel-default">
+                <h3>TRANFER</h3>
+                <h4>For individual customers</h4>
+                <div>
+                    <div class="form-group" class="well">
+                        <label class="control-label col-sm-3" for="toAccount"
+                               style="color: #1c478e; font-size: 17px;">Account Number</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="toAccount" placeholder="Enter Receiver Account Number" name="toAccount">
+                        </div>
                     </div>
-                </div>
-                <br>
-                <div class="form-group" class="well">
-                    <label class="control-label col-sm-3" for="contenttransfer"
-                           style="color: #1c478e; font-size: 17px;">Content</label>
-                    <div class="col-xs-9">
-                        <input type="text" class="form-control" id="contenttransfer" placeholder="Enter Content" name="contenttransfer">
+                    <br>
+                    <div class="form-group" class="well">
+                        <label class="control-label col-sm-3" for="contenttransfer"
+                               style="color: #1c478e; font-size: 17px;">Content</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="contenttransfer" placeholder="Enter Content" name="contenttransfer">
+                        </div>
                     </div>
-                </div>
-                <br>
-                <div class="form-group" class="well">
-                    <label class="control-label col-sm-3" for="amount"
-                           style="color: #1c478e; font-size: 17px;">Money</label>
-                    <div class="col-xs-9">
-                        <input type="number" class="form-control" id="amount" placeholder="Enter Money" name="amount" onkeydown="enterdown(event)">
+                    <br>
+                    <div class="form-group" class="well">
+                        <label class="control-label col-sm-3" for="amount"
+                               style="color: #1c478e; font-size: 17px;">Money</label>
+                        <div class="col-xs-9">
+                            <input type="number" class="form-control" id="amount" placeholder="Enter Money" name="amount" onkeydown="enterdown(event)">
+                        </div>
+
                     </div>
 
-                </div>
-
-                <br>
-                <div class="form-group" style="padding-bottom: 5px">
-                    <label class="control-label col-sm-3" for="confirm" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
-                    <div class="col-xs-9">
-                        <input type="password" class="form-control" id="confirm" placeholder="Confirm password" name="confirm" onkeydown="enterdown(event)"><span id="error"></span>
+                    <br>
+                    <div class="form-group" style="padding-bottom: 5px">
+                        <label class="control-label col-sm-3" for="confirm" style="color: #1c478e; font-size: 17px;">Confirm Password:</label>
+                        <div class="col-xs-9">
+                            <input type="password" class="form-control" id="confirm" placeholder="Confirm password" name="confirm" onkeydown="enterdown(event)"><span id="error"></span>
+                        </div>
                     </div>
                 </div>
+                <div class="col-lg-3" style="margin-top: 20px">
+                    <button type="button" class="btn btn-basic btn-block" id="enter">OK</button>
+                </div>
+
             </div>
-            <div class="col-lg-3" style="margin-top: 20px">
-                <button type="button" class="btn btn-basic btn-block" id="enter">OK</button>
-            </div>
-
-        </div>
-    </div><!--content end-->
-</div>
+        </div><!--content end-->
+    </div>
 
 </div><!--container end-->

@@ -5,9 +5,6 @@
         <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
         <html>
         <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><tiles:getAsString name="title"/></title>
 
         <tilesx:useAttribute id="listCss" name="stylesheets" classname="java.util.List"/>
@@ -46,4 +43,6 @@
             </c:choose>
         </c:forEach>
         </body>
+        <footer>
+        </footer>
         </html>

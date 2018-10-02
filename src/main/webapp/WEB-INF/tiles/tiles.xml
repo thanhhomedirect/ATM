@@ -21,6 +21,7 @@
             <add-attribute value="/static/js/jquery.js"/>
             <add-attribute value="/static/js/bootstrap.js"/>
             <add-attribute value="/static/js/general.js"/>
+            <add-attribute value="/static/js/sweetalert.js"/>
         </put-list-attribute>
     </definition>
 

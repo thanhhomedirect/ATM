@@ -22,35 +22,37 @@
     </div>
 
     <div class="container" style="background-color: white;" >
-        <div class="login">
-            <div id="content" class="panel panel-default">
-                <h3>ELECTRONIC BANKING</h3>
-                <h4>For individual customers</h4>
-                <div>
-                    <div class="form-group" class="well">
-                        <label class="control-label col-sm-3" for="name" style="color: #1c478e; font-size: 17px;">Username:</label>
-                        <div class="col-xs-9">
-                            <input type="text" class="form-control" id="name" placeholder="Enter username" required name="name">
+        <div class="w3-center w3-animate-zoom">
+            <div class="login">
+                <div id="content" class="panel panel-default">
+                    <h3>ELECTRONIC BANKING</h3>
+                    <h4>For individual customers</h4>
+                    <div>
+                        <div class="form-group" class="well">
+                            <label class="control-label col-sm-3" for="name" style="color: #1c478e; font-size: 17px;">Username:</label>
+                            <div class="col-xs-9">
+                                <input type="text" class="form-control" id="name" placeholder="Enter username" required name="name">
+                            </div>
                         </div>
-                    </div>
-                    <br>
+                        <br>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
-                        <div class="col-xs-9">
-                            <input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass" required onkeydown="enterdown(event)">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
+                            <div class="col-xs-9">
+                                <input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass" required onkeydown="enterdown(event)">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <button id="enter" type="button" class="btn btn-basic btn-block" onclick="login()">Login</button>
-                </div>
-                <div class = "col-lg-12">
-                    <h5><a href="forgotpassword">Forgot Password</a></h5>
-                    <h5><a href="conditions" target="_blank">Conditions and terms</a></h5>
-                    <h5><a href="guide">Guide to secure transactions</a></h5>
-                </div>
-            </div><!--content end-->
+                    <div class="col-lg-3">
+                        <button id="enter" type="button" class="btn btn-basic btn-block" onclick="login()">Login</button>
+                    </div>
+                    <div class = "col-lg-12">
+                        <h5><a href="forgotpassword">Forgot Password</a></h5>
+                        <h5><a href="conditions" target="_blank">Conditions and terms</a></h5>
+                        <h5><a href="guide">Guide to secure transactions</a></h5>
+                    </div>
+                </div><!--content end-->
+            </div>
         </div>
     </div>
 

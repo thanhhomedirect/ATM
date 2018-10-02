@@ -52,10 +52,14 @@ $(document).ready(function () {
             })
         }).done(function (data) {
             if (data.code == 1) {
-                alert("SUCCESS");
-                window.location = 'http://127.0.0.1:8090/login'
+                swal({
+                    title: "SUCCESS!",
+                    icon: "success"
+                }).then(function() {
+                    window.location = 'http://127.0.0.1:8090/login'
+                });
             } else {
-                alert(data.message);
+                swal("Oops...", data.message, "error");
             }
         });
     })
