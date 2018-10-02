@@ -13,14 +13,13 @@
 
                     </div>
                     <div class="col-sm-1 col-xs-2.1 col-md-0 col-lg-1" style="float: right">
-                        <div class="btn-group">
-                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><span
-                                    id="user"></span> <span class="caret"></span></button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/accounts/detail">Information</a></li>
-                                <li><a href="/accounts/change-password">Change Password</a></li>
-                                <li><a href="../home" onclick="logout()">Logout</a></li>
-                            </ul>
+                        <div class="w3-dropdown-hover">
+                            <button class="w3-padding-large w3-button w3-black" title="More"><span id="user"></span> <span class="caret"></span></button>
+                            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                                <a href="/accounts/detail" class="w3-bar-item w3-button">Information</a>
+                                <a href="/accounts/change-password" class="w3-bar-item w3-button">Change Password</a>
+                                <a href="../home" class="w3-bar-item w3-button" onclick="logout()">Logout</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -51,8 +50,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
+
                 <div class="form-group" class="well">
                     <label class="control-label col-sm-3"
                            style="color: #1c478e; font-size: 17px;">Type</label>
@@ -68,11 +66,8 @@
                 <div class="col-lg-3" style="margin-top: 20px">
                     <button type="button" class="btn btn-basic btn-block" id="enter">OK</button>
                 </div>
-
-            </div><!--content end-->
-        </div>
+            </div>
+        </div><!--content end-->
     </div>
-    <div id="history" class="container" style="background: rgb(255, 255, 255);">
-        <div id="tables"></div>
-    </div>
+    <div id="history" class="container" style="background: rgb(255, 255, 255);"></div>
 </div><!--container end-->
