@@ -71,7 +71,7 @@ $(document).ready(function () {
                         '<td>' + (currentIndex + 1) + '</td>' +
                         '<td>' + data.data.content[i].fromAccount + '</td>' +
                         '<td>' + data.data.content[i].toAccount + '</td>' +
-                        '<td>' + data.data.content[i].transferAmount + '</td>' +
+                        '<td>' + (data.data.content[i].transferAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND") + '</td>' +
                         '<td>' + data.data.content[i].content + '</td>' +
                         '<td>' + new Date(data.data.content[i].time).toUTCString() + '</td>' +
                         '<td>' + data.data.content[i].status + '</td>' +
@@ -123,7 +123,7 @@ $(document).ready(function () {
                     '<td>' + (currentIndex + 1) + '</td>' +
                     '<td>' + data.data.content[i].fromAccount + '</td>' +
                     '<td>' + data.data.content[i].toAccount + '</td>' +
-                    '<td>' + data.data.content[i].transferAmount + '</td>' +
+                    '<td>' + (data.data.content[i].transferAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND") + '</td>' +
                     '<td>' + data.data.content[i].content + '</td>' +
                     '<td>' + new Date(data.data.content[i].time).toUTCString() + '</td>' +
                     '<td>' + data.data.content[i].status + '</td>' +
@@ -163,7 +163,7 @@ $(document).ready(function () {
                     '<td>' + (currentIndex + 1) + '</td>' +
                     '<td>' + data.data.content[i].fromAccount + '</td>' +
                     '<td>' + data.data.content[i].toAccount + '</td>' +
-                    '<td>' + data.data.content[i].transferAmount + '</td>' +
+                    '<td>' + (data.data.content[i].transferAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND") + '</td>' +
                     '<td>' + data.data.content[i].content + '</td>' +
                     '<td>' + new Date(data.data.content[i].time).toUTCString() + '</td>' +
                     '<td>' + data.data.content[i].status + '</td>' +
