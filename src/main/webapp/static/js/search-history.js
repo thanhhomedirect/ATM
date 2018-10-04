@@ -59,18 +59,18 @@ $(document).ready(function () {
         }).done(function (data) {
             drawTable();
             if (data.code == 1 && data.data.content != null && data.data.content != "") {
-                fetch = data.data.size;
-                size = data.data.size;
-                if (data.data.numberOfElements < data.data.size) {
-                    fetch = data.data.numberOfElements;
+                fetch = data.data.pageSize;
+                size = data.data.pageSize;
+                if (data.data.totalElements < data.data.pageSize) {
+                    fetch = data.data.totalElements;
                 }
                 for (i = 0; i < fetch; i++) {
                     var markup =
                         '<tr>' +
                         '<td>' + (currentIndex + 1) + '</td>' +
-                        '<td>' + data.data.content[i].fromAccount + '</td>' +
-                        '<td>' + data.data.content[i].toAccount + '</td>' +
-                        '<td>' + data.data.content[i].transferAmount + '</td>' +
+                        '<td>' + data.data.content[i].fromAccountNumber + '</td>' +
+                        '<td>' + data.data.content[i].toAccountNumber + '</td>' +
+                        '<td>' + (data.data.content[i].transferAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND") + '</td>' +
                         '<td>' + data.data.content[i].content + '</td>' +
                         '<td>' + new Date(data.data.content[i].time).toUTCString() + '</td>' +
                         '<td>' + data.data.content[i].status + '</td>' +
@@ -105,24 +105,24 @@ $(document).ready(function () {
                 '&fromDate=' + fromDate + '&type=' + type + '&pageNo=' + currentPage
         }).done(function (data) {
             if (currentPage == (data.data.totalPage - 1)) {
-                if (data.data.totalElements % data.data.size != 0) {
-                    fetch = data.data.totalElements % data.data.size;
+                if (data.data.totalElements % data.data.pageSize != 0) {
+                    fetch = data.data.totalElements % data.data.pageSize;
                 } else {
-                    fetch = data.data.size;
+                    fetch = data.data.pageSize;
                 }
             }
-            fetch = data.data.size;
-            if (data.data.numberOfElements < data.data.size) {
-                fetch = data.data.numberOfElements;
+            fetch = data.data.pageSize;
+            if (data.data.totalElements < data.data.pageSize) {
+                fetch = data.data.totalElements;
             }
             drawTable();
             for (i = 0; i < fetch; i++) {
                 var markup =
                     '<tr>' +
                     '<td>' + (currentIndex + 1) + '</td>' +
-                    '<td>' + data.data.content[i].fromAccount + '</td>' +
-                    '<td>' + data.data.content[i].toAccount + '</td>' +
-                    '<td>' + data.data.content[i].transferAmount + '</td>' +
+                    '<td>' + data.data.content[i].fromAccountNumber + '</td>' +
+                    '<td>' + data.data.content[i].toAccountNumber + '</td>' +
+                    '<td>' + (data.data.content[i].transferAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND") + '</td>' +
                     '<td>' + data.data.content[i].content + '</td>' +
                     '<td>' + new Date(data.data.content[i].time).toUTCString() + '</td>' +
                     '<td>' + data.data.content[i].status + '</td>' +
@@ -155,14 +155,14 @@ $(document).ready(function () {
                 '&fromDate=' + fromDate + '&type=' + type + '&pageNo=' + currentPage
         }).done(function (data) {
             drawTable();
-            fetch = data.data.size;
+            fetch = data.data.pageSize;
             for (i = 0; i < fetch; i++) {
                 var markup =
                     '<tr>' +
                     '<td>' + (currentIndex + 1) + '</td>' +
                     '<td>' + data.data.content[i].fromAccountNumber + '</td>' +
                     '<td>' + data.data.content[i].toAccountNumber + '</td>' +
-                    '<td>' + data.data.content[i].transferAmount + '</td>' +
+                    '<td>' + (data.data.content[i].transferAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND") + '</td>' +
                     '<td>' + data.data.content[i].content + '</td>' +
                     '<td>' + new Date(data.data.content[i].time).toUTCString() + '</td>' +
                     '<td>' + data.data.content[i].status + '</td>' +
