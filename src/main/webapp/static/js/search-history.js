@@ -57,8 +57,7 @@ $(document).ready(function () {
         currentIndex = 0;
         $.ajax({
             method: 'GET',
-            url: '/transactions/search?accountId=' + accountId + '&toDate=' + toDate +
-                '&fromDate=' + fromDate + '&type=' + type
+            url: '/transactions/search?accountId=' + accountId + '&toDate=' + toDate + '&fromDate=' + fromDate + '&type=' + type
         }).done(function (data) {
             drawTable();
             if (data.code == 1 && data.data.content != null && data.data.content != "") {
