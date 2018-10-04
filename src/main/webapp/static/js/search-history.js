@@ -55,8 +55,7 @@ $(document).ready(function () {
         currentIndex = 0;
         $.ajax({
             method: 'GET',
-            url: '/transactions/search?accountId=' + accountId + '&toDate=' + toDate +
-                '&fromDate=' + fromDate + '&type=' + type
+            url: '/transactions/search?accountId=' + accountId + '&toDate=' + toDate + '&fromDate=' + fromDate + '&type=' + type
         }).done(function (data) {
             drawTable();
             if (data.code == 1 && data.data.content != null && data.data.content != "") {
@@ -80,7 +79,7 @@ $(document).ready(function () {
                     currentIndex++;
                 }
 
-                if (currentPage == (data.data.totalPages - 1)) {
+                if (currentPage == (data.data.totalPage - 1)) {
                     $('#next').prop('disabled', true);
                 } else {
                     $('#next').prop('disabled', false);
@@ -105,7 +104,7 @@ $(document).ready(function () {
             url: '/transactions/search?accountId=' + accountId + '&toDate=' + toDate +
                 '&fromDate=' + fromDate + '&type=' + type + '&pageNo=' + currentPage
         }).done(function (data) {
-            if (currentPage == (data.data.totalPages - 1)) {
+            if (currentPage == (data.data.totalPage - 1)) {
                 if (data.data.totalElements % data.data.size != 0) {
                     fetch = data.data.totalElements % data.data.size;
                 } else {
@@ -132,7 +131,7 @@ $(document).ready(function () {
                 currentIndex++;
             }
 
-            if (currentPage == (data.data.totalPages - 1)) {
+            if (currentPage == (data.data.totalPage - 1)) {
                 $('#next').prop('disabled', true);
             } else {
                 $('#next').prop('disabled', false);
@@ -161,8 +160,8 @@ $(document).ready(function () {
                 var markup =
                     '<tr>' +
                     '<td>' + (currentIndex + 1) + '</td>' +
-                    '<td>' + data.data.content[i].fromAccount + '</td>' +
-                    '<td>' + data.data.content[i].toAccount + '</td>' +
+                    '<td>' + data.data.content[i].fromAccountNumber + '</td>' +
+                    '<td>' + data.data.content[i].toAccountNumber + '</td>' +
                     '<td>' + data.data.content[i].transferAmount + '</td>' +
                     '<td>' + data.data.content[i].content + '</td>' +
                     '<td>' + new Date(data.data.content[i].time).toUTCString() + '</td>' +
@@ -172,7 +171,7 @@ $(document).ready(function () {
                 currentIndex++;
             }
 
-            if (currentPage == (data.data.totalPages - 1)) {
+            if (currentPage == (data.data.totalPage - 1)) {
                 $('#next').prop('disabled', true);
             } else {
                 $('#next').prop('disabled', false);
