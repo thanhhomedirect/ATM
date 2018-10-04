@@ -28,7 +28,7 @@ public class ApiAccountController {
         return atmReponse;
     }
 
-    @RequestMapping(value = "/accounts", method = RequestMethod.GET)
+    @RequestMapping(value = "/show-accounts", method = RequestMethod.GET)
     public ATMReponse account() {
         RestTemplate restTemplate = new RestTemplate();
         ATMReponse atmReponse = restTemplate.getForObject(REST_URL + "/accounts/", ATMReponse.class);
@@ -52,4 +52,11 @@ public class ApiAccountController {
 
         return atmReponse.getBody();
     }
+    @RequestMapping(value = "/search-accounts", method = RequestMethod.GET)
+    public ATMReponse searchAccount(@RequestParam("username") String username) {
+        RestTemplate restTemplate = new RestTemplate();
+        ATMReponse account = restTemplate.getForObject(REST_URL + "/accounts/search?username=" + username , ATMReponse.class);
+        return account;
+    }
+
 }
