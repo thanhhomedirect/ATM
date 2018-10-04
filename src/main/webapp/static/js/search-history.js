@@ -9,6 +9,8 @@ if (localStorage.getItem("id") == "" || localStorage.getItem("id") == null) {
 }
 
 $(document).ready(function () {
+    $('#fromDate').val("2018-09-01");
+    $('#toDate').val(new Date().toJSON().slice(0,10));
     var accountId = localStorage.getItem("id");
     var fromDate = $('#fromDate').val().toString();
     var toDate = $('#toDate').val().toString();
