@@ -16,7 +16,14 @@ $(document).ready(function () {
             if (data.code == 1) {
                 localStorage.setItem("id", data.data.id)
                 localStorage.setItem("username", data.data.username)
-                window.location = 'http://127.0.0.1:8090/accounts/detail'
+                swal({
+                        title: "Login Success!",
+                        text: "Wellcome " + data.data.username,
+                        type: "success",
+                        timer: 2000
+                    }).then(function() {
+                    window.location.replace('http://127.0.0.1:8090/afterlogin');
+                });
             } else {
                 swal(data.message);
             }

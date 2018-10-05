@@ -29,24 +29,25 @@
                     <h4>For individual customers</h4>
                     <div class="well-lg">
                         <div class="form-group" style="padding-bottom: 5px">
-                            <label class="control-label col-sm-3" for="name"
-                                   style="color: #1c478e; font-size: 17px;">Username:</label>
+                            <label class="control-label col-sm-3" for="name" style="color: #1c478e; font-size: 17px;">Username:</label>
                             <div class="col-xs-9">
-                                <input type="text" class="form-control" id="name" placeholder="Enter username" required
-                                       name="name">
+                                <input data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Pill  username" type="text" class="form-control" id="name" placeholder="Enter username" required name="name">
+                                <span></span>
                             </div>
+                            <br>
                         </div>
-                        <br>
+
                         <div class="form-group" style="padding-bottom: 5px">
                             <label class="control-label col-sm-3" for="pass"
                                    style="color: #1c478e; font-size: 17px;">Password:</label>
                             <div class="col-xs-9">
-                                <input type="password" class="form-control" id="pass" placeholder="Enter password" minlength="6"
+                                <input data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Password must have at least 1 capital letter, 1 lower case, 1 special character, 1 digit and minimum 8, maximum 32 characters" type="password" class="form-control" id="pass" placeholder="Enter password" minlength="6"
                                        name="pass" required="true" onkeydown="enterdown(event)">
                                 <span id="errorpass" style="color: red;"></span>
                             </div>
+                            <br>
                         </div>
-                        <br>
+
                         <div class="form-group" style="padding-bottom: 5px">
                             <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Confirm
                                 Password:</label>
@@ -55,6 +56,7 @@
                                        name="confirm" onkeydown="enterdown(event)">
                                 <span id="error" style="color:red;"></span>
                             </div>
+                            <br>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12" style="margin: 10px 0 10px 2px;">

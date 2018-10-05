@@ -35,6 +35,7 @@ function checked() {
 }
 
 $(document).ready(function () {
+    $('[data-toggle="popover"]').popover();
     $('#enter').click(function () {
         if (!validatePass()) {
             return false;

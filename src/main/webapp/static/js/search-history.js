@@ -29,6 +29,7 @@ $(document).ready(function () {
     function drawTable() {
         $('<button id="back" style="color: black;">Back</button>').appendTo('#tables');
         $('<button id="next" style="color: black;">Next</button>').appendTo('#tables');
+        $('<button id="download" style="color: black;">Download Excel</button>').appendTo('#tables');
         $('#tables').append(
             '<table id="table-history" class="table table-bordered" style="color: black">' +
             '<tr>' +
@@ -49,7 +50,19 @@ $(document).ready(function () {
         $('#back').click(function () {
             back(accountId, fromDate, toDate, type);
         });
+        $('#download').click(function () {
+            $.ajax({
+                method: 'GET',
+                url: '/transactions/excel-transactions?accountId=' + accountId
+            }).done(function (data) {
+                swal({
+                    title: "Download " + data.message,
+                    icon: "success"
+                })
+            });
+        })
     }
+
 
     $('#enter').click(function () {
         $("#tables").empty();

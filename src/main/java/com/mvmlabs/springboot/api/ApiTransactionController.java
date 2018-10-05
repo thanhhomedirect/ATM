@@ -1,9 +1,9 @@
 package com.mvmlabs.springboot.api;
 
 import com.mvmlabs.springboot.model.ATMReponse;
-import com.mvmlabs.springboot.model.TransactionHistory;
-import com.mvmlabs.springboot.model.request.*;
-import org.springframework.data.domain.Page;
+import com.mvmlabs.springboot.model.request.DepositRequest;
+import com.mvmlabs.springboot.model.request.TransferRequest;
+import com.mvmlabs.springboot.model.request.WithdrawRequest;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -56,6 +56,13 @@ public class ApiTransactionController {
         RestTemplate restTemplate = new RestTemplate();
         ATMReponse transactionHistory = restTemplate.getForObject(REST_URL + "/transactions/search?accountId=" + id + "&toDate=" + toDate +
                 "&fromDate=" + fromDate + "&type=" + type + "&pageNo=" +pageNo, ATMReponse.class);
+        return transactionHistory;
+    }
+
+    @RequestMapping(value = "/excel-transactions", method = RequestMethod.GET)
+    public ATMReponse historyTransaction(@RequestParam("accountId") int id) {
+        RestTemplate restTemplate = new RestTemplate();
+        ATMReponse transactionHistory = restTemplate.getForObject(REST_URL + "/excel/transactions?accountId=" + id, ATMReponse.class);
         return transactionHistory;
     }
 }

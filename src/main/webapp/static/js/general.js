@@ -7,7 +7,7 @@ function logout() {
     localStorage.setItem("username", "");
 }
 
-if (localStorage.getItem("username") != "") {
+if (localStorage.getItem("username") !== undefined && localStorage.getItem("username") !== null && localStorage.getItem("username")!== '') {
     document.getElementById("user").innerHTML = "Wellcome " + localStorage.getItem("username");
 }
 

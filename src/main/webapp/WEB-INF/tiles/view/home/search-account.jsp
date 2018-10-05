@@ -30,11 +30,14 @@
         <div class="w3-center w3-animate-zoom">
             <div id="content" class="panel panel-default">
 
-                <div class="col-xs-9">
+                <div class="col-xs-6">
                     <input type="text" class="form-control" id="param" name="param" required>
                 </div>
                 <div class="col-lg-3" >
                     <button type="button" class="btn btn-basic btn-block" id="enter">Search</button>
+                </div>
+                <div class="col-lg-3" >
+                    <button type="button" class="btn btn-basic btn-block" id="download">Download Excel</button>
                 </div>
 
                     <table id="table" class="table table-bodered" style="color: #3a3a3a">
@@ -49,8 +52,8 @@
 
                         </div>
                     </table>
-                <button id="back" type="button" title="Back">Back</button>
-                <button id="next" type="button" title="Next">Next</button>
+                <button id="back" type="button" title="Back" style="float: left;">Back</button>
+                <button id="next" type="button" title="Next" style="float: right;">Next</button>
             </div><!--content end-->
         </div>
     </div>

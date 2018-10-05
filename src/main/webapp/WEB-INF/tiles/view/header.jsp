@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-
+                <li title="Accounts"><a href="/accounts/show-account">Accounts</a></li>
                 <li title="BBCbank cards"><a href="#">BBCbank cards</a></li>
                 <li title="E-Banking"><a href="#">E-Banking</a></li>
                 <li title="Saving Advices"><a href="#">Saving Advices</a></li>

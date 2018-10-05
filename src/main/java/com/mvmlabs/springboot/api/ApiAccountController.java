@@ -59,4 +59,11 @@ public class ApiAccountController {
         return account;
     }
 
+    @RequestMapping(value = "/excel-accounts", method = RequestMethod.GET)
+    public String excelAccount() {
+        RestTemplate restTemplate = new RestTemplate();
+        String str = restTemplate.getForObject(REST_URL + "/excel/accounts", String.class);
+        return str;
+    }
+
 }

@@ -38,6 +38,7 @@
                         <div class="col-xs-9">
                             <input type="text" class="form-control" id="amount" placeholder="Enter Money" name="amount" onkeydown="enterdown(event)">
                         </div>
+                        <br>
                     </div>
 
                     <div class="form-group" style="padding-bottom: 5px; margin-top: 3px">

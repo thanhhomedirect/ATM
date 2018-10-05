@@ -35,7 +35,11 @@ function validatePass() {
 }
 
 $(document).ready(function () {
+
     $('#button').click(function () {
+        if(validatePass() == false){
+            return false;
+        }
         $.ajax({
             method : 'PUT',
             url : '/accounts/change-password',

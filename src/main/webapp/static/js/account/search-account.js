@@ -115,6 +115,18 @@ $(document).ready(function () {
         });
     })
 
+    $('#download').click(function () {
+        $.ajax({
+            method: 'GET',
+            url: '/excel-accounts'
+        }).done(function (data) {
+            swal({
+                title: "Download " + data,
+                icon: "success"
+            })
+        });
+    })
+
     //////
     function next(param) {
         $("#table > tbody").empty();

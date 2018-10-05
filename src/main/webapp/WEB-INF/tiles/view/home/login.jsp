@@ -33,8 +33,8 @@
                             <div class="col-xs-9">
                                 <input type="text" class="form-control" id="name" placeholder="Enter username" required name="name">
                             </div>
+                            <br>
                         </div>
-                        <br>
 
                         <div class="form-group">
                             <label class="control-label col-sm-3" for="pass" style="color: #1c478e; font-size: 17px;">Password:</label>
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <button id="enter" type="button" class="btn btn-basic btn-block" onclick="login()">Login</button>
+                        <button id="enter" type="button" class="btn btn-basic btn-block">Login</button>
                     </div>
                     <div class = "col-lg-12">
                         <h5><a href="forgotpassword">Forgot Password</a></h5>
