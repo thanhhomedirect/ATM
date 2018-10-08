@@ -18,10 +18,20 @@ $(document).ready(function () {
 
     $.ajax({
         method: 'GET',
-        url: '/show-account/'
+        url: '/search-account?username='
     }).done(function (data) {
         drawTable();
-        console.log(data);
+        if (currentPage == (data.data.totalPages - 1)) {
+            $('#next').prop('disabled', true);
+        } else {
+            $('#next').prop('disabled', false);
+        }
+
+        if (currentPage == 0) {
+            $('#back').prop('disabled', true);
+        } else {
+            $('#back').prop('disabled', false);
+        }
         if (data.code == 1 && data.data.content != null && data.data.content != "") {
             fetch = data.data.size;
             size = data.data.size;
@@ -39,18 +49,6 @@ $(document).ready(function () {
                     '</tr>';
                 $("#table > tbody").append(markup);
                 currentIndex++;
-            }
-
-            if (currentPage == (data.data.totalPage - 1)) {
-                $('#next').prop('disabled', true);
-            } else {
-                $('#next').prop('disabled', false);
-            }
-
-            if (currentPage == 0) {
-                $('#back').prop('disabled', true);
-            } else {
-                $('#back').prop('disabled', false);
             }
         } else {
             swal("No data can found!");
@@ -78,7 +76,17 @@ $(document).ready(function () {
             url: '/search-account?username=' + param
         }).done(function (data) {
             drawTable();
-            console.log(data);
+            if (currentPage == (data.data.totalPages - 1)) {
+                $('#next').prop('disabled', true);
+            } else {
+                $('#next').prop('disabled', false);
+            }
+
+            if (currentPage == 0) {
+                $('#back').prop('disabled', true);
+            } else {
+                $('#back').prop('disabled', false);
+            }
             if (data.code == 1 && data.data.content != null && data.data.content != "") {
                 fetch = data.data.size;
                 size = data.data.size;
@@ -148,6 +156,17 @@ $(document).ready(function () {
                 fetch = data.data.totalElements;
             }
             drawTable();
+            if (currentPage == (data.data.totalPages - 1)) {
+                $('#next').prop('disabled', true);
+            } else {
+                $('#next').prop('disabled', false);
+            }
+
+            if (currentPage == 0) {
+                $('#back').prop('disabled', true);
+            } else {
+                $('#back').prop('disabled', false);
+            }
             for (i = 0; i < fetch; i++) {
                 var markup =
                     '<tr>' +
@@ -184,6 +203,17 @@ $(document).ready(function () {
             url: '/search-account?username=' + param + '&pageNo=' + currentPage
         }).done(function (data) {
             drawTable();
+            if (currentPage == (data.data.totalPages - 1)) {
+                $('#next').prop('disabled', true);
+            } else {
+                $('#next').prop('disabled', false);
+            }
+
+            if (currentPage == 0) {
+                $('#back').prop('disabled', true);
+            } else {
+                $('#back').prop('disabled', false);
+            }
             fetch = data.data.size;
             for (i = 0; i < fetch; i++) {
                 var markup =

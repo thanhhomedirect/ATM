@@ -75,6 +75,17 @@ $(document).ready(function () {
             url: '/transactions/search?accountId=' + accountId + '&toDate=' + toDate + '&fromDate=' + fromDate + '&type=' + type
         }).done(function (data) {
             drawTable();
+            if (currentPage == (data.data.totalPages - 1)) {
+                $('#next').prop('disabled', true);
+            } else {
+                $('#next').prop('disabled', false);
+            }
+
+            if (currentPage == 0) {
+                $('#back').prop('disabled', true);
+            } else {
+                $('#back').prop('disabled', false);
+            }
             if (data.code == 1 && data.data.content != null && data.data.content != "") {
                 fetch = data.data.size;
                 size = data.data.size;
@@ -95,18 +106,6 @@ $(document).ready(function () {
                     $("table tbody").append(markup);
                     currentIndex++;
                 }
-
-                if (currentPage == (data.data.totalPage - 1)) {
-                    $('#next').prop('disabled', true);
-                } else {
-                    $('#next').prop('disabled', false);
-                }
-
-                if (currentPage == 0) {
-                    $('#back').prop('disabled', true);
-                } else {
-                    $('#back').prop('disabled', false);
-                }
             } else {
                 swal("No data can found!");
             }
@@ -121,18 +120,29 @@ $(document).ready(function () {
             url: '/transactions/search?accountId=' + accountId + '&toDate=' + toDate +
                 '&fromDate=' + fromDate + '&type=' + type + '&pageNo=' + currentPage
         }).done(function (data) {
-            if (currentPage == (data.data.totalPage - 1)) {
+            fetch = data.data.size;
+            if (data.data.totalElements < data.data.size) {
+                fetch = data.data.totalElements;
+            }
+            drawTable();
+            if (currentPage == (data.data.totalPages - 1)) {
+                $('#next').prop('disabled', true);
+            } else {
+                $('#next').prop('disabled', false);
+            }
+
+            if (currentPage == 0) {
+                $('#back').prop('disabled', true);
+            } else {
+                $('#back').prop('disabled', false);
+            }
+            if (currentPage == (data.data.totalPages - 1)) {
                 if (data.data.totalElements % data.data.size != 0) {
                     fetch = data.data.totalElements % data.data.size;
                 } else {
                     fetch = data.data.size;
                 }
             }
-            fetch = data.data.size;
-            if (data.data.totalElements < data.data.size) {
-                fetch = data.data.totalElements;
-            }
-            drawTable();
             for (i = 0; i < fetch; i++) {
                 var markup =
                     '<tr>' +
@@ -146,18 +156,6 @@ $(document).ready(function () {
                     '</tr>';
                 $("table tbody").append(markup);
                 currentIndex++;
-            }
-
-            if (currentPage == (data.data.totalPage - 1)) {
-                $('#next').prop('disabled', true);
-            } else {
-                $('#next').prop('disabled', false);
-            }
-
-            if (currentPage == 0) {
-                $('#back').prop('disabled', true);
-            } else {
-                $('#back').prop('disabled', false);
             }
         })
     }
@@ -172,6 +170,17 @@ $(document).ready(function () {
                 '&fromDate=' + fromDate + '&type=' + type + '&pageNo=' + currentPage
         }).done(function (data) {
             drawTable();
+            if (currentPage == (data.data.totalPages - 1)) {
+                $('#next').prop('disabled', true);
+            } else {
+                $('#next').prop('disabled', false);
+            }
+
+            if (currentPage == 0) {
+                $('#back').prop('disabled', true);
+            } else {
+                $('#back').prop('disabled', false);
+            }
             fetch = data.data.size;
             for (i = 0; i < fetch; i++) {
                 var markup =
@@ -186,18 +195,6 @@ $(document).ready(function () {
                     '</tr>';
                 $("table tbody").append(markup);
                 currentIndex++;
-            }
-
-            if (currentPage == (data.data.totalPage - 1)) {
-                $('#next').prop('disabled', true);
-            } else {
-                $('#next').prop('disabled', false);
-            }
-
-            if (currentPage == 0) {
-                $('#back').prop('disabled', true);
-            } else {
-                $('#back').prop('disabled', false);
             }
         })
     }
