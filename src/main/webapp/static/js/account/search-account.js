@@ -105,6 +105,18 @@ $(document).ready(function () {
                     $("#table > tbody").append(markup);
                     currentIndex++;
                 }
+
+                if (currentPage == (data.data.totalPages - 1)) {
+                    $('#next').prop('disabled', true);
+                } else {
+                    $('#next').prop('disabled', false);
+                }
+
+                if (currentPage == 0) {
+                    $('#back').prop('disabled', true);
+                } else {
+                    $('#back').prop('disabled', false);
+                }
             } else {
                 swal("No data can found!");
             }
@@ -131,6 +143,7 @@ $(document).ready(function () {
             method: 'GET',
             url: '/search-account?username=' + param + '&pageNo=' + currentPage
         }).done(function (data) {
+            console.log(data)
             if (currentPage == (data.data.totalPages - 1)) {
                 if (data.data.totalElements % data.data.size != 0) {
                     fetch = data.data.totalElements % data.data.size;
@@ -165,6 +178,18 @@ $(document).ready(function () {
                     '</tr>';
                 $("#table > tbody").append(markup);
                 currentIndex++;
+            }
+
+            if (currentPage == (data.data.totalPages - 1)) {
+                $('#next').prop('disabled', true);
+            } else {
+                $('#next').prop('disabled', false);
+            }
+
+            if (currentPage == 0) {
+                $('#back').prop('disabled', true);
+            } else {
+                $('#back').prop('disabled', false);
             }
         })
     }
@@ -201,6 +226,18 @@ $(document).ready(function () {
                     '</tr>';
                 $("#table > tbody").append(markup);
                 currentIndex++;
+            }
+
+            if (currentPage == (data.data.totalPages - 1)) {
+                $('#next').prop('disabled', true);
+            } else {
+                $('#next').prop('disabled', false);
+            }
+
+            if (currentPage == 0) {
+                $('#back').prop('disabled', true);
+            } else {
+                $('#back').prop('disabled', false);
             }
         })
     }
