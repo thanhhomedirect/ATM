@@ -322,3 +322,6 @@ body {
 .modal-footer .btn{
     padding: 10px;
 }
+#tables button{
+    color: black;
+}

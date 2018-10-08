@@ -29,9 +29,9 @@ $(document).ready(function () {
     }
 
     function drawTable() {
-        $('<button id="back" style="color: black;">Back</button>').appendTo('#tables');
-        $('<button id="next" style="color: black;">Next</button>').appendTo('#tables');
-        $('<button id="download" style="color: black;">Download Excel</button>').appendTo('#tables');
+        $('<button id="back">Back</button>').appendTo('#tables');
+        $('<button id="next">Next</button>').appendTo('#tables');
+        $('<button id="download">Download Excel</button>').appendTo('#tables');
         $('#tables').append(
             '<table id="table-history" class="table table-bordered" style="color: black">' +
             '<tr>' +
