@@ -18,14 +18,14 @@ $(document).ready(function () {
 
     $.ajax({
         method: 'GET',
-        url: '/show-accounts/'
+        url: '/show-account/'
     }).done(function (data) {
         drawTable();
         console.log(data);
         if (data.code == 1 && data.data.content != null && data.data.content != "") {
-            fetch = data.data.pageSize;
-            size = data.data.pageSize;
-            if (data.data.totalElements < data.data.pageSize) {
+            fetch = data.data.size;
+            size = data.data.size;
+            if (data.data.totalElements < data.data.size) {
                 fetch = data.data.totalElements;
             }
             for (i = 0; i < fetch; i++) {
@@ -75,14 +75,14 @@ $(document).ready(function () {
         currentIndex = 0;
         $.ajax({
             method: 'GET',
-            url: '/search-accounts?username=' + param
+            url: '/search-account?username=' + param
         }).done(function (data) {
             drawTable();
             console.log(data);
             if (data.code == 1 && data.data.content != null && data.data.content != "") {
-                fetch = data.data.pageSize;
-                size = data.data.pageSize;
-                if (data.data.totalElements < data.data.pageSize) {
+                fetch = data.data.size;
+                size = data.data.size;
+                if (data.data.totalElements < data.data.size) {
                     fetch = data.data.totalElements;
                 }
                 for (i = 0; i < fetch; i++) {
@@ -133,17 +133,17 @@ $(document).ready(function () {
         currentPage++;
         $.ajax({
             method: 'GET',
-            url: '/search-accounts?username=' + param + '&pageNo=' + currentPage
+            url: '/search-account?username=' + param + '&pageNo=' + currentPage
         }).done(function (data) {
             if (currentPage == (data.data.totalPage - 1)) {
-                if (data.data.totalElements % data.data.pageSize != 0) {
+                if (data.data.totalElements % data.data.size != 0) {
                     fetch = data.data.totalElements % data.data.pageSize;
                 } else {
                     fetch = data.data.pageSize;
                 }
             }
             fetch = data.data.pageSize;
-            if (data.data.totalElements < data.data.pageSize) {
+            if (data.data.totalElements < data.data.size) {
                 fetch = data.data.totalElements;
             }
             drawTable();
@@ -180,10 +180,10 @@ $(document).ready(function () {
         currentIndex = currentIndex - fetch - size;
         $.ajax({
             method: 'GET',
-            url: '/search-accounts?username=' + param + '&pageNo=' + currentPage
+            url: '/search-account?username=' + param + '&pageNo=' + currentPage
         }).done(function (data) {
             drawTable();
-            fetch = data.data.pageSize;
+            fetch = data.data.size;
             for (i = 0; i < fetch; i++) {
                 var markup =
                     '<tr>' +

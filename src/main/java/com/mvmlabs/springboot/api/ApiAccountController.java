@@ -28,10 +28,10 @@ public class ApiAccountController {
         return atmReponse;
     }
 
-    @RequestMapping(value = "/show-accounts", method = RequestMethod.GET)
+    @RequestMapping(value = "/show-account", method = RequestMethod.GET)
     public ATMReponse account() {
         RestTemplate restTemplate = new RestTemplate();
-        ATMReponse atmReponse = restTemplate.getForObject(REST_URL + "/accounts/", ATMReponse.class);
+        ATMReponse atmReponse = restTemplate.getForObject(REST_URL + "/accounts/search?username=", ATMReponse.class);
         return atmReponse;
     }
 

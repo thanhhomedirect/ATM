@@ -9,7 +9,9 @@ if (localStorage.getItem("id") == "" || localStorage.getItem("id") == null) {
 }
 
 $(document).ready(function () {
-    $('#fromDate').val("2018-09-01");
+    var d = new Date();
+    d.setDate(d.getUTCDate() -7)
+    $('#fromDate').val(d.toJSON().slice(0,10));
     $('#toDate').val(new Date().toJSON().slice(0,10));
     var accountId = localStorage.getItem("id");
     var fromDate = $('#fromDate').val().toString();
@@ -74,9 +76,9 @@ $(document).ready(function () {
         }).done(function (data) {
             drawTable();
             if (data.code == 1 && data.data.content != null && data.data.content != "") {
-                fetch = data.data.pageSize;
-                size = data.data.pageSize;
-                if (data.data.totalElements < data.data.pageSize) {
+                fetch = data.data.size;
+                size = data.data.size;
+                if (data.data.totalElements < data.data.size) {
                     fetch = data.data.totalElements;
                 }
                 for (i = 0; i < fetch; i++) {
@@ -120,14 +122,14 @@ $(document).ready(function () {
                 '&fromDate=' + fromDate + '&type=' + type + '&pageNo=' + currentPage
         }).done(function (data) {
             if (currentPage == (data.data.totalPage - 1)) {
-                if (data.data.totalElements % data.data.pageSize != 0) {
-                    fetch = data.data.totalElements % data.data.pageSize;
+                if (data.data.totalElements % data.data.size != 0) {
+                    fetch = data.data.totalElements % data.data.size;
                 } else {
-                    fetch = data.data.pageSize;
+                    fetch = data.data.size;
                 }
             }
-            fetch = data.data.pageSize;
-            if (data.data.totalElements < data.data.pageSize) {
+            fetch = data.data.size;
+            if (data.data.totalElements < data.data.size) {
                 fetch = data.data.totalElements;
             }
             drawTable();
@@ -170,7 +172,7 @@ $(document).ready(function () {
                 '&fromDate=' + fromDate + '&type=' + type + '&pageNo=' + currentPage
         }).done(function (data) {
             drawTable();
-            fetch = data.data.pageSize;
+            fetch = data.data.size;
             for (i = 0; i < fetch; i++) {
                 var markup =
                     '<tr>' +
