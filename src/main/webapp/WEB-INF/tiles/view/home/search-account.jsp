@@ -30,8 +30,8 @@
         <div class="w3-center w3-animate-zoom">
             <div id="content" class="panel panel-default">
 
-                <div class="col-xs-6">
-                    <input type="text" class="form-control" id="param" name="param" required>
+                <div class="col-lg-4">
+                    <input type="text" class="form-control" id="param" name="param" onkeydown="enterdown(event)">
                 </div>
                 <div class="col-lg-3" >
                     <button type="button" class="btn btn-basic btn-block" id="enter">Search</button>
@@ -41,19 +41,22 @@
                 </div>
 
                     <table id="table" class="table table-bodered" style="color: #3a3a3a">
-                        <tr>
-                            <th>STT</th>
-                            <th>ID</th>
-                            <th>Account Number</th>
-                            <th>User Name</th>
-                            <th>Amount</th>
-                        </tr>
-                        <div id="body">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>ID</th>
+                                <th>Account Number</th>
+                                <th>User Name</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                        </div>
+                        </tbody>
                     </table>
-                <button id="back" type="button" title="Back" style="float: left;">Back</button>
-                <button id="next" type="button" title="Next" style="float: right;">Next</button>
+
+                <button id="back" type="button" class="btn btn-basic" title="Back" style="float: left;"><<</button>
+                <button id="next" type="button" class="btn btn-basic" title="Next" style="float: right;">>></button>
             </div><!--content end-->
         </div>
     </div>

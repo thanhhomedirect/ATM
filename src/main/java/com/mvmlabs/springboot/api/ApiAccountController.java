@@ -47,16 +47,16 @@ public class ApiAccountController {
     }
     @RequestMapping(value = "/search-account", method = RequestMethod.GET)
     public ATMReponse searchAccount(@RequestParam(value = "username", required = false) String username,
-                                    @RequestParam(defaultValue = "0") int pageNo) {
+                                    @RequestParam(defaultValue = "0") int pageNo, @RequestParam(defaultValue = "10") int pageSize) {
         RestTemplate restTemplate = new RestTemplate();
-        ATMReponse account = restTemplate.getForObject(REST_URL + "/accounts/search?username=" + username + "&pageNo=" + pageNo, ATMReponse.class);
+        ATMReponse account = restTemplate.getForObject(REST_URL + "/accounts/search?username=" + username + "&pageNo=" + pageNo + "&pageSize=" + pageSize, ATMReponse.class);
         return account;
     }
 
     @RequestMapping(value = "/excel-accounts", method = RequestMethod.GET)
     public String excelAccount() {
         RestTemplate restTemplate = new RestTemplate();
-        String str = restTemplate.getForObject(REST_URL + "/excel/accounts", String.class);
+        String str = restTemplate.getForObject(REST_URL + "/accounts/dowload", String.class);
         return str;
     }
 

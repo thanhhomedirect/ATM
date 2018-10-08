@@ -20,7 +20,7 @@ $(document).ready(function () {
                         title: "Login Success!",
                         text: "Wellcome " + data.data.username,
                         type: "success",
-                        timer: 2000
+                        timer: 700
                     }).then(function() {
                     window.location.replace('http://127.0.0.1:8090/afterlogin');
                 });

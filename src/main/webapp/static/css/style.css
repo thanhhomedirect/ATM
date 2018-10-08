@@ -171,9 +171,9 @@ body {
     color: #1c478e;
     margin-top: 3%;
     float: left;
-    background-color: #fff;
+    /*background-color: #fff;*/
     border-radius: 10px;
-    border: #1c478e solid 2px;
+    border: #1c478e solid 0.5px;
     padding: 10px;
     margin-left: 9%;
     margin-right: 2%;
@@ -324,4 +324,19 @@ body {
 }
 #tables button{
     color: black;
+}
+.form-group {
+    margin: 20px 0px;
+}
+#param {
+    margin-left: 0;
+}
+#enter{
+    float: left;
+    height: 35px;
+    max-width: 70px;
+    text-align: center;
+}
+#download{
+    float: right;
 }

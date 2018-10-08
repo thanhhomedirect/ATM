@@ -22,7 +22,8 @@ $(document).ready(function () {
                 if (data.code == 1) {
                     swal({
                         title: "SUCCESS!",
-                        icon: "success"
+                        icon: "success",
+                        timer: 1500
                     }).then(function() {
                         window.location = 'http://127.0.0.1:8090/accounts/detail'
                     });
