@@ -98,7 +98,7 @@ $(document).ready(function () {
                     currentIndex++;
                 }
 
-                if (currentPage == (data.data.totalPage - 1)) {
+                if (currentPage == (data.data.totalPages - 1)) {
                     $('#next').prop('disabled', true);
                 } else {
                     $('#next').prop('disabled', false);
@@ -135,14 +135,15 @@ $(document).ready(function () {
             method: 'GET',
             url: '/search-account?username=' + param + '&pageNo=' + currentPage
         }).done(function (data) {
-            if (currentPage == (data.data.totalPage - 1)) {
+            console.log(data)
+            if (currentPage == (data.data.totalPages - 1)) {
                 if (data.data.totalElements % data.data.size != 0) {
-                    fetch = data.data.totalElements % data.data.pageSize;
+                    fetch = data.data.totalElements % data.data.size;
                 } else {
-                    fetch = data.data.pageSize;
+                    fetch = data.data.size;
                 }
             }
-            fetch = data.data.pageSize;
+            fetch = data.data.size;
             if (data.data.totalElements < data.data.size) {
                 fetch = data.data.totalElements;
             }
@@ -160,7 +161,7 @@ $(document).ready(function () {
                 currentIndex++;
             }
 
-            if (currentPage == (data.data.totalPage - 1)) {
+            if (currentPage == (data.data.totalPages - 1)) {
                 $('#next').prop('disabled', true);
             } else {
                 $('#next').prop('disabled', false);
@@ -197,7 +198,7 @@ $(document).ready(function () {
                 currentIndex++;
             }
 
-            if (currentPage == (data.data.totalPage - 1)) {
+            if (currentPage == (data.data.totalPages - 1)) {
                 $('#next').prop('disabled', true);
             } else {
                 $('#next').prop('disabled', false);

@@ -52,10 +52,11 @@ public class ApiAccountController {
 
         return atmReponse.getBody();
     }
-    @RequestMapping(value = "/search-accounts", method = RequestMethod.GET)
-    public ATMReponse searchAccount(@RequestParam("username") String username) {
+    @RequestMapping(value = "/search-account", method = RequestMethod.GET)
+    public ATMReponse searchAccount(@RequestParam(value = "username", required = false) String username,
+                                    @RequestParam(defaultValue = "0") int pageNo) {
         RestTemplate restTemplate = new RestTemplate();
-        ATMReponse account = restTemplate.getForObject(REST_URL + "/accounts/search?username=" + username , ATMReponse.class);
+        ATMReponse account = restTemplate.getForObject(REST_URL + "/accounts/search?username=" + username +"&pageNo=" + pageNo , ATMReponse.class);
         return account;
     }
 
