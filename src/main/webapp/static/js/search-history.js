@@ -10,9 +10,9 @@ if (localStorage.getItem("id") == "" || localStorage.getItem("id") == null) {
 
 $(document).ready(function () {
     var d = new Date();
-    d.setDate(d.getUTCDate() -7)
-    $('#fromDate').val(d.toJSON().slice(0,10));
-    $('#toDate').val(new Date().toJSON().slice(0,10));
+    d.setDate(d.getUTCDate() - 7)
+    $('#fromDate').val(d.toJSON().slice(0, 10));
+    $('#toDate').val(new Date().toJSON().slice(0, 10));
     var accountId = localStorage.getItem("id");
     var fromDate = $('#fromDate').val().toString();
     var toDate = $('#toDate').val().toString();
@@ -28,10 +28,7 @@ $(document).ready(function () {
         type = $('#type').val();
     }
 
-    function drawTable() {
-        $('<button id="back">Back</button>').appendTo('#tables');
-        $('<button id="next">Next</button>').appendTo('#tables');
-        $('<button id="download">Download Excel</button>').appendTo('#tables');
+    function drawTable(data) {
         $('#tables').append(
             '<table id="table-history" class="table table-bordered" style="color: black">' +
             '<tr>' +
@@ -44,6 +41,14 @@ $(document).ready(function () {
             '<th>Status</th>' +
             '</tr>' +
             '</table>')
+
+        for (var i = 0; i < data.data.totalPages; i++) {
+            $('#back').after('<input type= "button" class="page" value="' + (data.data.totalPages - i) + '\"' +'/>');
+        }
+
+        $('.page').click(function () {
+            page(accountId, fromDate, toDate, type);
+        });
 
         $('#next').click(function () {
             next(accountId, fromDate, toDate, type);
@@ -64,17 +69,24 @@ $(document).ready(function () {
             });
         })
     }
+    $('#next').click(function () {
+        next(accountId, fromDate, toDate, type);
+    });
 
 
     $('#enter').click(function () {
         $("#tables").empty();
+        $('<button id="back">Back</button>').appendTo('#tables');
+        $('<button id="next">Next</button>').appendTo('#tables');
+        $('<button id="download">Download Excel</button>').appendTo('#tables');
         getData();
         currentIndex = 0;
+        currentPage=0;
         $.ajax({
             method: 'GET',
             url: '/transactions/search?accountId=' + accountId + '&toDate=' + toDate + '&fromDate=' + fromDate + '&type=' + type
         }).done(function (data) {
-            drawTable();
+            drawTable(data);
             if (currentPage == (data.data.totalPages - 1)) {
                 $('#next').prop('disabled', true);
             } else {
@@ -112,8 +124,58 @@ $(document).ready(function () {
         });
     })
 
+    function page(accountId, fromDate, toDate, type) {
+        $("table > tbody").empty();
+        currentPage = event.target.value -1;
+        $.ajax({
+            method: 'GET',
+            url: '/transactions/search?accountId=' + accountId + '&toDate=' + toDate +
+                '&fromDate=' + fromDate + '&type=' + type + '&pageNo=' + currentPage
+        }).done(function (data) {
+            fetch = data.data.size;
+            if (data.data.totalElements < data.data.size) {
+                fetch = data.data.totalElements;
+            }
+
+            if (currentPage == (data.data.totalPages - 1)) {
+                $('#next').prop('disabled', true);
+            } else {
+                $('#next').prop('disabled', false);
+            }
+
+            if (currentPage == 0) {
+                currentIndex = 0;
+                $('#back').prop('disabled', true);
+            } else {
+                $('#back').prop('disabled', false);
+            }
+            if (currentPage == (data.data.totalPages - 1)) {
+                if (data.data.totalElements % data.data.size != 0) {
+                    fetch = data.data.totalElements % data.data.size;
+                } else {
+                    fetch = data.data.size;
+                }
+            }
+            for (i = 0; i < fetch; i++) {
+                var markup =
+                    '<tr>' +
+                    '<td>' + (currentIndex + 1) + '</td>' +
+                    '<td>' + data.data.content[i].fromAccountNumber + '</td>' +
+                    '<td>' + data.data.content[i].toAccountNumber + '</td>' +
+                    '<td>' + (data.data.content[i].transferAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND") + '</td>' +
+                    '<td>' + data.data.content[i].content + '</td>' +
+                    '<td>' + new Date(data.data.content[i].time).toUTCString() + '</td>' +
+                    '<td>' + data.data.content[i].status + '</td>' +
+                    '</tr>';
+                $("table tbody").append(markup);
+                currentIndex++;
+            }
+        })
+
+    }
+
     function next(accountId, fromDate, toDate, type) {
-        $("#tables").empty();
+        $("table > tbody").empty();
         currentPage++;
         $.ajax({
             method: 'GET',
@@ -124,7 +186,7 @@ $(document).ready(function () {
             if (data.data.totalElements < data.data.size) {
                 fetch = data.data.totalElements;
             }
-            drawTable();
+
             if (currentPage == (data.data.totalPages - 1)) {
                 $('#next').prop('disabled', true);
             } else {
@@ -161,7 +223,7 @@ $(document).ready(function () {
     }
 
     function back(accountId, fromDate, toDate, type) {
-        $("#tables").empty();
+        $("table > tbody").empty();
         currentPage--;
         currentIndex = currentIndex - fetch - size;
         $.ajax({
@@ -169,7 +231,7 @@ $(document).ready(function () {
             url: '/transactions/search?accountId=' + accountId + '&toDate=' + toDate +
                 '&fromDate=' + fromDate + '&type=' + type + '&pageNo=' + currentPage
         }).done(function (data) {
-            drawTable();
+
             if (currentPage == (data.data.totalPages - 1)) {
                 $('#next').prop('disabled', true);
             } else {

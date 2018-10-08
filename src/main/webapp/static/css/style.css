@@ -316,13 +316,16 @@ body {
 .w3-dropdown-hover a {
     text-decoration: none;
 }
-.w3-black button:visited{
+
+.w3-black button:visited {
     border: none;
 }
-.modal-footer .btn{
+
+.modal-footer .btn {
     padding: 10px;
 }
-#tables button{
+
+#tables, button, span {
     color: black;
 }
 .form-group {
@@ -337,6 +340,11 @@ body {
     max-width: 70px;
     text-align: center;
 }
-#download{
+#download {
     float: right;
+}
+
+.page {
+    margin: 0 5px;
+    cursor: pointer;
 }
