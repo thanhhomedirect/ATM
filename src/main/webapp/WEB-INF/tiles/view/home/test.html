@@ -1,19 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>
+
+    </title>
+
+    <style>
+        .is-loading{background: red}
+
+    </style>
 </head>
+
+
 <body>
-<table>
-    <tr>
-        <td>STT</td>
-        <td>AccountNumber</td>
-        <td>Amount</td>
-        <td>Content</td>
-        <td>Time</td>
-        <td>Status</td>
-    </tr>
-</table>
+
+<div id="root">
+
+    <button :class="{'is-loading': false}"> Click me</button>
+
+</div>
+
+
+
+<script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+
+        el: '#root',
+
+        data: {
+            className: 'color-red'
+        },
+
+
+    })
+
+
+</script>
 </body>
-</html>

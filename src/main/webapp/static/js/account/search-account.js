@@ -20,6 +20,14 @@ $(document).ready(function () {
         url: '/search-account?username='
     }).done(function (data) {
         totalPages = data.data.totalPages
+        for (var i = 0; i < totalPages; i++) {
+            $('#back').after('<input type= "button" class="page" value="' + (totalPages - i) + '\"' +'/>');
+        }
+
+        $('.page').click(function () {
+            page(param);
+        });
+
         $('#next').click(function () {
             next(param);
         });
@@ -175,5 +183,48 @@ $(document).ready(function () {
             })
         })
     }
+
+    function page(param) {
+        $("#table > tbody").empty();
+        currentPage = event.target.value -1;
+        $.ajax({
+            method: 'GET',
+            url: '/search-account?username=' + param + '&pageNo=' + currentPage
+        }).done(function (data) {
+            fetch = data.data.size;
+            if (data.data.totalElements < data.data.size) {
+                fetch = data.data.totalElements;
+            }
+
+            if (currentPage == 0){
+                currentIndex = 0;
+            } else {
+                currentIndex = currentPage*10;
+            }
+
+            activeButton()
+            if (currentPage == (data.data.totalPages - 1)) {
+                if (data.data.totalElements % data.data.size != 0) {
+                    fetch = data.data.totalElements % data.data.size;
+                } else {
+                    fetch = data.data.size;
+                }
+            }
+            $.each(data.data.content, function (idx, obj) {
+                var markup =
+                    '<tr>' +
+                    '<td>' + (currentIndex + 1) + '</td>' +
+                    '<td>' + obj.id + '</td>' +
+                    '<td>' + obj.accountNumber + '</td>' +
+                    '<td>' + obj.username + '</td>' +
+                    '<td>' + obj.amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + " VND" + '</td>' +
+                    '</tr>';
+                $("#table > tbody").append(markup);
+                currentIndex++;
+            })
+        })
+
+    }
+
 })
 

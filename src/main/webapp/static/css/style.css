@@ -325,7 +325,10 @@ body {
     padding: 10px;
 }
 
-#tables, button, span {
+#tables input {
+    color: black;
+}
+#tables button {
     color: black;
 }
 .form-group {
